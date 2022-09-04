@@ -314,6 +314,11 @@ function my_pre_get_posts( $query ) {
         $paged = max( 1, get_query_var( 'paged' ) );
         $query->set( 'offset', ( $paged - 1 ) * $per_page + $offset );
     }
+    if ( !is_admin() && $query->is_main_query() ) {
+        if ($query->is_tag) {
+            $query->set('post_type', array( 'post', ));
+        }
+    }
 }
 add_action( 'pre_get_posts', 'my_pre_get_posts' );
 

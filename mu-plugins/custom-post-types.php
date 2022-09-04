@@ -76,7 +76,7 @@ function portfolio_post_types()
         'show_ui' => true,
         'update_count_callback' => '_update_post_term_count',
         'query_var' => true,
-        'rewrite' => array( 'slug' => 'tag' ),
+        'rewrite' => array( 'slug' => 'tag-services' ),
     ));
 }
 

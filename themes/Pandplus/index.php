@@ -91,7 +91,7 @@ if (is_home() && !is_category() && 1 == $paged) {
 
     </section>
     <?php get_template_part('template-parts/archive-category'); ?>
-<?php } else { ?>
+<?php }  ?>
     <section class="container-xl container-fluid z-top position-relative default-margin-top">
         <div class="row justify-content-start align-items-center">
             <div class="col-12 text-white">
@@ -99,7 +99,6 @@ if (is_home() && !is_category() && 1 == $paged) {
             </div>
         </div>
     </section>
-<?php } ?>
 <?php if (1 < $paged) { ?>
     <section class="container-xl container-fluid z-top position-relative">
         <div class="row justify-content-start align-items-center">

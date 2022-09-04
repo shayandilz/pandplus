@@ -74,9 +74,9 @@ while (have_posts()) :
                     </span>
                 <div>
                     <?php foreach ($posttags as $tag) { ?>
-                        <span class="fw-normal badge background-blur rounded-1 m-1 p-2">
+                        <a href="<?php echo get_tag_link($tag->term_id) ?>" class="fw-normal badge background-blur rounded-1 m-1 p-2">
                                 <?php echo $tag->name ?>
-                            </span>
+                            </a>
                     <?php } ?>
                 </div>
             </div>

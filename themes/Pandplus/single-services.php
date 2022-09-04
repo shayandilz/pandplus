@@ -17,12 +17,6 @@ while (have_posts()) : the_post();
                     </div>
                     <div class="col-lg-6 col-12 text-lg-end text-center mt-3 mt-lg-0">
                         <div class="d-inline">
-                            <!--                        <span class="p-2 m-2 rounded-pill background-blur">-->
-                            <!--                            --><?php //get_template_part('template-parts/SVG/comment');
-                            //                            echo get_comments_number($post->ID);
-                            //
-                            ?>
-                            <!--                        </span>-->
                             <span class="p-2 m-2 rounded-pill background-blur">
                                     <?php get_template_part('template-parts/SVG/views');
                                     echo gt_get_post_view(); ?>
@@ -42,9 +36,9 @@ while (have_posts()) : the_post();
                         <div>
                             <?php
                             foreach ($service_tags as $tag) { ?>
-                                <span class="badge background-blur rounded-1 m-1 p-2">
+                                <a href="<?php echo get_tag_link($tag->term_id) ?>" class="badge background-blur rounded-1 m-1 p-2">
                                     <?php echo $tag->name ?>
-                                </span>
+                                </a>
                             <?php } ?>
                         </div>
                     </div>
