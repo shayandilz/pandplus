@@ -1,0 +1,100 @@
+//
+// Base styles
+//
+.btn {
+    display: inline-block;
+    font-family: $btn-font-family;
+    font-weight: $btn-font-weight;
+    line-height: $btn-line-height;
+    color: $body-text;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
+    @include transition($btn-transition);
+    outline: 0 !important;
+
+    &:disabled,
+    &.disabled,
+    fieldset:disabled & {
+        pointer-events: none;
+        opacity: $btn-disabled-opacity;
+        @include box-shadow(none);
+    }
+
+    // custom styles
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+
+    &.btn-circle {
+        width: 56px;
+        height: 56px;
+        padding: $btn-padding-y;
+        vertical-align: middle;
+    }
+
+    svg path {
+        transition: inherit;
+    }
+}
+
+//button mixins
+@mixin button-variant($color) {
+    background-color: $color;
+
+    &:hover {
+        box-shadow: none;
+        background: transparent;
+        border: 1px solid #fff;
+        color: #ffffff !important;
+
+        svg path {
+            stroke: #fff;
+        }
+    }
+}
+
+
+@each $color, $value in $button-colors {
+    .btn-#{$color} {
+        @include button-variant($value);
+    }
+}
+
+.link-muted {
+    color: $text-muted !important;
+
+    &:hover, &:focus {
+        color: $gold !important;
+
+        svg path {
+            stroke: $text-muted;
+        }
+    }
+}
+
+//colored links
+.link-dark {
+    color: $body-text;
+}
+
+.link-white {
+    color: white !important;
+}
+
+.link-white, .link-dark {
+    &:hover, &:focus {
+        color: #00DAD0 !important;
+
+        svg path {
+            stroke: #00DAD0!important;
+        }
+    }
+}

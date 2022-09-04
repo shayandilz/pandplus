@@ -1,0 +1,52 @@
+header {
+    top: 1.5rem;
+    z-index: 1000;
+    @include media-breakpoint-down(lg){
+        top: 0%;
+    }
+}
+header{
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 75%;
+    nav > div{
+        padding: 10px!important;
+    }
+}
+.scrolled header {
+    top: 0%;
+    width: 100%!important;
+    nav > div{
+        padding: 0px!important;
+    }
+    @include media-breakpoint-up(lg){
+        top: 2%;
+        width: 75%!important;
+        nav{
+            margin: 0px 5px!important;
+        }
+    }
+
+}
+.scrolled #main-header > div {
+    --fallback-background: #000000d1;
+    --background: rgba(255,255,255,0.1);
+    border-radius: 30px;
+    background-color: var(--fallback-background); /* Fallback */
+}
+@supports (backdrop-filter: blur()) {
+    .scrolled #main-header > div {
+        background: rgba(255,255,255,0.1);
+        -webkit-backdrop-filter: blur(30px);
+        backdrop-filter: blur(30px);
+        border-radius: 30px;
+        @include media-breakpoint-down(lg){
+            border-radius: 0px 0px 30px 30px!important;
+        }
+    }
+}
+.scrolled header nav > div{
+    background-color: transparent;
+    backdrop-filter: none;
+}

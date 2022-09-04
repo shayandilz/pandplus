@@ -1,0 +1,89 @@
+html, body {
+  overflow-x: hidden;
+
+}
+main a{
+  font-weight: 800;
+  transition: 0.3s all ease-in-out!important;
+}
+body {
+  font-size: 14px;
+  color: $dark;
+}
+
+// SCROLL bar styles
+::-webkit-scrollbar {
+  width: 4px;
+  height: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: $light;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primary;
+  border-radius: 2rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: tint-color($primary, 10%);
+}
+
+.lazy {
+  transition: $transition;
+}
+
+.lazy-slow {
+  transition: $transition-slow;
+}
+
+.object-fit {
+  object-fit: cover;
+}
+
+.z-top {
+  z-index: 10;
+}
+
+@supports (-webkit-backdrop-filter: blur(8px)) or (backdrop-filter: blur(8px)) {
+  .background-blur {
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+  .background-blur-dark {
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+}
+
+.background-blur-insta {
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.3);
+
+}
+
+//custom button background ( not here, universal!!!)
+
+.background-radial {
+  background: radial-gradient(92.09% 85.42% at 86.3% 87.5%, rgba(0, 0, 0, 0.23) 0%, rgba(0, 0, 0, 0) 86.18%), radial-gradient(65.28% 65.28% at 26.39% 20.83%, rgba(255, 255, 255, 0.413) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%), #4C5098;
+}
+
+.testimonial-card {
+  background: radial-gradient(92.09% 85.42% at 86.3% 87.5%, rgba(0, 0, 0, 0.069) 0%, rgba(0, 0, 0, 0) 86.18%), radial-gradient(65.28% 65.28% at 26.39% 20.83%, rgba(255, 255, 255, 0.177) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.3);
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  transition: 0.3s all ease-in-out;
+}
+
+.testimonial-card:hover {
+  background: radial-gradient(92.09% 85.42% at 86.3% 87.5%, rgba(0, 0, 0, 0.069) 0%, rgb(12 1 1 / 0%) 86.18%), radial-gradient(65.28% 65.28% at 26.39% 20.83%, rgb(0 0 0 / 18%) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%), rgb(177 177 177 / 30%);
+  box-shadow: inset 3px -3px 9px rgb(255 255 255 / 25%), inset 0px 3px 9px rgb(0 0 0 / 30%), inset 0px 1px 1px rgb(255 255 255 / 60%), inset 0px -8px 36px rgb(0 0 0 / 30%), inset 0px 1px 5px rgb(12 10 10 / 60%);
+}
+
+.default-margin-top {
+  margin-top: 120px !important;
+}

@@ -1,0 +1,34 @@
+//ltr styles
+@import "modules/splide";
+
+.iconsax {
+  display: inline-block;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: var(--Iconsax-Size);
+  vertical-align: middle;
+}
+
+.iconsax svg {
+  display: block;
+  width: var(--Iconsax-Size);
+  height: var(--Iconsax-Size);
+}
+
+.iconsax svg [stroke] {
+  stroke: var(--Iconsax-Color);
+}
+
+.iconsax svg [fill] {
+  fill: var(--Iconsax-Color);
+}
+
+.ginput_container input,
+.ginput_container textarea
+{
+  border: none!important;
+}
+

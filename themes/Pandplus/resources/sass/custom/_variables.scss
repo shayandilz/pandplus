@@ -1,0 +1,164 @@
+$body-color: white;
+$light: rgba(255, 255, 255, 0.5);
+$dark: rgba(0, 0, 0, 0.7);
+$body-text: #222222;
+$text-muted: #666666;
+$text-white: #ffffff;
+
+
+$gold: #1542b1;
+$lightgold: #F8F5EF;
+$clightgold: #F1E9D9;
+$primary: $gold;
+
+$gradient:  linear-gradient(0deg ,rgba(63, 62, 68, 1) ,rgba(10, 9, 10, 0.5), rgba(0, 0, 0, 0));
+
+$custom-colors: (
+    "gold": $gold,
+    "ligthgold": $lightgold,
+    "clightgold": $clightgold,
+    "dark": $dark,
+    "light": $light,
+);
+
+$button-colors: (
+    "gold": $gold,
+    "lightgold": $lightgold,
+);
+
+
+//base class variables
+$transition-base: all .4s;
+$transition-fast: all .2s ease-in-out;
+$transition: all .4s ease-in-out;
+$transition-slow: all .6s;
+
+
+//border radius
+$border-radius: 10px;
+$border-radius-sm: 15px;
+$border-radius-lg: 30px;
+$border-radius-pill: 50rem;
+
+//shadows
+$box-shadow: 0px 9px 7px rgb(0 0 0 / 10%);
+
+//base variables
+$spacer: 1rem;
+$spacers: (
+    0: 0,
+    1: $spacer * .25 * (14/16),
+    2: $spacer * .5 * (14/16),
+    3: $spacer * (14/16),
+    4: $spacer * 1.5 * (14/16),
+    5: $spacer * 3 * (14/16),
+);
+
+//font
+$font-weight-lighter: 100;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 600;
+$font-weight-bolder: 800;
+$font-weight-base: $font-weight-normal;
+
+
+$min-contrast-ratio: 2.5;
+$font-family-base: Kalameh, 'sans-serif', 'Nunito';
+$font-size-base: 1rem * (14/16);
+$small-font-size: .875rem  * (14/16);
+$line-height-base: 1.5;
+$line-height-lg: 1.7;
+$enable-smooth-scroll: true;
+$enable-negative-margins: true;
+$stretched-link-z-index: 1;
+
+
+//headings
+$headings-font-weight: $font-weight-bold;
+$headings-line-height: $line-height-lg;
+$headings-margin-bottom: 1.5rem;
+
+//link
+$link-decoration: none;
+$link-hover-decoration: none;
+$link-color: #fff;
+$link-hover-color: $gold;
+
+
+//navbar
+$navbar-padding-y: .5rem;
+$navbar-padding-x: .75rem;
+$navbar-light-color: $body-text;
+$navbar-light-hover-color: $gold;
+$navbar-nav-link-padding-x: .75rem;
+$navbar-toggler-focus-width: 0;
+$nav-link-font-size: $font-size-base;
+$nav-link-font-weight: $font-weight-normal;
+$nav-link-color: $text-white;
+$nav-tabs-link-hover-border-color: transparent;
+$nav-tabs-link-active-bg: transparent;
+$nav-tabs-link-active-border-color: transparent;
+$nav-tabs-link-active-color: #00DAD0;
+//$nav-link-hover-color: $gold;
+$nav-link-transition: $transition-base;
+$nav-link-padding-x: 1.5rem;
+
+
+//button
+$btn-padding-x: 1rem;
+$btn-padding-y: .5rem;
+$btn-border-radius: $border-radius;
+$btn-font-size: $font-size-base;
+$btn-border-width: 1px;
+$btn-transition: $transition;
+
+//input and forms
+$input-padding-y: 1rem;
+$input-padding-x: 1rem;
+$input-font-family: $font-family-base;
+$input-font-size: $font-size-base;
+$input-font-weight: $font-weight-bold;
+$input-line-height: $line-height-base;
+//$input-padding-y-sm: $input-btn-padding-y-sm;
+//$input-padding-x-sm: $input-btn-padding-x-sm;
+//$input-font-size-sm: $input-btn-font-size-sm;
+//$input-padding-y-lg: $input-btn-padding-y-lg;
+//$input-padding-x-lg: $input-btn-padding-x-lg;
+//$input-font-size-lg: $input-btn-font-size-lg;
+
+$input-bg: rgba(112, 112, 112, 0.6);
+$input-disabled-bg: $lightgold;
+
+$input-color: #fff;
+$input-border-color: $clightgold;
+$input-border-width: 1px;
+$input-box-shadow: none;
+$input-border-radius: $border-radius;
+//$input-border-radius-sm: $border-radius-sm;
+//$input-border-radius-lg: $border-radius-lg;
+$input-focus-bg: $input-bg;
+$input-focus-border-color: $gold;
+$input-focus-color: $input-color;
+$input-focus-box-shadow: $box-shadow;
+$input-placeholder-color: $text-white;
+$input-plaintext-color: $body-text;
+$input-height-border: $input-border-width * 2;
+
+$input-transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+
+$form-color-width: 3rem;
+$form-label-margin-bottom: .5rem;
+$form-label-font-size: null;
+$form-label-font-style: null;
+$form-label-font-weight: null;
+$form-label-color: null;
+
+//accordion
+$accordion-button-focus-border-color:$lightgold;
+
+//cards
+$card-bg: transparent;
+
+$theme-colors: $custom-colors;
+$colors: $custom-colors;

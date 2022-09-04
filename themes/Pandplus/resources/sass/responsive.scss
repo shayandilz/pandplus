@@ -1,0 +1,164 @@
+@include media-breakpoint-up(lg) {
+  #Social {
+    transform: translateX(-80px);
+  }
+  #Graphic {
+    transform: translateY(40px);
+  }
+  .background-service {
+    border-color: #EABCFF !important;
+    --fallback-background-color: #000000d1;
+    background-color: #000000d1;
+    border: 1px solid;
+  }
+  @supports (backdrop-filter: blur()) {
+    .background-service {
+      background-color: #eabcff1c;
+      backdrop-filter: blur(3px);
+    }
+
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .service-character {
+    bottom: 240px;
+
+    svg {
+      transform: none;
+    }
+  }
+  .mouse-down {
+    position: absolute;
+    bottom: 50px;
+    z-index: 100;
+  }
+  footer > div > div {
+    flex-flow: row wrap !important;
+  }
+  .svg-section div:last-child svg {
+    transform: scale(1.2) translateY(190px) !important;
+    opacity: 0.4;
+  }
+  //    blog-archive
+  .custom__arrows {
+    position: relative !important;
+    width: 100% !important;
+    top: -30px !important;
+  }
+  .icon-badge {
+    height: auto !important;
+    display: inline-table;
+  }
+
+  .section-1 > {
+    div:first-child {
+      justify-content: center;
+    }
+
+    div:nth-child(2) {
+      justify-content: end;
+    }
+
+    div:nth-child(3) {
+      justify-content: start;
+    }
+
+    div:nth-child(4) {
+      justify-content: end;
+    }
+
+    div:nth-child(5) {
+      justify-content: start;
+    }
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  #navbarNav .nav-link {
+    padding: 1rem .5rem !important;
+  }
+  .grid {
+    display: flex !important;
+    flex-flow: row wrap;
+
+    > div {
+      flex: 0 0 auto !important;
+      width: 100% !important;
+    }
+  }
+  #main-header {
+    width: 90%;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .svg-section div:last-child svg {
+    transform: scale(2) translateY(270px) !important;
+  }
+  .fs-1 {
+    font-size: calc(1.325rem + 1.4vw) !important;
+  }
+
+  .fs-2 {
+    font-size: calc(1.275rem + 0.8vw) !important;
+  }
+
+  .fs-3 {
+    font-size: calc(1.25rem + 0.5vw) !important;
+  }
+
+  .fs-4 {
+    font-size: calc(1.225rem + 0.2vw) !important;
+  }
+
+  .fs-5 {
+    font-size: 1.2rem !important;
+  }
+
+  .fs-6, p, span {
+    font-size: 0.95rem !important;
+    line-height: 1.7;
+  }
+
+  small, .small {
+    font-size: 0.875rem !important;
+  }
+
+  .svg-section .row {
+    height: 370px;
+  }
+  #canvas {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .card.services {
+    &:after {
+      opacity: 1;
+      z-index: 10;
+    }
+  }
+
+  .card.services .overlay-bottom,
+  .card.services .overlay-top {
+    opacity: 1;
+    z-index: 11;
+  }
+
+}
+
+
+@include media-breakpoint-up(md) {
+
+}
+
+@include media-breakpoint-down(md) {
+  .small-md-down {
+    font-size: $small-font-size !important;
+  }
+  .custom__arrows {
+    top: auto !important;
+  }
+
+
+}
