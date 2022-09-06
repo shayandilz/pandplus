@@ -2,6 +2,7 @@
 /public/hot
 /public/storage
 /public
+/.npmrc
 /storage/*.key
 /vendor
 .env
