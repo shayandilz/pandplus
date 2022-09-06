@@ -6,7 +6,7 @@ $args_cat = array(
     'taxonomy' => 'portfolio_categories',
     'orderby' => 'name',
     'order' => 'ASC'
-);
+); 
 $cats = get_categories($args_cat);
 ?>
     <section class="container z-top position-relative default-margin-top min-vh-100">
