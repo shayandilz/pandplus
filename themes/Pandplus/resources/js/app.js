@@ -117,51 +117,6 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('section.menu__body').classList.toggle('show');
 
     });
-
-    (async () => {
-        await tsParticles.load('tsparticles', {
-            background: {
-                color: "transparent"
-            },
-            particles: {
-                number: {
-                    value: 60
-                },
-                color: {
-                    value: "#ffffff"
-                },
-                shape: {
-                    type: "circle"
-                },
-                opacity: {
-                    value: { min: 0, max: 1 },
-                    animation: {
-                        count: .10,
-                        enable: true,
-                        speed: 60,
-                        startValue: "min",
-                        sync: false
-                    }
-                },
-                size: {
-                    value: { min: 0.5, max: 1.3 }
-                },
-                move: {
-                    enable: true,
-                    speed: {
-                        min: 0,
-                        max: .1
-                    },
-                    direction: "none",
-                    straight: false,
-                    outModes: {
-                        default: "out"
-                    }
-                }
-            }
-        });
-    })();
-
 });
 
 

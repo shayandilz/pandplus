@@ -32,9 +32,6 @@ $cats = get_categories($args_cat);
                                     aria-controls="cat-<?php echo $cat->term_taxonomy_id ?>"
                                     aria-selected="true">
                                 <?php echo $cat->name; ?>
-                                <span class="position-absolute top-0 start-100 translate-middle-x">
-                                     <?php echo $cat->category_count; ?>
-                                </span>
                             </button>
                         </li>
                     <?php }

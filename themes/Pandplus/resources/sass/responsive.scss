@@ -42,7 +42,6 @@
   }
   .svg-section div:last-child svg {
     transform: scale(1.2) translateY(190px) !important;
-    opacity: 0.4;
   }
   //    blog-archive
   .custom__arrows {
@@ -98,7 +97,7 @@
 
 @include media-breakpoint-down(sm) {
   .svg-section div:last-child svg {
-    transform: scale(2) translateY(270px) !important;
+    transform: scale(2) translateY(270px) translateX(-15px) !important;
   }
   .fs-1 {
     font-size: calc(1.325rem + 1.4vw) !important;

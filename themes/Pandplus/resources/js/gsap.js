@@ -4,15 +4,20 @@ import $ from "jquery";
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import DrawSVGPlugin from "gsap/DrawSVGPlugin";
 import MorphSVGPlugin from "gsap/MorphSVGPlugin";
+import TextPlugin from "gsap/TextPlugin";
 
 
-
-gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MorphSVGPlugin)
+gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MorphSVGPlugin, TextPlugin)
 MorphSVGPlugin.defaultType = "linear";
 
 
 $(function () {
-
+    let tween = gsap.to("#text", {
+        text: {value: "آژانس دیجیتال مارکتینگ" + "<br>" + "پندپلاس"},
+        duration: 5,
+        delay: 1,
+        ease: "none"
+    })
 
     if ($('body').is('.single-service')) {
         let circle = document.querySelector("#circle")
@@ -37,7 +42,7 @@ $(function () {
 
 
     }
-    if ($('body').is('.single-services')){
+    if ($('body').is('.single-services')) {
         gsap.to(".bounce-gsap", {duration: 1.0, y: 20, ease: "circ.in", repeat: -1, yoyo: true})
         //glow numbers
         gsap.fromTo('.glow-numbers path',
@@ -68,7 +73,7 @@ $(function () {
             })
 
     }
-    if ($('body').is('.home') ) {
+    if ($('body').is('.home')) {
         let speed = 1
         let heroSvg = gsap.timeline({
             scrollTrigger: {
@@ -79,12 +84,6 @@ $(function () {
             }
         })
         heroSvg.to('.mouse-down svg', {y: -140 * speed, opacity: -20})
-        heroSvg.fromTo(".bg__metah .svg", {scale: 1, opacity: 1, duration: 1}, {
-            scale: 60 * speed,
-            opacity: -17,
-            ease: "power1.in"
-        }, 0)
-
 
         //line draw for main page
         let lineSVG = gsap.timeline({
@@ -190,7 +189,12 @@ $(function () {
         }, {stagger: {each: 0.1, from: "random"}, duration: 0.1, fill: 'transparent', repeat: -1, yoyo: true})
 
         //mouth animation
-        gsap.fromTo('.mouth-down', {duration: 1, y: 2, repeat: -1, yoyo: true}, {duration: 1,y: 5, repeat: -1, yoyo: true})
+        gsap.fromTo('.mouth-down', {duration: 1, y: 2, repeat: -1, yoyo: true}, {
+            duration: 1,
+            y: 5,
+            repeat: -1,
+            yoyo: true
+        })
         let section1 = gsap.timeline({
             scrollTrigger: {
                 trigger: ".section-1",
@@ -211,17 +215,31 @@ $(function () {
             }
         }),
             ScrollTrigger.matchMedia({
-            "(max-width: 1080px)": function () {
-                section1.fromTo("#Strategy", 1, {y: "100", opacity: "0"}, {y: "-190",scale:1.3, opacity: "0.5"})
-                section1.fromTo("#Website", 1, {y: "100",x:"100", opacity: "0"}, {y: "40",scale:1.3,x:"60", opacity: "0.5"})
-                section1.fromTo("#Graphic", 1, {y: "100", opacity: "0"}, {y: "50",scale:1.3, opacity: "0.5"})
-                section1.fromTo("#Content", 1, {y: "100",x:"100", opacity: "0"}, {y: "280",scale:1.3,x:"100", opacity: "0.5"})
-                section1.fromTo("#Social", 1, {y: "100", opacity: "0"}, {y: "300",x:"90",scale:1.3, opacity: "0.5"})
-            }
-        })
+                "(max-width: 1080px)": function () {
+                    section1.fromTo("#Strategy", 1, {y: "100", opacity: "0"}, {y: "-190", scale: 1.3, opacity: "0.5"})
+                    section1.fromTo("#Website", 1, {y: "100", x: "100", opacity: "0"}, {
+                        y: "40",
+                        scale: 1.3,
+                        x: "60",
+                        opacity: "0.5"
+                    })
+                    section1.fromTo("#Graphic", 1, {y: "100", opacity: "0"}, {y: "50", scale: 1.3, opacity: "0.5"})
+                    section1.fromTo("#Content", 1, {y: "100", x: "100", opacity: "0"}, {
+                        y: "280",
+                        scale: 1.3,
+                        x: "100",
+                        opacity: "0.5"
+                    })
+                    section1.fromTo("#Social", 1, {y: "100", opacity: "0"}, {
+                        y: "300",
+                        x: "90",
+                        scale: 1.3,
+                        opacity: "0.5"
+                    })
+                }
+            })
 
     }
-
 
     ScrollTrigger.matchMedia({
         "(min-width: 1080px)": function () {
@@ -235,23 +253,6 @@ $(function () {
                     }
                 })
             }
-            if ($('body').is('.home')){
-                let tl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: ".social-cards",
-                        start: "-20px center",
-                        end: "90px center",
-                        scrub: 1,
-                    }
-                })
-                tl.fromTo(".social-cards > li:first-child",
-                    {translateX: -170, translateY: 10, rotate: 4, scale: 0.85},
-                    {translateX: 0, translateY: 0, rotate: 0, scale: 1}, 0)
-                tl.fromTo(".social-cards > li:last-child",
-                    {translateX: 170, translateY: 10, rotate: -4, scale: 0.85},
-                    {translateX: 0, translateY: 0, rotate: 0, scale: 1}, 0)
-            }
-
         }
     })
 

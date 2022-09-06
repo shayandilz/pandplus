@@ -6,9 +6,8 @@
 </a>
 <div class="hero z-top position-relative overflow-hidden vh-100 container d-flex align-items-center justify-content-lg-start justify-content-center">
     <div class="row justify-content-center align-items-center">
-        <h1 class="text-white">
-            آژانس دیجیتال مارکتینگ<br>
-            پندپلاس
+        <h1 id="text" class="text-white">
+
         </h1>
     </div>
 

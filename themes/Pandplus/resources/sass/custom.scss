@@ -175,8 +175,10 @@
 .wc-field-submit {
   @extend .justify-content-end;
 
+
   input {
-    font-family: Kalameh !important;
+    font-family: Iransans !important;
+    border: 1px solid transparent !important;
   }
 
   :hover {
@@ -374,7 +376,9 @@
     }
   }
 }
-
+.blog-sticky img{
+  @extend .overflow-hidden, .rounded-1;
+}
 .is-affixed .sidebar__inner {
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   padding-right: calc(var(--bs-gutter-x) * 0.5);
