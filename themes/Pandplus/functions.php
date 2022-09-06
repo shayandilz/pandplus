@@ -5,14 +5,11 @@
 
 function amaco_scripts()
 {
-
     //    <!-- Icons -->
-    wp_enqueue_style('font', get_template_directory_uri() . '/public/fonts/Kalameh/fontface.css', array() );
+    wp_enqueue_style('font', get_template_directory_uri() . '/public/fonts/Iran/fontface.css', array() );
     wp_enqueue_style('style-extra', get_stylesheet_directory_uri() . '/public/css/extra-style.css', array() );
     wp_enqueue_style('style', get_stylesheet_directory_uri() . '/public/css/rtl-style.css', array() );
     wp_enqueue_script('main-js', get_template_directory_uri() . '/public/js/app.js', false, array(), false, true);
-
-
 
 }
 
@@ -143,7 +140,7 @@ function add_menu_link_class($classes, $item, $args)
 
 add_filter('nav_menu_link_attributes', 'add_menu_link_class', 1, 3);
 
-require get_template_directory() . '/inc/comments.php';
+//require get_template_directory() . '/inc/comments.php';
 
 /**
  * Generate breadcrumbs

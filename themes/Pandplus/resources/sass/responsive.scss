@@ -21,6 +21,10 @@
 }
 
 @include media-breakpoint-down(lg) {
+  .hero h1{
+    font-size: 30px;
+    text-align: center;
+  }
   .service-character {
     bottom: 240px;
 

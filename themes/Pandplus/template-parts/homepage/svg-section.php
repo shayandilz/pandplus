@@ -4,7 +4,7 @@
             while (have_rows('services_list')): the_row();?>
                 <div class="row align-items-lg-start align-items-center">
                     <div class="col-lg-5 col-12 col-xl-4 position-relative">
-                        <div class="background-service rounded-3 h-auto p-1 p-lg-3 wow animate__animated animate__fadeInUp">
+                        <div class="background-service rounded-3 text-center h-auto p-1 p-lg-3 wow animate__animated animate__fadeInUp">
                             <h2 class="fs-4"><?php the_sub_field('title'); ?></h2>
                             <?php the_sub_field('text'); ?>
                         </div>

@@ -19,8 +19,7 @@
 <body <?php body_class(); ?>>
 <?php //wp_body_open(); ?>
 <div class="custom-background position-fixed w-100 h-100 top-0 end-0">
-    <div class="box-1 position-absolute"></div>
-    <div class="box-2 position-absolute"></div>
+
 </div>
 <!-- Navbar STart -->
 <header id="main-header" class="position-fixed lazy">

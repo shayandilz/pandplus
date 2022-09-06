@@ -64,7 +64,7 @@ while (have_posts()) :
                 </div>
             </div>
         </div>
-        <div class="text-white py-4 blog-sticky">
+        <div class="text-white py-4 blog-sticky text-justify">
             <?php the_content(); ?>
         </div>
         <?php if ($posttags) { ?>

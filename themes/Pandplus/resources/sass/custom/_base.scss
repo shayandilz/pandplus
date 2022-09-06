@@ -10,7 +10,12 @@ body {
   font-size: 14px;
   color: $dark;
 }
-
+.hero h1{
+  font-size: 60px;
+}
+.text-justify{
+  text-align: justify;
+}
 // SCROLL bar styles
 ::-webkit-scrollbar {
   width: 4px;
