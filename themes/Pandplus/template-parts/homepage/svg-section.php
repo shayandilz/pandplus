@@ -1,4 +1,4 @@
-<section id="first_section" class="svg-section py-5 position-relative z-top">
+<section id="first_section" class="svg-section py-5 position-relative z-top custom-background">
     <div class="container h-100 text-white text-center z-top section-1">
         <?php if (have_rows('services_list')): $i = 0;
             while (have_rows('services_list')): the_row();?>

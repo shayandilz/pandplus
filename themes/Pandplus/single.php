@@ -19,7 +19,7 @@ while (have_posts()) :
     ?>
     <section class="container z-top position-relative default-margin-top ">
     <div class="row justify-content-start align-items-start flex-lg-row flex-column-reverse">
-    <div class="col-lg-8 col-12 text-white ps-lg-0">
+    <article class="col-lg-8 col-12 text-white ps-lg-0">
         <div class="d-inline">
             <span class="badge background-blur rounded-3 p-2 link-white lazy">
                 <?php the_category('  ,  '); ?>
@@ -30,7 +30,7 @@ while (have_posts()) :
         </h1>
         <div class="row justify-content-md-between justify-content-center align-items-center">
             <div class="col-md-6 col-12">
-                <div class="d-flex justify-content-md-start justify-content-center align-items-center">
+                <div class="d-flex justify-content-start align-items-center">
                     <div class="lazy me-2">
                         <?php get_template_part('template-parts/author'); ?>
                     </div>
@@ -44,23 +44,65 @@ while (have_posts()) :
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-12 text-md-end text-center mt-3 mt-lg-0">
-                <div class="d-inline">
-                            <span class="p-2 m-2 rounded-pill background-blur">
-                                <a href="<?php echo add_query_arg('post_action', 'like'); ?>">
-                                    <?php get_template_part('template-parts/SVG/like'); ?>
-                                </a>
-                                <?php echo ip_get_like_count('likes') ?>
-                            </span>
-                    <span class="p-2 m-2 rounded-pill background-blur">
-                                <?php get_template_part('template-parts/SVG/comment');
-                                echo get_comments_number($post->ID);
-                                ?>
-                            </span>
-                    <span class="p-2 m-2 rounded-pill background-blur">
-                                <?php get_template_part('template-parts/SVG/views');
-                                echo gt_get_post_view(); ?>
-                            </span>
+            <div class="col-md-6 col-12 text-md-end text-start mt-3 mt-lg-0">
+                <div class="d-inline-flex align-items-center">
+                    <div class="order-last order-lg-first p-2 m-2 w-auto rounded-pill background-blur menuToggle position-relative d-flex align-items-center justify-content-center">
+                        <?php get_template_part('template-parts/SVG/share'); ?>
+                        <?php get_template_part('template-parts/SVG/close'); ?>
+                        <div class="menu-share position-absolute rounded-pill">
+                            <ul class="d-flex list-unstyled justify-content-center align-items-center">
+                                <li style="--i:0.1s;">
+                                    <a href="http://www.facebook.com/share.php?<?= get_permalink() ?>"
+                                       class="px-3 text-white"
+                                       target="_blank">
+                                        <?php get_template_part('template-parts/SVG/facebook'); ?>
+                                    </a>
+                                </li>
+
+                                <li style="--i:0.2s;">
+                                    <a href="whatsapp://send?text=<?= get_permalink() ?>"
+                                       class="px-3 text-white"
+                                       target="_blank">
+                                        <?php get_template_part('template-parts/SVG/whatsapp'); ?>
+                                    </a>
+                                </li>
+
+                                <li style="--i:0.3s;">
+                                    <a href="https://telegram.me/share/url?url=<?= get_permalink() ?>"
+                                       class="px-3 text-white"
+                                       target="_blank">
+                                        <?php get_template_part('template-parts/SVG/telegram'); ?>
+                                    </a>
+                                </li>
+                                <li style="--i:0.4s;">
+                                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?= get_permalink(); ?>"
+                                       class="px-3 text-white"
+                                       target="_blank">
+                                        <?php get_template_part('template-parts/SVG/linkedin'); ?>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-2 m-2 rounded-pill background-blur d-flex align-items-center justify-content-center">
+                        <?php get_template_part('template-parts/SVG/clock');
+                        echo reading_time(); ?>
+                    </div>
+                    <div class="p-2 m-2 rounded-pill background-blur d-flex align-items-center justify-content-center">
+                        <a href="<?php echo add_query_arg('post_action', 'like'); ?>">
+                            <?php get_template_part('template-parts/SVG/like'); ?>
+                        </a>
+                        <?php echo ip_get_like_count('likes') ?>
+                    </div>
+                    <div class="p-2 m-2 rounded-pill background-blur d-flex align-items-center justify-content-center">
+                        <?php get_template_part('template-parts/SVG/comment');
+                        echo get_comments_number($post->ID);
+                        ?>
+                    </div>
+                    <div class="p-2 m-2 rounded-pill background-blur d-flex align-items-center justify-content-center">
+                        <?php get_template_part('template-parts/SVG/views');
+                        echo gt_get_post_view(); ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -74,9 +116,10 @@ while (have_posts()) :
                     </span>
                 <div>
                     <?php foreach ($posttags as $tag) { ?>
-                        <a href="<?php echo get_tag_link($tag->term_id) ?>" class="fw-normal badge background-blur rounded-1 m-1 p-2">
-                                <?php echo $tag->name ?>
-                            </a>
+                        <a href="<?php echo get_tag_link($tag->term_id) ?>"
+                           class="fw-normal badge background-blur rounded-1 m-1 p-2">
+                            <?php echo $tag->name ?>
+                        </a>
                     <?php } ?>
                 </div>
             </div>
@@ -91,14 +134,14 @@ while (have_posts()) :
             endif;
             ?>
         </div>
-    </div>
+    </article>
     <div class="col-lg-4 col-12 ">
     <div class="ratio ratio-1x1 rounded-1 overflow-hidden mb-3">
         <img class="img-fluid overflow-hidden rounded-1 object-fit lazy"
              src="<?php
              if (has_post_thumbnail($post->ID)) {
                  echo get_the_post_thumbnail_url();
-             }else{
+             } else {
                  echo esc_url(site_url()) . "/wp-content/uploads/2022/08/doc.jpg";
              }
              ?>"
@@ -116,3 +159,5 @@ wp_reset_query(); ?>
     </div>
     </section>
 <?php get_footer();
+
+

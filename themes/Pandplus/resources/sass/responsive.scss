@@ -16,11 +16,23 @@
       background-color: #eabcff1c;
       backdrop-filter: blur(3px);
     }
-
+  }
+  .svg-section {
+    margin-top: 120vh;
+  }
+  .hero{
+    position: fixed;
+    top: 0;
   }
 }
 
 @include media-breakpoint-down(lg) {
+  .hero{
+    position: relative;
+  }
+  #exampleModal .modal-dialog{
+    overflow-y: scroll;
+  }
   .hero h1{
     font-size: 30px;
     text-align: center;
@@ -96,6 +108,12 @@
 }
 
 @include media-breakpoint-down(sm) {
+  .menuToggle.active ~ div:nth-child(n+3){
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.25s;
+    transition-delay: 0.75s;
+  }
   .svg-section div:last-child svg {
     transform: scale(2) translateY(270px) translateX(-15px) !important;
   }

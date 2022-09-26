@@ -1,26 +1,43 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="yrAbFPNW03P6nVf3eS5Cdb_SsSG1uxAK4Yp7JHyKomM" />
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXP5NP4LRG"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTJDKQXKFQ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-PXP5NP4LRG');
+        gtag('config', 'G-ZTJDKQXKFQ');
     </script>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="yrAbFPNW03P6nVf3eS5Cdb_SsSG1uxAK4Yp7JHyKomM"/>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5JCSSNW');</script>
+    <!-- End Google Tag Manager -->
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JCSSNW"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
 <?php //wp_body_open(); ?>
-<div class="custom-background position-fixed w-100 h-100 top-0 end-0">
-
-</div>
 <!-- Navbar STart -->
 <header id="main-header" class="position-fixed lazy">
     <div class="flex-nowrap">
@@ -43,7 +60,7 @@
                 </svg>
             </button>
             <div class="d-xl-flex d-none background-blur align-items-center order-3 ms-auto rounded-3">
-                <div class="order-xl-2 order-last" id="navbarNav">
+                <div id="navbarNav">
                     <?php
                     wp_nav_menu(array(
                         'theme_location' => 'headerMenuLocation',
@@ -55,12 +72,19 @@
                     ));
                     ?>
                 </div>
+                <button type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                        id="button-cta"
+                        class="background-radial rounded-1 text-white btn btn-gold fw-bold fs-5 px-md-5 py-1 d-md-block ms-3">
+                    مشاوره
+                </button>
             </div>
         </nav>
     </div>
 
     <section class="menu__body background-blur d-block h-100 pb-2 position-fixed bottom-0">
-        <nav class="menu__header navbar flex-column">
+        <nav class="menu__header navbar flex-column align-items-end">
             <a class="navbar-brand border-bottom w-100 py-3 text-end pe-3" href="/">
                 <svg xmlns="http://www.w3.org/2000/svg" width="103" height="31" viewBox="0 0 103 31" fill="none">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -81,6 +105,12 @@
                 'depth' => 1
             ));
             ?>
+            <button type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    class="text-white nav-link fs-2 bg-transparent border-0 text-end pe-3">
+                مشاوره
+            </button>
         </nav>
 
     </section>

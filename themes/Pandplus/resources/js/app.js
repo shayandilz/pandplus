@@ -44,7 +44,12 @@ wow.init();
 
 document.addEventListener('DOMContentLoaded', function () {
 
-
+    if (document.querySelector('.menuToggle')){
+        let menuToggle = document.querySelector('.menuToggle');
+        menuToggle.onclick = function () {
+            menuToggle.classList.toggle('active')
+        }
+    }
     if (document.getElementById('playerModal')) {
         [].slice.call(document.querySelectorAll('.play-btn[data-bs-toggle="modal"]')).map(function (El) {
             El.addEventListener('click', function () {

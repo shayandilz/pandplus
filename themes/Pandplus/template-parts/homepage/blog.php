@@ -1,4 +1,5 @@
-<section class="container-lg container-fluid py-5 z-top position-relative">
+<section class=" py-5 z-top position-relative custom-background">
+<div class="container-lg container-fluid">
     <div class="text-center mb-4">
         <?php
         $blog_title = get_field('home_blog-title');
@@ -46,4 +47,5 @@
             </a>
         </div>
     </div>
+</div>
 </section>

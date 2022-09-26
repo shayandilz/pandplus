@@ -1,4 +1,4 @@
-<section class="container py-5 z-top position-relative">
+<section class="container py-5 z-top position-relative custom-background">
     <div class="row justify-content-center wow animate__animated animate__fadeIn animate__delay-1s">
         <div class="col-lg-4 col-12 mb-4 mb-lg-0">
             <div class="background-blur rounded-1 text-white h-100 p-2" >
