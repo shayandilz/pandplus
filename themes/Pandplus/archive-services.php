@@ -20,13 +20,26 @@ get_header(); ?>
                     );
                     $loop = new WP_Query($args);
                     if ($loop->have_posts()) {
-                        while ($loop->have_posts()) : $loop->the_post(); ?>
-                            <li class="col-lg-4 col-6">
+                        while ($loop->have_posts()) : $loop->the_post();
+                            $service_cat = get_the_terms(get_the_ID(), 'services_categories');
+                        ?>
+                            <li class="col-lg col-6">
                                 <a href="<?php the_permalink(); ?>"
                                    class="card mb-2 border-0 lazy rounded-1 no-translate overflow-hidden" style="isolation: isolate">
-                                    <div class="ratio lazy ratio-1x1 background-blur">
-                                        <img src="<?php echo get_the_post_thumbnail_url() ?>"
-                                             alt="<?php the_title(); ?>">
+                                    <div class="ratio lazy ratio-1x1 background-blur service-hover">
+                                        <?php foreach ($service_cat as $cats) {
+                                            if ($cats->slug == 'website'){
+                                                get_template_part('template-parts/services/website');
+                                            }elseif ($cats->slug == 'social'){
+                                                get_template_part('template-parts/services/social');
+                                            }elseif ($cats->slug == 'graphics'){
+                                                get_template_part('template-parts/services/graphic');
+                                            }elseif ($cats->slug == 'strategy'){
+                                                get_template_part('template-parts/services/strategy');
+                                            }elseif ($cats->slug == 'content'){
+                                                get_template_part('template-parts/services/content');
+                                            }
+                                        } ?>
                                     </div>
 
                                     <div class="background-blur-insta p-3 rounded-1z-top d-flex justify-content-between align-items-center">

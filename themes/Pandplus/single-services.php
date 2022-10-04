@@ -47,24 +47,20 @@ while (have_posts()) : the_post();
             <div class="col-lg-4 col-12">
                 <div class="position-relative service-hover">
                     <div class="rounded-1 overflow-hidden mb-3 background-blur rounded-3 z-top">
-
-                        <?php get_template_part('template-parts/services/website'); ?>
+                        <?php foreach ($service_cat as $cats) {
+                            if ($cats->slug == 'website'){
+                                get_template_part('template-parts/services/website');
+                            }elseif ($cats->slug == 'social'){
+                                get_template_part('template-parts/services/social');
+                            }elseif ($cats->slug == 'graphics'){
+                                get_template_part('template-parts/services/graphic');
+                            }elseif ($cats->slug == 'strategy'){
+                                get_template_part('template-parts/services/strategy');
+                            }elseif ($cats->slug == 'content'){
+                                get_template_part('template-parts/services/content');
+                            }
+                        } ?>
                     </div>
-<!--                    <div class="position-absolute w-100 bounce-gsap service-character">-->
-<!--                        --><?php //foreach ($service_cat as $cats) {
-//                            if ($cats->slug == 'website'){
-//                                get_template_part('template-parts/services/website');
-//                            }elseif ($cats->slug == 'social'){
-//                                get_template_part('template-parts/SVG/social');
-//                            }elseif ($cats->slug == 'graphics'){
-//                                get_template_part('template-parts/SVG/graphics');
-//                            }elseif ($cats->slug == 'strategy'){
-//                                get_template_part('template-parts/SVG/strategy');
-//                            }elseif ($cats->slug == 'content'){
-//                                get_template_part('template-parts/SVG/content');
-//                            }
-//                        } ?>
-<!--                    </div>-->
                 </div>
 
             </div>

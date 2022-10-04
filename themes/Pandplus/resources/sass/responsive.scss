@@ -1,4 +1,7 @@
 @include media-breakpoint-up(lg) {
+  .no-overflow{
+    overflow: hidden!important;
+  }
   #Social {
     transform: translateX(-80px);
   }

@@ -6,10 +6,14 @@
 </a>
 <div class="hero  overflow-hidden vh-100 container-fluid d-flex align-items-center justify-content-lg-start justify-content-center">
     <div class="row justify-content-center align-items-center w-100">
-        <div class="col-lg-4 col-12">
-            <h1 id="text" class="text-white">
-
+        <div class="col-lg-4 col-12" id="text-hero">
+            <h1 class="text-white display-3 fw-bold mb-0 mb-lg-2">
+                آژانس دیجیتال مارکتینگ
             </h1>
+            <br>
+            <h2 id="text" class="text-white display-3 fw-bold text-lg-start text-center">
+
+            </h2>
         </div>
         <div class="col-lg-6 col-12">
             <?php get_template_part('template-parts/SVG/hero-svg'); ?>

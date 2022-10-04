@@ -20,11 +20,11 @@ get_header();
     <section class="container-xl container-fluid z-top position-relative pt-5">
         <?php
         if (have_posts()) : ?>
-            <div class="row g-3">
+            <div class="row g-3 flex-row flex-nowrap flex-lg-wrap overflow-scroll no-overflow">
                 <?php /* Start the Loop */
                 while (have_posts()) :
                     the_post(); ?>
-                    <article class="col-6 col-lg-3">
+                    <article class="col-10 col-lg-3">
                         <div class="rounded-1 overflow-hidden">
                             <?php get_template_part('template-parts/post-card'); ?>
                         </div>

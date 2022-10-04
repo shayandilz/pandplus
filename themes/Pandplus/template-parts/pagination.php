@@ -10,17 +10,17 @@
                 <?php echo '<ul class="pagination justify-content-center align-items-center">';
                 // get_previous_posts_link will return a string or void if no link is set.
                 if ($prev_posts_link = get_previous_posts_link(__('قبلی'))) :
-                    echo '<li class="prev-list-item page-item me-4 ">';
+                    echo '<li class="prev-list-item page-item me-lg-4 me-1 ">';
                     echo $prev_posts_link;
                     echo '</li>';
                 endif;
-                echo '<li class="page-item me-4">';
-                echo join('</li><li class="page-item me-4">', $links);
+                echo '<li class="page-item me-lg-4 me-1">';
+                echo join('</li><li class="page-item me-lg-4 me-1">', $links);
                 echo '</li>';
 
                 // get_next_posts_link will return a string or void if no link is set.
                 if ($next_posts_link = get_next_posts_link(__('بعدی'))) :
-                    echo '<li class="next-list-item page-item me-4">';
+                    echo '<li class="next-list-item page-item me-lg-4 me-1">';
                     echo $next_posts_link;
                     echo '</li>';
                 endif;

@@ -37,7 +37,7 @@ if (is_home() && !is_category() && 1 == $paged) {
 
                     <article class="h-100 row ">
                         <div class="col-12 overflow-hidden row flex-xl-row-reverse flex-row g-0">
-                            <div class="col-4 position-relative blog-archive">
+                            <div class="col-12 col-lg-4 position-relative blog-archive">
                                 <div class="position-relative">
                                     <div class="rounded-1 overflow-hidden">
                                         <a href="<?php the_permalink(); ?>">
@@ -55,7 +55,7 @@ if (is_home() && !is_category() && 1 == $paged) {
                                     <?php } ?>
                                 </div>
                             </div>
-                            <div class="col-8 text-white px-xl-4 p-3">
+                            <div class="col-12 col-lg-8 text-white px-xl-4 p-3">
                                 <a class="text-white" href="<?php the_permalink(); ?>">
                                     <h4><?php the_title(); ?></h4>
                                 </a>
@@ -111,11 +111,11 @@ if (is_home() && !is_category() && 1 == $paged) {
     <section class="container-xl container-fluid z-top position-relative pt-5">
         <?php
         if (have_posts()) : ?>
-            <div class="row g-3">
+            <div class="row g-3 flex-row flex-nowrap flex-lg-wrap overflow-scroll no-overflow">
                 <?php /* Start the Loop */
                 while (have_posts()) :
                     the_post(); ?>
-                    <article class="col-6 col-lg-3">
+                    <article class="col-10 col-lg-3">
                         <div class="rounded-1 overflow-hidden">
                             <?php get_template_part('template-parts/post-card'); ?>
                         </div>

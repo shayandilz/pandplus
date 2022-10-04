@@ -25,9 +25,9 @@ $(function () {
     if (home.length) {
         // text typewriter
         let tween = gsap.to("#text", {
-            text: {value: "آژانس دیجیتال مارکتینگ" + "<br>" + "پندپلاس"},
-            duration: 5,
-            delay: 1,
+            text: {value: "پندپلاس"},
+            duration: 2,
+            delay: 0.4,
             ease: "none"
         })
         //line draw for main page
@@ -64,12 +64,11 @@ $(function () {
                         trigger: ".hero",
                         start: "top 30px",
                         end: "bottom center",
-                        scrub: 3,
-                        snap: true
+                        scrub: 3
                     }
                 })
                 heroSvg.to('.mouse-down svg', {y: -140 * speed, opacity: -20})
-                heroSvg.fromTo('#text', {opacity: 1}, {opacity: 0})
+                heroSvg.fromTo('#text-hero', {opacity: 1}, {opacity: 0})
                 heroSvg.fromTo('#hero-office', {x: 0}, {x: 290})
                 heroSvg.fromTo('#hero-office > g:not(#office-1)', {opacity: 1}, {opacity: 0})
                 heroSvg.fromTo('#hero-office', {scale: 1}, {scale: 1.5})
@@ -225,6 +224,7 @@ $(function () {
         })
     }
 
+    //website service
     let website = gsap.utils.toArray('#website1,' + '#website2');
     if (website.length) {
 
@@ -259,7 +259,12 @@ $(function () {
                 }
             ))
         }
-        gsap.to("#coffee2", {morphSVG: {shape: `#coffee1`, type: "linear", origin: "10% 60%"},yoyo:true, duration: 1, repeat: -1})
+        gsap.to("#coffee2", {
+            morphSVG: {shape: `#coffee1`, type: "linear", origin: "10% 60%"},
+            yoyo: true,
+            duration: 1,
+            repeat: -1
+        })
 
         hover.addEventListener("mouseenter", function () {
 
@@ -271,10 +276,13 @@ $(function () {
             })
             gsap.fromTo('.glow-numbers1 path', {stagger: 0.1, duration: 0.1, fill: "transaprent"},
                 {stagger: 0.1, duration: 0.1, fill: '#ffffff'})
-            gsap.to("#website_text", {duration:"6", text:{
+            gsap.to("#website_text", {
+                duration: "6", text: {
                     value: "www.pandplus.com"
-                }})
+                }
+            })
         });
+
 
         hover.addEventListener("mouseleave", function () {
             globePlay.map(function (item) {
@@ -287,9 +295,222 @@ $(function () {
             })
             gsap.fromTo('.glow-numbers1 path', {stagger: 0.1, duration: 0.1, fill: "#ffffff"},
                 {stagger: 0.1, duration: 0.1, fill: 'transparent'})
-            gsap.to("#website_text", {duration:"3", text:{
+            gsap.to("#website_text", {
+                duration: "3", text: {
                     value: " "
-                }})
+                }
+            })
         });
+    }
+    //content service
+    let graphic = gsap.utils.toArray('#social1,' + '#social2');
+    if (graphic.length) {
+
+        MorphSVGPlugin.convertToPath("circle, rect, ellipse, line, polygon, polyline");
+
+        let hover = document.querySelector(".service-hover");
+        let pencilRot = []
+        for (let i = 0; i < 3; i++) {
+            pencilRot.push(gsap.to(`#pen1 path:nth-child(${i})`,
+                {
+                    duration: 1,
+                    morphSVG: {
+                        shape: `#pen2 path:nth-child(${i})`,
+                        type: "linear",
+                        origin: "80% 60%"
+                    }
+                }
+            ))
+        }
+        let tablet = []
+        for (let i = 0; i < 8; i++) {
+            pencilRot.push(gsap.to(`#tablet1 path:nth-child(${i})`,
+                {
+                    duration: 1,
+                    morphSVG: {
+                        shape: `#tablet2 path:nth-child(${i})`,
+                        type: "linear",
+                        origin: "80% 60%"
+                    }
+                }
+            ))
+        }
+
+        let line = []
+        for (let i = 0; i < 3; i++) {
+            line.push(gsap.to(`#line1 path:nth-child(${i})`,
+                {
+                    duration: 1,
+                    morphSVG: {
+                        shape: `#line2 path:nth-child(${i})`,
+                        type: "linear",
+                        origin: "80% 60%"
+                    }
+                }
+            ))
+        }
+        let tl = gsap.fromTo("#gear1 path:first-child",{
+            rotation: 0,
+            transformOrigin: '32px 32px'
+        },{
+            rotation: 360,
+            duration: 10,
+            repeat: -1,
+            transformOrigin: '30px 30px',
+            ease: "linear"
+        },0);
+
+        let tl1 = gsap.fromTo("#gear1 path:nth-child(2)",{
+            rotation: 0,
+            transformOrigin: '50px 50px'
+        },{
+            rotation: -360,
+            transformOrigin: '50px 50px',
+            duration: 10,
+            repeat: -1,
+            ease: "linear"
+        },0);
+        gsap.fromTo('#chair', {translateX: "0px", duration: 2}, {translateX: "107px", duration: 2})
+
+        hover.addEventListener("mouseenter", function () {
+            pencilRot.map(function (item) {
+                item.reverse();
+            })
+            tablet.map(function (item) {
+                item.reverse();
+            })
+            line.map(function (item) {
+                item.reverse();
+            })
+        });
+
+        hover.addEventListener("mouseleave", function () {
+            pencilRot.map(function (item) {
+                item.play();
+            })
+            tablet.map(function (item) {
+                item.play();
+            })
+            line.map(function (item) {
+                item.play();
+            })
+        });
+    }
+
+    let content = gsap.utils.toArray('#content1,' + '#content2')
+    if(content.length){
+        MorphSVGPlugin.convertToPath("circle, rect, ellipse, line, polygon, polyline");
+
+        let boxes = []
+        for (let i = 0; i < 10; i++) {
+            boxes.push(gsap.to(`#boxes1 path:nth-child(${i})`,
+                {
+                    duration: 1,
+                    morphSVG: {
+                        shape: `#boxes2 path:nth-child(${i})`,
+                        type: "linear",
+                        origin: "80% 60%"
+                    }
+                }
+            ))
+        }
+
+        let flower = []
+        for (let i = 0; i < 40; i++) {
+            flower.push(gsap.to(`#flower1 path:nth-child(${i})`,
+                {
+                    duration: 1,
+                    morphSVG: {
+                        shape: `#flower2 path:nth-child(${i})`,
+                        type: "linear",
+                        origin: "0% 0%"
+                    }
+                }
+            ))
+        }
+
+        let hover = document.querySelector(".service-hover");
+        hover.addEventListener("mouseenter", function () {
+            boxes.map(function (item) {
+                item.reverse();
+            })
+            flower.map(function (item) {
+                item.reverse();
+            })
+            gsap.fromTo('#chair', {translateX: "0px", duration: 2}, {translateX: "-107px", duration: 2})
+            gsap.fromTo('#lamp', {fill: "transparent", duration: 0.4}, {fill: "#fff", duration: 0.4})
+        });
+
+        hover.addEventListener("mouseleave", function () {
+            boxes.map(function (item) {
+                item.play();
+            })
+            flower.map(function (item) {
+                item.play();
+            })
+            gsap.to('#chair', {translateX: "0px", duration: 2})
+            gsap.fromTo('#lamp', {fill: "#fff", duration: 0.4}, {fill: "transparent", duration: 0.4})
+
+        });
+    }
+
+    let strategy = gsap.utils.toArray('#strategy1,' + '#strategy2')
+    if (strategy.length){
+        MorphSVGPlugin.convertToPath("circle, rect, ellipse, line, polygon, polyline");
+
+        // let leftChat = []
+        // for (let i = 0; i < 50; i++) {
+        //     leftChat.push(gsap.to(`#left-chat1 path:nth-child(${i})`,
+        //         {
+        //             duration: 1,
+        //             morphSVG: {
+        //                 shape: `#left-chat2 path:nth-child(${i})`,
+        //                 type: "rectangle",
+        //                 origin: "0% 100%"
+        //             }
+        //         }
+        //     ))
+        // }
+        // let rightChat = []
+        // for (let i = 0; i < 50; i++) {
+        //     rightChat.push(gsap.to(`#right-chat1 path:nth-child(${i})`,
+        //         {
+        //             duration: 1,
+        //             morphSVG: {
+        //                 shape: `#right_chat2 path:nth-child(${i})`,
+        //                 type: "linear",
+        //                 origin: "80% 60%"
+        //             }
+        //         }
+        //     ))
+        // }
+        let hover = document.querySelector(".service-hover");
+        hover.addEventListener("mouseenter", function () {
+            // gsap.fromTo("#circle_strategy1",{
+            //     rotation: 0,
+            // },{
+            //     rotation: 60,
+            //     duration: 4,
+            //     transformOrigin: '230px 260px',
+            //     ease: "linear"
+            // },0);
+            // leftChat.map(function (item) {
+            //     item.reverse();
+            // })
+            // rightChat.map(function (item) {
+            //     item.reverse();
+            // })
+
+        });
+
+        hover.addEventListener("mouseleave", function () {
+            // leftChat.map(function (item) {
+            //     item.play();
+            // })
+            // rightChat.map(function (item) {
+            //     item.play();
+            // })
+        });
+
     }
 });
