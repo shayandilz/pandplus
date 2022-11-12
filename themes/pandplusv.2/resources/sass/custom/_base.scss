@@ -1,0 +1,38 @@
+html, body {
+  overflow-x: hidden;
+
+}
+body {
+  //font-size: 14px;
+  //color: $dark;
+  //background-color: $backg;
+}
+
+.text-justify{
+  text-align: justify;
+}
+// SCROLL bar styles
+::-webkit-scrollbar {
+
+}
+
+::-webkit-scrollbar-track {
+
+}
+
+::-webkit-scrollbar-thumb {
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+}
+
+
+.object-fit {
+  object-fit: cover;
+}
+
+.z-top {
+  z-index: 10;
+}

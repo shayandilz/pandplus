@@ -1,0 +1,62 @@
+//COLOR
+$body-color: #ffffff;
+$body-text: #5E6972;
+$light: rgba(255, 255, 255, 0.5);
+$dark: rgba(26, 25, 29, 0.95);
+
+$gunmetal: #2B303E;
+
+$primary: #4c328b;
+$secondary: #6be3bd;
+$warning: #fbbb01;
+$transparent: #ffffff;
+//
+//$custom-colors: (
+//        "primary": $primary,
+//        "secondary": $secondary,
+//        "warning": $warning
+//);
+//
+//$button-colors: (
+//        "primary": $primary,
+//        "secondary": $secondary,
+//        "warning": $warning,
+//        "gr_btn": $secondary,
+//);
+//border radius
+$border-radius: 10px;
+$border-radius-sm: 15px;
+$border-radius-lg: 30px;
+
+//base class variables
+$transition-base: all .4s;
+$transition-fast: all .2s ease-in-out;
+$transition: all .4s ease-in-out;
+$transition-slow: all .6s;
+
+//FONTS
+$font-weight-normal: 400;
+$font-weight-bold: 500;
+$font-weight-semibold: 700;
+$font-weight-bolder: 900;
+$font-weight-base: $font-weight-normal;
+
+$min-contrast-ratio: 2.5;
+$font-family-base: Iransans, 'sans-serif', 'Nunito';
+$font-size-base: 1rem * (14/16);
+$small-font-size: .875rem  * (14/16);
+$line-height-base: 1.5;
+$line-height-lg: 1.7;
+$enable-smooth-scroll: true;
+$enable-negative-margins: true;
+$stretched-link-z-index: 1;
+
+
+//link
+//$link-decoration: none;
+//$link-hover-decoration: none;
+//$link-color: #fff;
+//$link-hover-color: $gold;
+
+//$theme-colors: $custom-colors;
+//$colors: $custom-colors;
