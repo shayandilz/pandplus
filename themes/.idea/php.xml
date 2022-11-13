@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/www-pandplus-com/vendor/gettext/languages" />
+      <path value="$PROJECT_DIR$/www-pandplus-com/vendor/phpcompatibility/phpcompatibility-wp" />
+      <path value="$PROJECT_DIR$/www-pandplus-com/vendor/gettext/gettext" />
+      <path value="$PROJECT_DIR$/www-pandplus-com/vendor/phpcompatibility/phpcompatibility-paragonie" />
+      <path value="$PROJECT_DIR$/www-pandplus-com/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/www-pandplus-com/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/www-pandplus-com/vendor/wp-coding-standards/wpcs" />
+      <path value="$PROJECT_DIR$/www-pandplus-com/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/www-pandplus-com/vendor/composer" />
+      <path value="$PROJECT_DIR$/www-pandplus-com/vendor/eftec/bladeone" />
+      <path value="$PROJECT_DIR$/www-pandplus-com/vendor/rmccue/requests" />
+      <path value="$PROJECT_DIR$/www-pandplus-com/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/www-pandplus-com/vendor/mck89/peast" />
+      <path value="$PROJECT_DIR$/www-pandplus-com/vendor/mustache/mustache" />
+      <path value="$PROJECT_DIR$/www-pandplus-com/vendor/wp-cli/mustangostang-spyc" />
+      <path value="$PROJECT_DIR$/www-pandplus-com/vendor/sirbrillig/phpcs-variable-analysis" />
+      <path value="$PROJECT_DIR$/www-pandplus-com/vendor/wp-cli/i18n-command" />
+      <path value="$PROJECT_DIR$/www-pandplus-com/vendor/sirbrillig/phpcs-changed" />
+      <path value="$PROJECT_DIR$/www-pandplus-com/vendor/wp-cli/wp-cli" />
+      <path value="$PROJECT_DIR$/www-pandplus-com/vendor/phpcompatibility/php-compatibility" />
+      <path value="$PROJECT_DIR$/www-pandplus-com/vendor/wp-cli/php-cli-tools" />
+      <path value="$PROJECT_DIR$/www-pandplus-com/vendor/dealerdirect/phpcodesniffer-composer-installer" />
+    </include_path>
+  </component>
+</project>

@@ -116,7 +116,7 @@ if (is_home() && !is_category() && 1 == $paged) {
                 while (have_posts()) :
                     the_post(); ?>
                     <article class="col-10 col-lg-3">
-                        <div class="rounded-1 overflow-hidden">
+                        <div class="rounded-1 overflow-hidden" style="isolation: isolate">
                             <?php get_template_part('template-parts/post-card'); ?>
                         </div>
                     </article>

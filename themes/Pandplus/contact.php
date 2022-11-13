@@ -6,7 +6,7 @@ get_header();
 ?>
 
     <section class="position-relative z-top">
-        <div class="w-100">
+        <div class="w-100 bg-shadow position-relative">
             <?php the_field('iframe_google', 'option'); ?>
         </div>
         <div class="container">

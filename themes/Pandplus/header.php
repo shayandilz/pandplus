@@ -13,6 +13,10 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="yrAbFPNW03P6nVf3eS5Cdb_SsSG1uxAK4Yp7JHyKomM"/>
+    <!--    yektanet script -->
+    <script> !function (t, e, n) {
+        t.yektanetAnalyticsObject = n, t[n] = t[n] || function () { t[n].q.push(arguments) }, t[n].q = t[n].q || []; var a = new Date, r = a.getFullYear().toString() + "0" + a.getMonth() + "0" + a.getDate() + "0" + a.getHours(), c = e.getElementsByTagName("script")[0], s = e.createElement("script"); s.id = "ua-script-NMiTglkd"; s.dataset.analyticsobject = n; s.async = 1; s.type = "text/javascript"; s.src = "https://cdn.yektanet.com/rg_woebegone/scripts_v3/NMiTglkd/rg.complete.js?v=" + r, c.parentNode.insertBefore(s, c) }(window, document, "yektanet"); </script>
+    <!--    yektanet script -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || [];
             w[l].push({

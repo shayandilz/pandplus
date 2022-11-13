@@ -1,4 +1,12 @@
 @include media-breakpoint-up(lg) {
+  .w-100.bg-shadow:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 30%;
+  }
   .no-overflow{
     overflow: hidden!important;
   }

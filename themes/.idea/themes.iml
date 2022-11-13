@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/www-pandplus-com/vendor/gettext/languages" />
+      <excludeFolder url="file://$MODULE_DIR$/www-pandplus-com/vendor/phpcompatibility/phpcompatibility-wp" />
+      <excludeFolder url="file://$MODULE_DIR$/www-pandplus-com/vendor/gettext/gettext" />
+      <excludeFolder url="file://$MODULE_DIR$/www-pandplus-com/vendor/phpcompatibility/phpcompatibility-paragonie" />
+      <excludeFolder url="file://$MODULE_DIR$/www-pandplus-com/vendor/symfony/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/www-pandplus-com/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/www-pandplus-com/vendor/wp-coding-standards/wpcs" />
+      <excludeFolder url="file://$MODULE_DIR$/www-pandplus-com/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/www-pandplus-com/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/www-pandplus-com/vendor/eftec/bladeone" />
+      <excludeFolder url="file://$MODULE_DIR$/www-pandplus-com/vendor/rmccue/requests" />
+      <excludeFolder url="file://$MODULE_DIR$/www-pandplus-com/vendor/squizlabs/php_codesniffer" />
+      <excludeFolder url="file://$MODULE_DIR$/www-pandplus-com/vendor/mck89/peast" />
+      <excludeFolder url="file://$MODULE_DIR$/www-pandplus-com/vendor/mustache/mustache" />
+      <excludeFolder url="file://$MODULE_DIR$/www-pandplus-com/vendor/wp-cli/mustangostang-spyc" />
+      <excludeFolder url="file://$MODULE_DIR$/www-pandplus-com/vendor/sirbrillig/phpcs-variable-analysis" />
+      <excludeFolder url="file://$MODULE_DIR$/www-pandplus-com/vendor/wp-cli/i18n-command" />
+      <excludeFolder url="file://$MODULE_DIR$/www-pandplus-com/vendor/sirbrillig/phpcs-changed" />
+      <excludeFolder url="file://$MODULE_DIR$/www-pandplus-com/vendor/wp-cli/wp-cli" />
+      <excludeFolder url="file://$MODULE_DIR$/www-pandplus-com/vendor/phpcompatibility/php-compatibility" />
+      <excludeFolder url="file://$MODULE_DIR$/www-pandplus-com/vendor/wp-cli/php-cli-tools" />
+      <excludeFolder url="file://$MODULE_DIR$/www-pandplus-com/vendor/dealerdirect/phpcodesniffer-composer-installer" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
