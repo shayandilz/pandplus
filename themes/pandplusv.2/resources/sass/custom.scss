@@ -28,3 +28,61 @@
 
 
 @import "responsive";
+
+a {
+  text-decoration: none!important;
+}
+//cta button
+.cta {
+  transition: 0.5s;
+  background: radial-gradient(51.35% 646.46% at 10.67% 48.65%, rgba(75, 80, 152, 0.7) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2A7FD6;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+//front page
+
+.front__banner {
+  background-image: url("/wp-content/uploads/2022/11/banner-top__image.png");
+  background-size: cover;
+  background-position: top;
+  h2 {
+    font-weight: 900;
+  }
+ }
+.call {
+  position: fixed;
+  z-index: 3;
+  right: 10%;
+  div {
+    a{
+      transform: rotate(90deg);
+      color: black;
+      &:hover::before{
+        animation: hover 250ms linear;
+      }
+      &:before {
+        background: red;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+
+}
+
+@keyframes hover {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    scale: 1.1;
+  }
+
+}

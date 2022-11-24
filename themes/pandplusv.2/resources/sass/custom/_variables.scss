@@ -1,28 +1,17 @@
 //COLOR
-$body-color: #ffffff;
+$body-color: #5E6972;
 $body-text: #5E6972;
 $light: rgba(255, 255, 255, 0.5);
 $dark: rgba(26, 25, 29, 0.95);
 
 $gunmetal: #2B303E;
 
-$primary: #4c328b;
+$primary: #408BE1;
 $secondary: #6be3bd;
 $warning: #fbbb01;
+$success: #F1F5F9;
 $transparent: #ffffff;
-//
-//$custom-colors: (
-//        "primary": $primary,
-//        "secondary": $secondary,
-//        "warning": $warning
-//);
-//
-//$button-colors: (
-//        "primary": $primary,
-//        "secondary": $secondary,
-//        "warning": $warning,
-//        "gr_btn": $secondary,
-//);
+
 //border radius
 $border-radius: 10px;
 $border-radius-sm: 15px;
@@ -58,5 +47,3 @@ $stretched-link-z-index: 1;
 //$link-color: #fff;
 //$link-hover-color: $gold;
 
-//$theme-colors: $custom-colors;
-//$colors: $custom-colors;

@@ -16,3 +16,8 @@ mix.sass('resources/sass/custom.scss', 'public/css/style.css', {}, [
     require("rtlcss")({}),
 ]).options({
     processCssUrls: true});
+mix.webpackConfig({
+    stats: {
+        children: true,
+    },
+});

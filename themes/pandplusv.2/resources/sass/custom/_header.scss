@@ -2,11 +2,10 @@ main {
   position: relative;
   z-index: 2;
   /* fix bug on iOS */
-  height: 100vh;
-  overflow-y: auto;
+  //height: 100vh;
+  //overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-  padding: 200px 5%;
-  background-color: #9cb3a8;
+  background-color: white;
   /* Force Hardware Acceleration in WebKit */
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -22,20 +21,7 @@ main {
   -moz-transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
   transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
 }
-main h1, main p {
-  text-align: center;
-}
-main h1 {
-  font-size: 2.6rem;
-  margin-bottom: 1em;
-}
-main p {
-  font-family: "Merriweather", serif;
-  color: #d6dfdb;
-  max-width: 450px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
+
 .navigation-is-open main {
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
@@ -43,17 +29,7 @@ main p {
   -o-transform: translateX(100%);
   transform: translateX(100%);
 }
-@media only screen and (min-width: 768px) {
-  main {
-    padding: 250px 10%;
-  }
-  main h1 {
-    font-size: 3.6rem;
-  }
-  main p {
-    font-size: 2rem;
-  }
-}
+
 
 .cd-nav-trigger {
   position: fixed;

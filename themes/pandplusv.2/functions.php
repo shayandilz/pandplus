@@ -5,7 +5,7 @@
 function theme_scripts() {
 
 	//    <!-- Icons -->
-	wp_enqueue_style( 'bootstrap-icons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css', array(), );
+	wp_enqueue_style( 'bootstrap-icons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css', array(), );
 
     wp_enqueue_style('font', get_template_directory_uri() . '/public/fonts/Iran/fontface.css', array() );
 //    wp_enqueue_style('font', get_template_directory_uri() . '/public/fonts/Peyda/fontface.css', array() );
@@ -64,10 +64,10 @@ function my_acf_op_init() {
             'redirect'    => false,
         ));
 
-        // Add sub page.
+        // Add subpage
         $child = acf_add_options_page(array(
-            'page_title'  => __('Social Settings'),
-            'menu_title'  => __('Social'),
+            'page_title'  => __('Contact and Social'),
+            'menu_title'  => __('Contact and Social'),
             'parent_slug' => $parent['menu_slug'],
         ));
     }
@@ -88,7 +88,7 @@ add_filter( 'nav_menu_link_attributes', 'add_menu_link_class', 1, 3 );
 
 //populate gravity form
 /**
- * Populate ACF select field options with Gravity Forms forms
+ * Populate ACF select field options with Gravity Forms
  */
 function acf_populate_gf_forms_ids( $field ) {
 	if ( class_exists( 'GFFormsModel' ) ) {
