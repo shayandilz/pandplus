@@ -29,7 +29,12 @@
 }
 
 @include media-breakpoint-down(xl) {
-
+  .top-menu {
+    top: 25px;
+    img {
+      width: 50px
+    }
+  }
 }
 
 @include media-breakpoint-down(sm) {
