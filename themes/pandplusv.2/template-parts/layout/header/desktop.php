@@ -27,7 +27,7 @@ $services_list = [7470,7469];
                     $services = array(
                         'post_type' => 'services',
                         'post_status' => 'publish',
-                        'posts_per_page' => '3',
+                        'posts_per_page' => '-1',
                         'ignore_sticky_posts' => true
                     );
                     $loop_services = new WP_Query($services);
