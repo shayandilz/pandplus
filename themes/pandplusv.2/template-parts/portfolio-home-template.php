@@ -9,7 +9,7 @@
                 <!--                category-->
                 <p class="m-0">
                     <?php
-                    $terms = get_the_terms($post->ID, 'portfolio_categories');
+                    $terms = get_the_terms($loop->ID, 'portfolio_categories');
                     foreach ($terms as $cd) {
                         echo $cd->name;
                     }
@@ -33,7 +33,7 @@
             <!--                services icon-->
             <div class="d-flex gap-3 text-center">
                 <?php
-                $terms = get_the_terms($post->ID, 'portfolio_categories');
+                $terms = get_the_terms($loop->ID, 'portfolio_categories');
                 foreach ($terms as $cd) {
 //                    var_dump($cd);
                     ?>

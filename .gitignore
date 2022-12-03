@@ -3,3 +3,9 @@
 /plugins/
 /upgrade/
 /uploads/
+/themes/Pandplus/.idea
+/themes/Pandplus/node_modules
+/themes/Pandplus/public
+/themes/pandplusv.2/.idea
+/themes/pandplusv.2/node_modules
+/themes/pandplusv.2/public
