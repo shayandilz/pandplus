@@ -15,9 +15,9 @@
                 <p class="text-start m-0">
                     <?php the_field('hero_small_title'); ?>
                 </p>
-                <h2 class="display-2 my-5 fw-bolder">
+                <h1 class="display-2 my-5 fw-bolder">
                     <?php the_field('hero_title'); ?>
-                </h2>
+                </h1>
                 <?php
                 $blog_page_category_link = get_field('hero_button');
                 if ($blog_page_category_link): ?>

@@ -74,13 +74,12 @@
 }
 
 @include media-breakpoint-up(md) {
-
 }
 
 @include media-breakpoint-down(md) {
   .logo {
     left: -43%!important;
-    bottom: -43% !important;
+    bottom: -55% !important;
   }
   .cta-footer {
     overflow-x: scroll;

@@ -156,7 +156,7 @@ function wpd_get_menu_item($field, $object_id, $items)
 }
 
 /*--Offset Pre_Get_Posts pagination fix--*/
-//add_action('pre_get_posts', 'myprefix_query_offset', 1 );
+add_action('pre_get_posts', 'myprefix_query_offset', 1);
 function myprefix_query_offset(&$query)
 {
 
@@ -183,7 +183,7 @@ function myprefix_query_offset(&$query)
     }
 }
 
-//add_filter('found_posts', 'myprefix_adjust_offset_pagination', 1, 2 );
+add_filter('found_posts', 'myprefix_adjust_offset_pagination', 1, 2);
 function myprefix_adjust_offset_pagination($found_posts, $query)
 {
 
@@ -317,7 +317,6 @@ function get_toc($content)
     // parse toc
     ob_start();
     echo "<div class='table-of-contents'>";
-    echo "<span class='toc-headline'>آنچه در این مقاله می‌خوانید:</span>";
     echo "<!-- Table of contents by webdeasy.de -->";
     parse_toc($headings, 0, 0);
     echo "</div>";
@@ -372,7 +371,7 @@ function parse_toc($headings, $index, $recursive_counter)
     if (isset($current_element["classes"]) && $current_element["classes"] && in_array("toc-bold", $current_element["classes"])) {
         echo $name;
     } else {
-        echo "<a class='text-decoration-none' href='#" . $id . "'>" . $name . "</a>";
+        echo "<a class='text-decoration-none text-danger' href='#" . $id . "'>" . $name . "</a>";
     }
     if ($next_element && intval($next_element["tag"]) > $tag) {
         parse_toc($headings, $index + 1, $recursive_counter + 1);
@@ -432,4 +431,14 @@ function toc_shortcode()
 }
 
 add_shortcode('TOC', 'toc_shortcode');
+//estimated reading time
+
+function reading_time() {
+    ob_start();
+    the_content();
+    $content = ob_get_clean();
+    $readingtime = ceil(sizeof(explode(" ", utf8_decode($content))) / 200);
+
+    return $readingtime;
+}
 

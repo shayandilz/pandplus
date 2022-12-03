@@ -1,6 +1,15 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTJDKQXKFQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZTJDKQXKFQ');
+    </script>
     <meta charset="UTF-8">
     <meta name="keywords" content="Digify website">
     <meta name="description" content="">
@@ -8,16 +17,40 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="yrAbFPNW03P6nVf3eS5Cdb_SsSG1uxAK4Yp7JHyKomM"/>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5JCSSNW');</script>
+    <!-- End Google Tag Manager -->
+    <!--    yektanet script -->
+    <script> !function (t, e, n) {
+            t.yektanetAnalyticsObject = n, t[n] = t[n] || function () { t[n].q.push(arguments) }, t[n].q = t[n].q || []; var a = new Date, r = a.getFullYear().toString() + "0" + a.getMonth() + "0" + a.getDate() + "0" + a.getHours(), c = e.getElementsByTagName("script")[0], s = e.createElement("script"); s.id = "ua-script-NMiTglkd"; s.dataset.analyticsobject = n; s.async = 1; s.type = "text/javascript"; s.src = "https://cdn.yektanet.com/rg_woebegone/scripts_v3/NMiTglkd/rg.complete.js?v=" + r, c.parentNode.insertBefore(s, c) }(window, document, "yektanet"); </script>
+    <!--    yektanet script -->
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JCSSNW"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
 
 <!-- Navbar STart -->
 <header class="position-relative">
-    <div class="position-absolute top-menu text-black justify-content-end d-flex gap-3 align-items-center px-2 justify-content-lg-between z-top">
-        <div class="d-flex gap-3">
+    <div class="position-absolute top-menu  z-top bg-danger py-3">
+        <div class=" container  justify-content-center d-flex gap-3 align-items-center px-2">
+            <div class="d-flex col-9 gap-3">
             <a class="text-center text-lg-start" href="<?php echo esc_url(get_home_url()) ?>">
                 <?php
                 $footer_logo = get_field('footer_logo', 'option');
@@ -38,13 +71,14 @@
                 ));
                 ?>
             </div>
-        </div>
+            </div>
         <button type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
-                class="btn btn-dark px-3 py-2 d-none d-lg-inline ">
+                class="btn btn-white px-3 py-2 d-none d-lg-inline ">
             دریافت مشاوره
         </button>
+        </div>
 
 
     </div>
