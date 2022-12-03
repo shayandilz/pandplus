@@ -1,5 +1,5 @@
-<article class="row w-100 align-items-start">
-    <div class="col-3 d-flex flex-column gap-2 justify-content-center align-items-start">
+<article class="row w-100 align-items-start text-center text-lg-start justify-content-lg-start py-3">
+    <div class="col-12 col-lg-3 d-flex flex-column gap-2 align-items-center">
         <?php $user_array_img = get_field('profile_image', 'user_' . $post->post_author);
         if ($user_array_img) { ?>
             <img class="rounded-circle" width="42px" height="42px" src="<?php echo $user_array_img['url'] ?>"
@@ -9,34 +9,27 @@
                  src="<?php echo esc_url(site_url('/wp-content/uploads/2022/06/logo-avatar.png')); ?>"
                  alt="<?php the_title(); ?>">
         <?php } ?>
-        <div>
+        <div class="fs-5">
             ارایه توسط
-            <span class="fw-normal text-primary">
+            <span class="fw-normal text-danger">
                 <?php echo get_the_author_meta('display_name', $post->post_author); ?>
             </span>
         </div>
-        <div class="fw-normal">
+        <div class="fw-normal fs-5 mb-3">
             <?php echo get_the_date('d  F , Y'); ?>
         </div>
     </div>
-    <div class="col-7">
+    <div class="col-12 col-lg-7">
         <a class="text-black " href="<?php the_permalink(); ?>">
             <h4 class="fw-bolder">
                 <?php the_title(); ?>
             </h4>
         </a>
         <p>
-            <?php
-            $excerpt = get_the_excerpt();
-            $excerpt = substr($excerpt, 0, 200);
-            $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
-            $excerpt = trim(preg_replace('/\s+/', ' ', $excerpt));
-
-            echo $excerpt . '...';
-            ?>
+                      <?= wp_trim_words(get_the_content(), 18); ?>
         </p>
     </div>
-    <div class="col-2">
+    <div class="col-12 col-lg-2 p-0 text-center text-lg-start">
         <div class="d-flex justify-content-center align-items-center flex-row">
             <a href="<?php the_permalink(); ?>"
                class="text-black">

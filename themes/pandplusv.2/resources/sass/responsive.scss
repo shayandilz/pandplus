@@ -1,4 +1,26 @@
 @include media-breakpoint-up(lg) {
+  //clients{
+  .blackWhite{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    &:hover{
+      -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(0%);
+    }
+  }
+  .swiper2 {
+    .swiper-slide img,
+    .swiper-slide-active .ratio{
+      transition: all 0.3s ease-in-out;
+    }
+    //.swiper-slide-active .ratio{
+    //  margin-bottom: 20px!important;
+    //}
+    .swiper-slide-active img{
+      height: 290px;
+      object-fit: cover;
+    }
+  }
 
 }
 
@@ -47,7 +69,30 @@
 }
 
 @include media-breakpoint-down(md) {
+  .logo {
+    left: -43%!important;
+    bottom: -43% !important;
+  }
+  .cta-footer {
+    overflow-x: scroll;
+  }
+  .vh-80 {
+    min-height: 100vh;
+  }
+
+  .line-min {
+    transform: rotate(90deg);
+  }
+  .portfolio-main{
+    overflow: hidden;
+    height: 90vh;
+  }
   .small-md-down {
     //font-size: $small-font-size !important;
+  }
+  .top-menu {
+    right: 5%;
+    top: 20px;
+    left: unset;
   }
 }

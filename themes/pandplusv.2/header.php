@@ -15,46 +15,56 @@
 
 
 <!-- Navbar STart -->
-<header>
-    <a href="#cd-nav" class="cd-nav-trigger position-fixed z-top ">Menu
-        <span class="cd-nav-icon"></span>
+<header class="position-relative">
+    <div class="position-absolute top-menu text-black justify-content-end d-flex gap-3 align-items-center px-2 justify-content-lg-between z-top">
+        <div class="d-flex gap-3">
+            <a class="text-center text-lg-start" href="<?php echo esc_url(get_home_url()) ?>">
+                <?php
+                $footer_logo = get_field('footer_logo', 'option');
+                ?>
+                <img class="lazy" width="40" height="auto" src="<?= $footer_logo['url'] ?>"
+                     alt="<?= get_bloginfo('name'); ?>">
+            </a>
+            <hr class="vr text-white my-auto d-none d-lg-inline">
+            <div class="d-lg-flex d-none">
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'headerMenuLocation',
+                    'menu_class' => 'list-unstyled d-flex align-items-center gap-2 m-0',
+                    'container' => false,
+                    'item_class' => 'nav-item',
+                    'link_class' => 'nav-link fs-6 py-1',
+                    'depth' => 1
+                ));
+                ?>
+            </div>
+        </div>
+        <button type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                class="btn btn-dark px-3 py-2 d-none d-lg-inline ">
+            دریافت مشاوره
+        </button>
+
+
+    </div>
+    <a href="#cd-nav" class="cd-nav-trigger position-fixed z-top rounded-circle overflow-hidden">Menu
+        <span class="cd-nav-icon position-absolute start-50 top-50"></span>
 
         <svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
-            <circle fill="transparent" stroke="#656e79" stroke-width="1" cx="27" cy="27" r="25" stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
+            <circle fill="transparent" stroke="#656e79" stroke-width="1" cx="27" cy="27" r="25"
+                    stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
         </svg>
     </a>
-
-    <div id="cd-nav" class="cd-nav bg-dark">
-        <div class="cd-navigation-wrapper">
-            <div class="cd-half-block">
-                <h2>Navigation</h2>
-
-                <nav>
-                    <ul class="cd-primary-nav">
-                        <li><a href="#" class="selected">The team</a></li>
-                        <li><a href="#">Our services</a></li>
-                        <li><a href="#">Our projects</a></li>
-                        <li><a href="#">Start a project</a></li>
-                        <li><a href="#">Contact us</a></li>
-                    </ul>
-                </nav>
-            </div><!-- .cd-half-block -->
-
-            <div class="cd-half-block">
-                <address>
-                    <ul class="cd-contact-info">
-                        <li><a href="mailto:info@myemail.co">info@myemail.co</a></li>
-                        <li>0244-12345678</li>
-                        <li>
-                            <span>MyStreetName 24</span>
-                            <span>W1234X</span>
-                            <span>London, UK</span>
-                        </li>
-                    </ul>
-                </address>
-            </div> <!-- .cd-half-block -->
-        </div> <!-- .cd-navigation-wrapper -->
-    </div> <!-- .cd-nav -->
+    <div id="cd-nav" class="cd-nav position-fixed top-0 end-0 h-100 w-100 overflow-hidden">
+        <!--    desktop menu-->
+        <div class="d-none d-lg-block h-100 mt-5 ">
+            <?php get_template_part('template-parts/layout/header/desktop'); ?>
+        </div><!--    mobile menu-->
+        <div class="d-grid d-lg-none">
+            <?php get_template_part('template-parts/layout/header/mobile'); ?>
+        </div>
+    </div>
 </header>
 
 <!--left social and call button area -->
@@ -72,7 +82,7 @@
 <!--            </svg>-->
 <!--        </a>-->
 <!--    </div>-->
-<main class="container-fluid m-0 p-0">
+<main class="container-fluid m-0 p-0 position-relative">
 
 
 

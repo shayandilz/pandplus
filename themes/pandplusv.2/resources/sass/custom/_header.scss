@@ -1,5 +1,4 @@
 main {
-  position: relative;
   z-index: 2;
   /* fix bug on iOS */
   //height: 100vh;
@@ -32,27 +31,21 @@ main {
 
 
 .cd-nav-trigger {
-  position: fixed;
-  z-index: 3;
   left: 5%;
   top: 20px;
   height: 54px;
   width: 54px;
-  background-color: #243040;
-  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
   /* image replacement */
-  overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
   -webkit-transition: -webkit-transform 0.5s;
   -moz-transition: -moz-transform 0.5s;
   transition: transform 0.5s;
 }
+
 .cd-nav-trigger .cd-nav-icon {
   /* icon created in CSS */
-  position: absolute;
-  left: 50%;
-  top: 50%;
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
@@ -62,8 +55,9 @@ main {
   transform: translateX(-50%) translateY(-50%);
   width: 22px;
   height: 2px;
-  background-color: #ffffff;
+  background-color: rgba(0, 0, 0, 1);
 }
+
 .cd-nav-trigger .cd-nav-icon::before, .cd-nav-trigger .cd-nav-icon:after {
   /* upper and lower lines of the menu icon */
   content: '';
@@ -85,6 +79,7 @@ main {
   -moz-transition: -moz-transform 0.5s, width 0.5s, top 0.3s;
   transition: transform 0.5s, width 0.5s, top 0.3s;
 }
+
 .cd-nav-trigger .cd-nav-icon::before {
   -webkit-transform-origin: right top;
   -moz-transform-origin: right top;
@@ -97,6 +92,7 @@ main {
   -o-transform: translateY(-6px);
   transform: translateY(-6px);
 }
+
 .cd-nav-trigger .cd-nav-icon::after {
   -webkit-transform-origin: right bottom;
   -moz-transform-origin: right bottom;
@@ -109,23 +105,28 @@ main {
   -o-transform: translateY(6px);
   transform: translateY(6px);
 }
+
 .no-touch .cd-nav-trigger:hover .cd-nav-icon::after {
   top: 2px;
 }
+
 .no-touch .cd-nav-trigger:hover .cd-nav-icon::before {
   top: -2px;
 }
+
 .cd-nav-trigger svg {
   position: absolute;
   top: 0;
   left: 0;
 }
+
 .cd-nav-trigger circle {
   /* circle border animation */
   -webkit-transition: stroke-dashoffset 0.4s 0s;
   -moz-transition: stroke-dashoffset 0.4s 0s;
   transition: stroke-dashoffset 0.4s 0s;
 }
+
 .navigation-is-open .cd-nav-trigger {
   /* rotate trigger when navigation becomes visible */
   -webkit-transform: rotate(180deg);
@@ -134,6 +135,7 @@ main {
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+
 .navigation-is-open .cd-nav-trigger .cd-nav-icon::after,
 .navigation-is-open .cd-nav-trigger .cd-nav-icon::before {
   /* animate arrow --> from hamburger to arrow */
@@ -142,6 +144,7 @@ main {
   -moz-transition: -moz-transform 0.5s, width 0.5s;
   transition: transform 0.5s, width 0.5s;
 }
+
 .navigation-is-open .cd-nav-trigger .cd-nav-icon::before {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -149,6 +152,7 @@ main {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
 .navigation-is-open .cd-nav-trigger .cd-nav-icon::after {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -156,40 +160,87 @@ main {
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
+
 .no-touch .navigation-is-open .cd-nav-trigger:hover .cd-nav-icon::after, .no-touch .navigation-is-open .cd-nav-trigger:hover .cd-nav-icon::before {
   top: 0;
 }
+
 .navigation-is-open .cd-nav-trigger circle {
   stroke-dashoffset: 0;
   -webkit-transition: stroke-dashoffset 0.4s 0.3s;
   -moz-transition: stroke-dashoffset 0.4s 0.3s;
   transition: stroke-dashoffset 0.4s 0.3s;
 }
+
 @media only screen and (min-width: 1170px) {
   .cd-nav-trigger {
     top: 40px;
   }
 }
 
+@keyframes stepIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+
 .cd-nav {
-  position: fixed;
   z-index: 1;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #243040;
+  background-color: #6BE3BD;
   visibility: hidden;
   -webkit-transition: visibility 0s 0.7s;
   -moz-transition: visibility 0s 0.7s;
   transition: visibility 0s 0.7s;
+
+  .menu_nav a {
+    transition: all 0.3s ease-in-out;
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+
 }
+
+.services li,
+.portfolio li,
+.blog li {
+  opacity: 0;
+}
+
+.show.services,
+.show.portfolio,
+.show.blog {
+  z-index: 100;
+
+  li {
+    animation: stepIn 0.4s ease-out forwards;
+  }
+
+  &:nth-child(1) {
+    animation-delay: 0.3s;
+  }
+
+  &:nth-child(2) {
+    animation-delay: 0.6s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: 0.9s;
+  }
+}
+
 .cd-nav .cd-navigation-wrapper {
   /* all navigation content */
-  height: 100%;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  padding: 40px 5% 40px calc(5% + 80px);
   /* Force Hardware Acceleration in WebKit */
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -210,12 +261,14 @@ main {
   -moz-transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
   transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
 }
+
 .navigation-is-open .cd-nav {
   visibility: visible;
   -webkit-transition: visibility 0s 0s;
   -moz-transition: visibility 0s 0s;
   transition: visibility 0s 0s;
 }
+
 .navigation-is-open .cd-nav .cd-navigation-wrapper {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
@@ -229,114 +282,72 @@ main {
   -moz-transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
   transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
 }
-.cd-nav h2 {
+
+//mobile menu
+@media only screen and (max-width: 992px) {
+  #nav-tab {
+    white-space: nowrap;
+  }
+  #cd-nav {
+    .tab-pane {
+      height: 53vh;
+      overflow: hidden;
+      overflow-y: scroll;
+    }
+    .nav-tabs {
+      border: unset !important;
+
+      button {
+        border: unset !important;
+        &.active {
+          font-size: 1.2rem;
+          background-color: #6be3bd !important;
+        }
+      }
+    }
+  }
+
+}
+
+// menu hover style
+.desktop-menu a,
+.current-menu-item a {
   position: relative;
-  margin-bottom: 1.7em;
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: #080b0f;
-  text-transform: uppercase;
+
+  &:hover::after,
+  {
+    transform: scaleY(1);
+    opacity: 1;
+    transform-origin: top;
+  }
 }
-.cd-nav h2::after {
-  /* bottom separation line */
+
+.desktop-menu a::after {
+  transition: transform 500ms ease-out, opacity 500ms ease-out;
   content: '';
+  opacity: 0;
   position: absolute;
-  left: 0;
-  bottom: -20px;
-  height: 1px;
-  width: 60px;
-  background-color: currentColor;
-}
-.cd-nav .cd-primary-nav {
-  margin-top: 60px;
-}
-.cd-nav .cd-primary-nav li {
-  margin: 1.6em 0;
-}
-.cd-nav .cd-primary-nav a {
-  font-family: "Merriweather", serif;
-  font-size: 2.4rem;
-  color: rgba(255, 255, 255, 0.3);
-  display: inline-block;
-}
-.cd-nav .cd-primary-nav a.selected {
-  color: #ffffff;
-}
-.no-touch .cd-nav .cd-primary-nav a:hover {
-  color: #ffffff;
-}
-.cd-nav .cd-contact-info {
-  margin-top: 80px;
-}
-.cd-nav .cd-contact-info li {
-  font-family: "Merriweather", serif;
-  margin-bottom: 1.5em;
-  line-height: 1.2;
-  color: rgba(255, 255, 255, 0.3);
-}
-.cd-nav .cd-contact-info a {
-  color: #ffffff;
-}
-.cd-nav .cd-contact-info span {
-  display: block;
-}
-.cd-nav .cd-contact-info li, .cd-nav .cd-contact-info a, .cd-nav .cd-contact-info span {
-  font-size: 1.6rem;
-}
-@media only screen and (min-width: 1170px) {
-  .cd-nav .cd-navigation-wrapper {
-    padding: 62px 20%;
-  }
-  .cd-nav .cd-navigation-wrapper::after {
-    clear: both;
-    content: "";
-    display: table;
-  }
-  .cd-nav .cd-half-block {
-    width: 50%;
-    float: left;
-  }
-  .cd-nav .cd-primary-nav {
-    margin-top: 0;
-  }
-  .cd-nav h2 {
-    font-size: 1.5rem;
-    margin-bottom: 5.6em;
-  }
-  .cd-nav .cd-primary-nav li {
-    margin: 2em 0;
-  }
-  .cd-nav .cd-primary-nav a {
-    font-size: 4.4rem;
-  }
-  .cd-nav .cd-contact-info {
-    margin-top: 120px;
-    text-align: right;
-  }
-  .cd-nav .cd-contact-info li {
-    margin-bottom: 2.4em;
-  }
-  .cd-nav .cd-contact-info li, .cd-nav .cd-contact-info a, .cd-nav .cd-contact-info span {
-    font-size: 2rem;
-  }
+  width: 3px;
+  margin-top: auto;
+  height: 80%;
+  border-radius: 30px;
+  left: -10px;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  background-color: #0dcaf0;
 }
 
-.no-js main {
-  height: auto;
-  overflow: visible;
+.current-menu-item a {
+  opacity: 1 !important;
 }
 
-.no-js .cd-nav {
-  position: static;
-  visibility: visible;
-}
-.no-js .cd-nav .cd-navigation-wrapper {
-  height: auto;
-  overflow: visible;
-  padding: 100px 5%;
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  transform: translateX(0);
+//second menu
+.top-menu {
+  top: 50px;
+  left: 11vw;
+  width: 76vw;
+
+  .vr {
+    height: 30px;
+  }
 }

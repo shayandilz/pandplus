@@ -1,13 +1,49 @@
-<article class="col row align-items-start">
-   <?php get_template_part('template-parts/icons/services-icon'); ?>
+<article class="row swiper-slide px-0 justify-content-center">
     <div class="col-12">
-        <a class="text-black " href="<?php the_permalink(); ?>">
-            <h4 class="fw-bolder title-card py-3 text-info">
+        <a href="#">
+            <div class="ratio ratio-1x1">
+                <img class="image-rounded object-fit" src="<?php echo get_the_post_thumbnail_url(); ?>"
+                     title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
+            </div>
+            <div class="d-flex pt-3 gap-3 align-items-center text-danger">
+                <!--                category-->
+                <p class="m-0">
+                    <?php
+                    $terms = get_the_terms($post->ID, 'portfolio_categories');
+                    foreach ($terms as $cd) {
+                        echo $cd->name;
+                    }
+                    ?>
+                </p>
+                <hr class="vr">
+                <p class="m-0">
+                    <?php get_template_part('template-parts/icons/clock'); ?>
+                    <!--                    date-->
+                    <span>۱۴۰۰ بهمن ۲۲</span>
+                </p>
+            </div>
+            <h4 class="fw-bolder text-danger">
                 <?php echo get_the_title(); ?>
-                <span >> </span>
             </h4>
-            <p><?php echo wp_trim_words(get_the_content() , 18);?></p>
         </a>
-
-
+        <!--            services -->
+        <div class="d-flex gap-3 rounded bg-info align-items-center my-3 px-4 py-1 text-white">
+            <h6 class="m-0 ">خدمات ارائه شده</h6>
+            <hr class="vr">
+            <!--                services icon-->
+            <div class="d-flex gap-3 text-center">
+                <?php
+                $terms = get_the_terms($post->ID, 'portfolio_categories');
+                foreach ($terms as $cd) {
+//                    var_dump($cd);
+                    ?>
+                    <a href="#">
+                        <?php
+                        $image = get_field('service_svg', $cd->taxonomy . '_' . $cd->term_id);
+                        echo $image;
+                        ?>
+                    </a>
+                <?php } ?>
+            </div>
+        </div>
 </article>

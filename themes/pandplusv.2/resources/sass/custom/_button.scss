@@ -19,7 +19,8 @@
     @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
     @include transition($btn-transition);
     outline: 0 !important;
-
+    z-index: 1;
+    position: relative;
     &:disabled,
     &.disabled,
     fieldset:disabled & {
@@ -28,50 +29,15 @@
         @include box-shadow(none);
     }
 }
-
-////button mixins
-//@mixin button-variant($color) {
-//    background-color: $color;
-//
-//    &:hover {
-//        box-shadow: none;
-//        background: transparent;
-//        border: 1px solid #fff;
-//        color: #ffffff !important;
-//
-//        svg path {
-//            stroke: #fff;
-//        }
-//    }
-//}
-//
-//
-//@each $color, $value in $button-colors {
-//    .btn-#{$color} {
-//        @include button-variant($value);
-//    }
-//}
-
-.gradient{
-    color: #fff !important;
-    font-weight: 700;
-    background-image: linear-gradient(to right, rgba(0, 211, 190, 0.7) 0%, rgba(75, 80, 152, 0.7) 0%, #2A7FD6, #2bb673);
-    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 24px;
-    background-size: 300% 100%;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-    &:hover, &:focus {
-        background-position: -100% 0;
-        moz-transition: all .4s ease-in-out;
-        -o-transition: all .4s ease-in-out;
-        -webkit-transition: all .4s ease-in-out;
-        transition: all .4s ease-in-out;
+.btn-dark{
+    @extend .bg-danger, .text-white, .lazy, .border-1, .border-danger;
+    &:hover{
+        @extend .bg-white,.text-danger, .border-danger;
+    }
+}
+.btn-white{
+    @extend .bg-white, .text-danger, .lazy, .border-1, .border-danger;
+    &:hover{
+        @extend .bg-secondary,.text-danger, .border-secondary;
     }
 }

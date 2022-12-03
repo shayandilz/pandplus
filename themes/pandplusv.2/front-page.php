@@ -7,35 +7,46 @@
  * @package pandplus
  */
 
-get_header(); ?>
+get_header();
 
 
-<?php if (have_posts()) {
-    the_post(); ?>
-    <!--banner top -->
-    <?php get_template_part('template-parts/homepage/banner-top'); ?>
+if (have_posts()) {
+    the_post();
+//    <!--banner top -->
+    get_template_part('template-parts/homepage/hero');
 
-    <!--department svg -->
-    <?php get_template_part('template-parts/homepage/department'); ?>
+//    <!--about us -->
+    get_template_part('template-parts/homepage/about-us');
 
-    <!-- image and cta -->
-    <?php get_template_part('template-parts/homepage/image-cta'); ?>
+//    <!--department svg -->
+    get_template_part('template-parts/homepage/workflow');
 
-    <!-- clients -->
-    <?php get_template_part('template-parts/homepage/clients'); ?>
+    //    <!--department svg -->
+    get_template_part('template-parts/homepage/services');
 
-    <!--  testimonial  -->
-    <?php get_template_part('template-parts/homepage/testimony'); ?>
+//    <!--about us small-->
+    get_template_part('template-parts/homepage/cta');
 
-    <!--  Contact  -->
-    <?php get_template_part('template-parts/homepage/contact'); ?>
+//    <!--portfolio -->
+    get_template_part('template-parts/homepage/portfolio');
 
-    <!--  FAQ  -->
-    <?php get_template_part('template-parts/homepage/faq'); ?>
+//    <!-- image and cta -->
+    //get_template_part('template-parts/homepage/image-cta');
 
-    <!--  BLOG  -->
-    <?php get_template_part('template-parts/homepage/blog'); ?>
+//    <!-- clients -->
+    get_template_part('template-parts/homepage/clients');
 
-    <?php
+//    <!--  testimonial  -->
+    get_template_part('template-parts/testimony');
+
+//    <!--  Contact  -->
+    get_template_part('template-parts/homepage/contact');
+
+//    <!--  FAQ  -->
+    get_template_part('template-parts/faq');
+
+//    <!--  BLOG  -->
+    get_template_part('template-parts/homepage/blog');
+
 }
 get_footer();

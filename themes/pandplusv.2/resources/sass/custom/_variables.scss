@@ -4,12 +4,15 @@ $body-text: #5E6972;
 $light: rgba(255, 255, 255, 0.5);
 $dark: rgba(26, 25, 29, 0.95);
 
+
 $gunmetal: #2B303E;
 
 $primary: #408BE1;
 $secondary: #6be3bd;
 $warning: #fbbb01;
 $success: #F1F5F9;
+$danger :  #2B303E;
+$info : #20242F;
 $transparent: #ffffff;
 
 //border radius
@@ -31,7 +34,7 @@ $font-weight-bolder: 900;
 $font-weight-base: $font-weight-normal;
 
 $min-contrast-ratio: 2.5;
-$font-family-base: Iransans, 'sans-serif', 'Nunito';
+$font-family-base: Peyda, 'sans-serif', 'Nunito';
 $font-size-base: 1rem * (14/16);
 $small-font-size: .875rem  * (14/16);
 $line-height-base: 1.5;
@@ -42,8 +45,7 @@ $stretched-link-z-index: 1;
 
 
 //link
-//$link-decoration: none;
-//$link-hover-decoration: none;
-//$link-color: #fff;
-//$link-hover-color: $gold;
+$link-decoration: none;
+$link-hover-decoration: none;
+$link-color: #fff;
 
