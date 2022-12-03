@@ -9,13 +9,13 @@
                  src="<?php echo esc_url(site_url('/wp-content/uploads/2022/06/logo-avatar.png')); ?>"
                  alt="<?php the_title(); ?>">
         <?php } ?>
-        <div class="fs-5">
+        <div class="fs-6 text-center">
             ارایه توسط
             <span class="fw-normal text-danger">
                 <?php echo get_the_author_meta('display_name', $post->post_author); ?>
             </span>
         </div>
-        <div class="fw-normal fs-5 mb-3">
+        <div class="fw-normal fs-6 mb-3">
             <?php echo get_the_date('d  F , Y'); ?>
         </div>
     </div>
@@ -25,7 +25,7 @@
                 <?php the_title(); ?>
             </h4>
         </a>
-        <p>
+        <p class="text-justify">
                       <?= wp_trim_words(get_the_content(), 18); ?>
         </p>
     </div>

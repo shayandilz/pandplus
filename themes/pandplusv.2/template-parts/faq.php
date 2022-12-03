@@ -5,10 +5,10 @@
             <span class="ps-2 text-primary">
                <?= get_field('faq_small_header', 'option'); ?>
             </span>
-                <h3 class="ps-2 fw-bolder text-black">
+                <h3 class="ps-2 fw-bolder text-danger">
                     <?= get_field('faq_header', 'option'); ?>
                 </h3>
-                <p class="ps-2">
+                <p class="ps-2 text-justify">
                     <?= get_field('faq_text', 'option'); ?>
                 </p>
                 <div class="accordion" id="accordionFAQ">

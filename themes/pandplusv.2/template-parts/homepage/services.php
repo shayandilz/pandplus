@@ -4,10 +4,10 @@
         <div class="row justify-content-center">
             <div class="col-12 row justify-content-center py-3">
                 <div class="col-lg-6 col-12 text-center pt-5 pt-lg-0">
-                    <p class="fs-4">
+                    <p class="fs-4 text-danger">
                         <?php the_field('service_title'); ?>
                     </p>
-                    <h3 class="fs-2 fw-bold">
+                    <h3 class="fs-2 fw-bold text-danger">
                         <?php the_field('service_text'); ?>
                     </h3>
                 </div>

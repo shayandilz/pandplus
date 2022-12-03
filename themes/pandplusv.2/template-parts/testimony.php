@@ -30,6 +30,9 @@
                                         <p class="ps-lg-2 ps-0 text-danger">
                                             <?php the_sub_field('text') ?>
                                         </p>
+                                        <p class="ps-lg-2 ps-0 text-danger">
+                                            <?php get_field('client_name');?>
+                                            </p>
                                         <div class="position-relative d-flex gap-3 fs-2 ps-lg-3 ps-0 py-3 justify-content-center justify-content-lg-start">
                                             <div class="swiper-button-next-unique d-flex justify-content-center align-items-center gap-3 text-danger">
                                                 <div class="swiper-button-next-unique d-flex justify-content-center align-items-center">

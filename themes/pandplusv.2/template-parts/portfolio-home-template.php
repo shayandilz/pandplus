@@ -5,13 +5,13 @@
                 <img class="image-rounded object-fit" src="<?php echo get_the_post_thumbnail_url(); ?>"
                      title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
             </div>
-            <div class="d-flex pt-3 gap-3 align-items-center text-danger">
+            <div class="d-flex pt-3 gap-3 align-items-center">
                 <!--                category-->
                 <p class="m-0">
                     <?php
                     $terms = get_the_terms($loop->ID, 'portfolio_categories');
                     foreach ($terms as $cd) {
-                        echo $cd->name;
+                        echo $cd-> name;
                     }
                     ?>
                 </p>
@@ -22,7 +22,7 @@
                     <span>۱۴۰۰ بهمن ۲۲</span>
                 </p>
             </div>
-            <h4 class="fw-bolder text-danger">
+            <h4 class="fw-bolder">
                 <?php echo get_the_title(); ?>
             </h4>
         </a>

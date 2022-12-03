@@ -9,7 +9,7 @@ get_header(); ?>
         <div class="col-12 col-lg-5 pe-lg-5 me-lg-5 text-danger">
             <h2 class="display-3 fw-bolder"><?php the_title(); ?></h2>
             <div class="my-4 text-justify">
-                <?php the_excerpt(); ?>
+                <?php echo wp_trim_words(the_content() , 20); ?>
             </div>
             <div class="d-flex justify-content-between align-items-center pe-lg-3 my-5">
                 <!--                <button class="btn bg-danger px-4 py-2 rounded text-white">تعرفه های خدمات سئو</button>-->

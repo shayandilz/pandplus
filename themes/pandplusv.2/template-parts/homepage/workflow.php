@@ -10,7 +10,7 @@
                 <h3 class="fw-bold fs-1 py-4">
                     <?php the_field('workflow_title'); ?>
                 </h3>
-                <p class="text-justify">
+                <p class="text-justify pe-lg-5">
                     <?php the_field('workflow_text'); ?>
                 </p>
                 <?php

@@ -26,7 +26,7 @@
                     /* Start the Loop */
                     while ($loop->have_posts()) :
                         $loop->the_post(); ?>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide all-white">
                             <?php get_template_part('template-parts/portfolio-home-template'); ?>
                         </div>
                     <?php endwhile;

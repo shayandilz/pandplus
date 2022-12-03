@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-md-7 col-12">
 
-                    <article class="d-flex justify-content-evenly flex-wrap gap-4">
+                    <article class="d-flex justify-content-evenly flex-wrap gap-2 align-content-center">
                         <?php
                         $portfolio = array(
                             'post_type' => 'portfolio',
@@ -29,7 +29,7 @@
                             while ($loop_portfolio->have_posts()) :
                                 $loop_portfolio->the_post();
                                 $brand_logo = get_field('brand_logo');?>
-                                <div class="col-3">
+                                <div class="col-3 m-auto">
                                     <img width="120px" title="<?php echo esc_attr($brand_logo['alt']); ?>"
                                          class="img-fluid blackWhite lazy" src="<?php echo esc_url($brand_logo['url']); ?>"
                                          alt="<?php echo esc_attr($brand_logo['alt']); ?>">
