@@ -1,5 +1,9 @@
 @include media-breakpoint-up(lg) {
   //clients{
+  .logo {
+    right: 0!important;
+    bottom: -40% !important;
+  }
   .blackWhite{
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
@@ -25,16 +29,16 @@
 }
 
 @include media-breakpoint-down(lg) {
-
-}
-
-@include media-breakpoint-down(xl) {
   .top-menu {
     top: 25px;
     img {
       width: 50px
     }
   }
+}
+
+@include media-breakpoint-down(xl) {
+
 }
 
 @include media-breakpoint-down(sm) {

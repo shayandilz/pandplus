@@ -4,7 +4,7 @@
             <div class="col-12 row align-items-center">
                 <div class="col-md-5 col-12 text-dark text-justify">
                     <p class="fs-5">
-                        <?php the_field('client_title'); ?>
+                        <?php the_field('client_small_title'); ?>
                     </p>
                     <h3 class="fs-1 font-bold my-4">
                         <?php the_field('client_title'); ?>

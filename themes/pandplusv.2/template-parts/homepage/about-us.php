@@ -3,12 +3,12 @@
         <div class="row align-items-center">
             <div class="col-12 col-lg-6 row align-items-center">
                 <?php get_template_part('template-parts/lines/ver-line-medium'); ?>
-                <p class="col fs-1 text-white fw-bold">
+                <p class="col fs-1 text-white fw-bold text-justify">
                     <?php the_field('right_about_us_text'); ?>
                 </p>
             </div>
             <div class="col-12 col-lg-6 pt-5 text-center text-lg-start">
-                <p class="text-white pe-lg-5">
+                <p class="text-white pe-lg-5 text-justify">
                     <?php the_field('left_about_us_text'); ?>
                 </p>
                 <?php
