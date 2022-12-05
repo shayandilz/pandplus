@@ -13,20 +13,20 @@ $(document).ready(function () {
             el.addClass("active");
             el.siblings().removeClass("active");
         }
-        let services = $('.services');
-        let portfolio = $('.portfolio');
-        let blog = $('.blog');
+        let services = $('.services-menu');
+        let portfolio = $('.portfolio-menu');
+        let blog = $('.blog-menu');
 
 
-        if (el.attr('data-list') === 'portfolio' && el.hasClass('active')) {
+        if (el.attr('data-list') === 'portfolio-menu' && el.hasClass('active')) {
             portfolio.addClass('show');
             services.removeClass('show');
             blog.removeClass('show');
-        } else if (el.attr('data-list') === 'service' && el.hasClass('active')) {
+        } else if (el.attr('data-list') === 'service-menu' && el.hasClass('active')) {
             services.addClass('show');
             portfolio.removeClass('show');
             blog.removeClass('show');
-        } else if (el.attr('data-list') === 'blog' && el.hasClass('active')) {
+        } else if (el.attr('data-list') === 'blog-menu' && el.hasClass('active')) {
             blog.addClass('show');
             portfolio.removeClass('show');
             services.removeClass('show');
@@ -70,6 +70,7 @@ $(document).ready(function () {
                 el.siblings().removeClass("active");
             }
             datafrom.forEach(function (value, index) {
+                console.log(value)
                 if (datalist == value && el.hasClass('active') ){
                         services_show.addClass("show");
                         services_show.siblings().removeClass("show");

@@ -5,8 +5,8 @@
     </div>
 
     <div class="container my-lg-5 py-lg-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-10 text-center text-lg-start">
+        <div class="row justify-content-start">
+            <div class="col-12 col-lg-8 text-center text-lg-start">
                 <h3 class="fw-bold fs-1 py-4">
                     <?php the_field('workflow_title'); ?>
                 </h3>

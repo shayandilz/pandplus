@@ -17,6 +17,9 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="sabavision_advertiser_id" content="01862141-bc61-4233-ae52-14fa3352b001" />
+    <script src="https://plus.sabavision.com/dmp/dox/events.min.js"></script>
+    <script>__SabaEvents.initialize()</script>
     <meta name="google-site-verification" content="yrAbFPNW03P6nVf3eS5Cdb_SsSG1uxAK4Yp7JHyKomM"/>
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || [];
@@ -36,6 +39,16 @@
     <script> !function (t, e, n) {
             t.yektanetAnalyticsObject = n, t[n] = t[n] || function () { t[n].q.push(arguments) }, t[n].q = t[n].q || []; var a = new Date, r = a.getFullYear().toString() + "0" + a.getMonth() + "0" + a.getDate() + "0" + a.getHours(), c = e.getElementsByTagName("script")[0], s = e.createElement("script"); s.id = "ua-script-NMiTglkd"; s.dataset.analyticsobject = n; s.async = 1; s.type = "text/javascript"; s.src = "https://cdn.yektanet.com/rg_woebegone/scripts_v3/NMiTglkd/rg.complete.js?v=" + r, c.parentNode.insertBefore(s, c) }(window, document, "yektanet"); </script>
     <!--    yektanet script -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-241604640-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-241604640-1');
+    </script>
+
     <?php wp_head(); ?>
 </head>
 
@@ -48,10 +61,10 @@
 
 <!-- Navbar STart -->
 <header class="position-relative">
-    <div class="position-absolute top-menu  z-top bg-danger py-3">
-        <div class=" container  justify-content-center d-flex gap-3 align-items-center px-2">
-            <div class="d-flex col-9 gap-3">
-            <a class="text-center text-lg-start" href="<?php echo esc_url(get_home_url()) ?>">
+    <div class="position-absolute top-menu z-top py-2">
+        <div class="container justify-content-center justify-content-end justify-content-lg-center d-flex gap-3 align-items-center px-2">
+            <div class="d-flex col-11 col-lg-9 gap-3 justify-content-end justify-content-lg-start">
+            <a class="text-end text-lg-start" href="<?php echo esc_url(get_home_url()) ?>">
                 <?php
                 $footer_logo = get_field('footer_logo', 'option');
                 ?>
@@ -116,7 +129,7 @@
 <!--            </svg>-->
 <!--        </a>-->
 <!--    </div>-->
-<main class="container-fluid m-0 p-0 position-relative">
+<main class="container-fluid m-0 p-0 position-relative overflow-hidden">
 
 
 

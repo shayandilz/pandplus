@@ -9,9 +9,20 @@
                 <!--                category-->
                 <p class="m-0">
                     <?php
-                    $terms = get_the_terms($loop->ID, 'portfolio_categories');
-                    foreach ($terms as $cd) {
-                        echo $cd-> name;
+                    $tour_pages = get_posts(
+                        array(
+                            'post_type' => 'services',
+                            'meta_query' => array(
+                                array(
+                                    'key' => 'projects_services', // name of custom field
+                                    'value' => '"' . get_the_ID() . '"',
+                                    'compare' => 'LIKE'
+                                )
+                            )
+                        )
+                    );
+                    foreach ($tour_pages as $tour){
+                        echo $tour->post_title . ' ';
                     }
                     ?>
                 </p>
@@ -22,26 +33,23 @@
                     <span>۱۴۰۰ بهمن ۲۲</span>
                 </p>
             </div>
-            <h4 class="fw-bolder">
+            <h4 class="fw-bolder pt-3">
                 <?php echo get_the_title(); ?>
             </h4>
         </a>
         <!--            services -->
-        <div class="d-flex gap-3 rounded bg-info align-items-center my-3 px-4 py-1 text-white">
+        <div class="d-flex gap-3 rounded bg-info align-items-center my-3 px-3 py-1 text-white">
             <h6 class="m-0 ">خدمات ارائه شده</h6>
             <hr class="vr">
             <!--                services icon-->
             <div class="d-flex gap-3 text-center">
                 <?php
-                $terms = get_the_terms($loop->ID, 'portfolio_categories');
-                foreach ($terms as $cd) {
-//                    var_dump($cd);
-                    ?>
-                    <a href="#">
-                        <?php
-                        $image = get_field('service_svg', $cd->taxonomy . '_' . $cd->term_id);
-                        echo $image;
-                        ?>
+                foreach ($tour_pages as $tour){ ?>
+                    <a href="<?php echo get_permalink($tour->ID); ?>">
+                        <div style="width: 20px;height: 20px">
+                            <?php echo get_field('service_icon', $tour->ID); ?>
+                        </div>
+
                     </a>
                 <?php } ?>
             </div>

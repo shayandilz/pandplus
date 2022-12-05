@@ -34,18 +34,7 @@ a {
   text-decoration: none !important;
 }
 
-//cta button
-//.cta {
-//  transition: 0.5s;
-//  background: radial-gradient(51.35% 646.46% at 10.67% 48.65%, rgba(75, 80, 152, 0.7) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2A7FD6;
-//  &:hover {
-//    transform: scale(1.05);
-//  }
-//}
-
 //front page
-
-
 .call {
   position: fixed;
   z-index: 3;
@@ -87,8 +76,8 @@ a {
 
 // positon for top-banner logo in front page
 .logo {
-  right: 13px;
-  bottom: -45%;
+  bottom: -90%;
+  transform: translate(25% , 0);
 }
 
 // services card
@@ -133,6 +122,10 @@ a {
 
 //contact form style
 .contact-form {
+  .gform_required_legend {
+    @extend .d-none;
+  }
+
   input, textarea, select {
     @extend .rounded-1, .px-2 ;
     border: 1px solid #c2c2c2;
@@ -257,25 +250,44 @@ body.navigation-is-open {
 
 #services__area {
 
-  .service_archive_list li
-  {
-    opacity: 0.5!important;
-    &:hover{
-      opacity: 1!important;
+  .service_archive_list li {
+    opacity: 0.5 !important;
+
+    &:hover {
+      opacity: 1 !important;
     }
   }
-  .service_show div:not(.show){
-    opacity: 0!important;
+
+  .service_show div:not(.show) {
+    opacity: 0 !important;
   }
-  .service_show div{
+
+  .service_show div {
     transition: all 0.3s 0.5s ease-in;
-    &.show{
-      opacity: 1!important;
+
+    &.show {
+      opacity: 1 !important;
     }
   }
 }
+
 .page-item {
-  a.page-numbers ,  {
-    color: black!important;
+  a.page-numbers, {
+    color: black !important;
+  }
+}
+
+//service icon color
+.swiper-slide {
+  #Layer_1 {
+    filter: drop-shadow(0px 0px 2px gray);
+
+    path, line, rect, polyline, circle {
+      stroke: #fbbb01 !important;
+    }
+
+    circle, line[class="cls-2"] + path {
+      fill: #fbbb01 !important;
+    }
   }
 }

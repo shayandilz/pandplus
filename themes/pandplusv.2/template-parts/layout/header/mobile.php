@@ -61,7 +61,7 @@
                 /* Start the Loop */
                 while ($loop_services->have_posts()) :
                     $loop_services->the_post(); ?>
-                    <li class="col-8 display-5 py-2 d-flex gap-4 justify-content-start align-items-center">
+                    <li class="col-10 col-lg-8 display-6 py-2 d-flex gap-4 justify-content-start align-items-center">
                         <div style="width: 44px;height: 44px">
                             <?= get_field('service_icon'); ?>
                         </div>
@@ -184,7 +184,7 @@
     </div>
 </div>
 <!--menu mobile footer -->
-<div class="py-3 w-100 bg-danger position-fixed bottom-0">
+<div class="py-3 w-100 bg-danger position-fixed bottom-0 z-top">
     <h5 class="text-center text-secondary fw-bold">آدرس پستی</h5>
     <p class="px-5 text-center">تهران خیابان شهید بهشتی ابتدای خیابان سرافراز برج دریای نور طبقه چهار واحد۴۰۴</p>
     <div class="d-flex justify-content-center gap-3">

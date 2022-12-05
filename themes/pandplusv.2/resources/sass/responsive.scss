@@ -1,9 +1,5 @@
 @include media-breakpoint-up(lg) {
   //clients{
-  .logo {
-    right: 0!important;
-    bottom: -40% !important;
-  }
   .blackWhite{
     -webkit-filter: contrast(0); /* Safari 6.0 - 9.0 */
     filter: contrast(0);
@@ -30,7 +26,6 @@
 
 @include media-breakpoint-down(lg) {
   .top-menu {
-    top: 25px;
     img {
       width: 50px
     }
@@ -78,8 +73,8 @@
 
 @include media-breakpoint-down(md) {
   .logo {
-    left: -43%!important;
-    bottom: -55% !important;
+    bottom: -27%!important;
+    transform: translate(0%) scale(1.9)!important;
   }
   .cta-footer {
     overflow-x: scroll;
@@ -97,10 +92,5 @@
   }
   .small-md-down {
     //font-size: $small-font-size !important;
-  }
-  .top-menu {
-    right: 5%;
-    top: 20px;
-    left: unset;
   }
 }

@@ -6,7 +6,7 @@ function portfolio_post_types()
     //    Projects post type
     register_post_type('portfolio', array(
         'supports' => array( 'title', 'editor', 'comments', 'excerpt', 'custom-fields', 'thumbnail' ),
-        'rewrite' => array('slug' => 'نمونه-کارها'),
+        'rewrite' => array('slug' => 'projects'),
         'has_archive' => true,
         'public' => true,
         'labels' => array(

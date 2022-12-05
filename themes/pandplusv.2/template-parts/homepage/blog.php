@@ -1,4 +1,4 @@
-<section class="bg-warning py-4">
+<section class="py-4">
     <div class="container py-5">
         <div class="row justify-content-center align-items-center">
             <div class="row col-lg-10 align-items-center text-center text-lg-start">

@@ -188,7 +188,6 @@ main {
   }
 }
 
-
 .cd-nav {
   z-index: 1;
   background-color: #6BE3BD;
@@ -205,19 +204,17 @@ main {
       opacity: 1;
     }
   }
-
-
 }
 
-.services li,
-.portfolio li,
-.blog li {
+.services-menu li,
+.portfolio-menu li,
+.blog-menu li {
   opacity: 0;
 }
 
-.show.services,
-.show.portfolio,
-.show.blog {
+.show.services-menu,
+.show.portfolio-menu,
+.show.blog-menu {
   z-index: 100;
 
   li {
@@ -294,11 +291,13 @@ main {
       overflow: hidden;
       overflow-y: scroll;
     }
+
     .nav-tabs {
       border: unset !important;
 
       button {
         border: unset !important;
+
         &.active {
           font-size: 1.2rem;
           background-color: #6be3bd !important;
@@ -345,6 +344,13 @@ main {
 .top-menu {
   top: 0;
   width: 100vw;
+  backdrop-filter: brightness(0.5);
+
+  #menu-main-menu {
+    .current-menu-item a, .nav-link:hover {
+      @extend .text-secondary;
+    }
+  }
 
   .vr {
     height: 30px;

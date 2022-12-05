@@ -4,13 +4,18 @@
 get_header(); ?>
 
     <section class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center pb-5">
             <!--        selection post of blogs-->
             <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             if (is_home() && !is_category() && 1 == $paged) {
                 ?>
-                <div class="col-lg-10 row grid-border-card vh-80 my-5 pt-5 gap-3 justify-content-center">
+                <div class="col-lg-10 col-12 row pt-5">
+                    <h2 class="text-start fw-bolder fs-1">
+                        آخرین مقالات
+                    </h2>
+                </div>
+                <div class="col-lg-10 row grid-border-card vh-80 gap-3 justify-content-center">
                     <?php
                     $args = array(
                         'post_type' => 'post',
@@ -28,37 +33,27 @@ get_header(); ?>
                     endif;
                     wp_reset_postdata(); ?>
                 </div>
-            <?php } ?>
-            <!--        most visited post-->
+                <!--        most visited post-->
 
-            <!--            --><?php //get_template_part('template-parts/blogpage/most-visited'); ?>
+<!--                --><?php //get_template_part('template-parts/blogpage/most-visited'); ?>
+            <?php } ?>
+
             <!--        main area  and sidebar-->
-            <div class="row justify-content-center">
+            <div class="row justify-content-center pt-5">
                 <!--            main area-->
                 <div class="col-12 col-lg-6">
-                    <!--                video heading-->
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <h4 class="fw-bolder">مقالات</h4>
-                            <p>پرطرفدارترین دسته های پند پلاس در یک نگاه</p>
-                        </div>
-                        <a class="text-danger" href="">مشاهده همه ></a>
-                    </div>
                     <!--                vertical post list -->
-                    <?php
-                    if (have_posts()) :
-                        ?>
+                    <?php if (have_posts()) : ?>
                         <?php if (is_category()) { ?>
-                        <h5 class="text-start">
-                            <?php echo single_cat_title() ?>
-                        </h5>
-                    <?php } else { ?>
-                        <h5 class="text-start">
-                            جدیدترین پست‌های بلاگ پندپلاس
-                        </h5>
-                    <?php } ?>
+                            <h5 class="text-start">
+                                <?php echo single_cat_title() ?>
+                            </h5>
+                        <?php } else { ?>
+                            <h5 class="text-start">
+                                جدیدترین پست‌های بلاگ پندپلاس
+                            </h5>
+                        <?php } ?>
                         <div class="row my-3 row-cols-lg-2 row-cols-2">
-
                             <?php
                             /* Start the Loop */
                             while (have_posts()) :

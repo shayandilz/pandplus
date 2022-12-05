@@ -37,13 +37,13 @@ if (have_posts()) {
     get_template_part('template-parts/homepage/clients');
 
 //    <!--  testimonial  -->
-    get_template_part('template-parts/testimony');
+//    get_template_part('template-parts/testimony');
 
 //    <!--  Contact  -->
     get_template_part('template-parts/homepage/contact');
 
 //    <!--  FAQ  -->
-    get_template_part('template-parts/faq');
+//    get_template_part('template-parts/faq');
 
 //    <!--  BLOG  -->
     get_template_part('template-parts/homepage/blog');

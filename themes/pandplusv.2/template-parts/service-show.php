@@ -36,7 +36,7 @@
                 /* Start the Loop */
                 while ($loop_services->have_posts()) :
                     $loop_services->the_post(); ?>
-                    <div class="services-<?= $post->ID; ?> z-top position-absolute <?php echo ($pageID == $post->ID) ? 'show' : '' ?> ">
+                    <div class="services-<?= $post->ID; ?> z-top end-0 position-absolute <?php echo ($pageID == $post->ID) ? 'show' : '' ?> ">
                         <img class="img-fluid overflow-hidden image-rounded-min object-fit"
                              src="<?php
                              if (has_post_thumbnail($post->ID)) {

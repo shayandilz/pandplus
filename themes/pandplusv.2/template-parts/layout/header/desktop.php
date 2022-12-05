@@ -7,22 +7,22 @@ $services_list = [7470,7469];
         <nav class="menu_nav col">
             <ul class="menu list-unstyled d-flex gap-3 display-6 flex-column fw-bold desktop-menu">
                 <li <?php echo is_front_page() ? 'class="current-menu-item"' : '';  ?> >
-                    <a class="text-black" href="#">خانه</a>
+                    <a class="text-black" href="<?php echo esc_url(get_home_url()) ?>">خانه</a>
                 </li>
-                <li class="<?= (in_array(get_queried_object()->ID, $services_list)) || get_queried_object()->ID == 7373 ? 'current-menu-item' : ''; ?>" data-list="service">
+                <li class="<?= (in_array(get_queried_object()->ID, $services_list)) || get_queried_object()->ID == 7373 ? 'current-menu-item' : ''; ?>" data-list="service-menu">
                     <a class="text-black" href="#">خدمات</a>
                 </li>
-                <li data-list="portfolio">
+                <li data-list="portfolio-menu">
                     <a class="text-black" href="#">نمونه کار</a>
                 </li>
-                <li data-list="blog">
+                <li data-list="blog-menu">
                     <a class="text-black" href="#">بلاگ</a>
                 </li>
             </ul>
         </nav>
         <div class="col-8 position-relative d-flex align-items-center">
-            <div class="services position-absolute w-100">
-                <ul class="list-unstyled justify-content-around">
+            <div class="services-menu position-absolute w-100">
+                <ul class="list-unstyled justify-content-start d-flex flex-wrap row-cols-2">
                     <?php
                     $services = array(
                         'post_type' => 'services',
@@ -35,7 +35,7 @@ $services_list = [7470,7469];
                         /* Start the Loop */
                         while ($loop_services->have_posts()) :
                             $loop_services->the_post(); ?>
-                            <li class="fs-3 py-2 d-flex gap-3 align-items-center">
+                            <li class="fs-3 py-2 d-flex gap-4 align-items-center">
                                 <div style="width: 44px;height: 44px">
                                     <?= get_field('service_icon'); ?>
                                 </div>
@@ -48,7 +48,7 @@ $services_list = [7470,7469];
                     wp_reset_postdata(); ?>
                 </ul>
             </div>
-            <div class="portfolio position-absolute">
+            <div class="portfolio-menu position-absolute">
                 <ul class="row list-unstyled">
                     <?php
                     $portfolio = array(
@@ -80,7 +80,7 @@ $services_list = [7470,7469];
                     wp_reset_postdata(); ?>
                 </ul>
             </div>
-            <div class="blog position-absolute">
+            <div class="blog-menu position-absolute">
                 <ul class="row list-unstyled">
                     <?php
                     $post = array(

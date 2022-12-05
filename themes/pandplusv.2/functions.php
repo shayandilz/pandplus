@@ -18,7 +18,7 @@ function theme_scripts()
     $services = array(
         'post_type' => 'services',
         'post_status' => 'publish',
-        'posts_per_page' => '3',
+        'posts_per_page' => '-1',
         'ignore_sticky_posts' => true
     );
     $services_array = [];

@@ -1,4 +1,4 @@
-<article class="col row align-items-start">
+<article class="col row align-items-start mx-0 my-2 my-lg-0">
     <div style="width: 94px;height: 94px">
         <?= get_field('service_icon'); ?>
     </div>
