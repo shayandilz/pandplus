@@ -89,7 +89,7 @@
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
                 class="btn btn-white px-3 py-2 d-none d-lg-inline ">
-            دریافت مشاوره
+            دریافت مشاوره test
         </button>
         </div>
 
