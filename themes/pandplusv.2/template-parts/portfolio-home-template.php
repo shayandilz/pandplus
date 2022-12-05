@@ -1,13 +1,13 @@
 <article class="row swiper-slide px-0 justify-content-center">
     <div class="col-12">
-        <a href="#">
+        <a href="<?php the_permalink();?>">
             <div class="ratio ratio-1x1">
                 <img class="image-rounded object-fit" src="<?php echo get_the_post_thumbnail_url(); ?>"
                      title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
             </div>
-            <div class="d-flex pt-3 gap-3 align-items-center">
+            <div class="d-block d-lg-flex pt-3 gap-2 align-items-center">
                 <!--                category-->
-                <p class="m-0">
+                <p class="m-0 fs-6">
                     <?php
                     $tour_pages = get_posts(
                         array(
@@ -26,23 +26,23 @@
                     }
                     ?>
                 </p>
-                <hr class="vr">
-                <p class="m-0">
+                <hr class="vr d-none d-lg-inline">
+                <p class="m-0 fs-6 py-2 py-lg-0">
                     <?php get_template_part('template-parts/icons/clock'); ?>
                     <!--                    date-->
                     <span>۱۴۰۰ بهمن ۲۲</span>
                 </p>
             </div>
-            <h4 class="fw-bolder pt-3">
+            <h4 class="fw-bolder pt-3 fs-5">
                 <?php echo get_the_title(); ?>
             </h4>
         </a>
         <!--            services -->
-        <div class="d-flex gap-3 rounded bg-info align-items-center my-3 px-3 py-1 text-white">
-            <h6 class="m-0 ">خدمات ارائه شده</h6>
+        <div class="d-flex gap-2 rounded bg-info align-items-center my-3 px-3 text-white">
+            <h6 class="m-0 fs-6">خدمات ارائه شده</h6>
             <hr class="vr">
             <!--                services icon-->
-            <div class="d-flex gap-3 text-center">
+            <div class="d-flex gap-2 text-center">
                 <?php
                 foreach ($tour_pages as $tour){ ?>
                     <a href="<?php echo get_permalink($tour->ID); ?>">

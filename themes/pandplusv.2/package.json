@@ -22,6 +22,7 @@
         "sass-loader": "^12.6.0"
     },
     "dependencies": {
+        "gsap": "npm:@gsap/shockingly@^3.10.4",
         "@popperjs/core": "^2.10.2",
         "animate.css": "^4.1.1",
         "bootstrap": "5.1.3",

@@ -4,19 +4,19 @@
 get_header(); ?>
 <!--top banner-->
 <section class="container vh-100 mt-lg-0 mt-5">
-    <div class="row justify-content-center align-items-center h-100">
+    <div class="row justify-content-center align-items-start h-100">
         <!--            cta-->
-        <div class="col-12 col-lg-5 pe-lg-5 me-lg-5 text-danger">
+        <div class="col-12 col-lg-5 pe-lg-2 me-lg-5 text-danger pt-5 mt-lg-5">
             <h2 class="display-3 fw-bolder"><?php the_title(); ?></h2>
             <div class="my-4 text-justify">
                 <?php echo wp_trim_words(the_content(), 20); ?>
             </div>
-            <div class="d-flex justify-content-between align-items-center pe-lg-3 my-5">
+            <div class="d-flex justify-content-between align-items-center pe-lg-3 my-3">
                 <!--                <button class="btn bg-danger px-4 py-2 rounded text-white">تعرفه های خدمات سئو</button>-->
                 <?php
                 $blog_page_category_link = get_field('blog_page_category_link');
                 if ($blog_page_category_link): ?>
-                    <a class="btn bg-danger px-4 py-2 rounded text-white"
+                    <a class="btn btn-dark px-4 py-2 rounded text-white"
                        href="<?php echo esc_url($blog_page_category_link['url']); ?>">
                         <?php echo esc_html($blog_page_category_link['title']); ?>
                     </a>
@@ -25,9 +25,9 @@ get_header(); ?>
             <!--            call details-->
             <?php get_template_part('template-parts/service-cta'); ?>
             <!--            costumers -->
-            <div class="mt-5">
-                <h6>برخی از مشتریان ما</h6>
-                <div class="d-flex flex-row">
+            <div>
+                <h6 class="my-4">برخی از مشتریان ما</h6>
+                <div class="d-flex flex-row gap-2 align-items-start overflow-hidden">
                     <?php
                     $projects_services = get_field('projects_services');
                     if ($projects_services) :

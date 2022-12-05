@@ -3,11 +3,11 @@
         <div class="row align-items-center">
             <div class="col-12 col-lg-6 row align-items-center m-0">
                 <?php get_template_part('template-parts/lines/ver-line-medium'); ?>
-                <p class="col fs-1 text-white fw-bolder text-justify">
+                <p class="col fs-1 text-white fw-bolder text-justify gs_reveal gs_reveal_fromRight">
                     <?php the_field('right_about_us_text'); ?>
                 </p>
             </div>
-            <div class="col-12 col-lg-6 pt-5 text-center text-lg-start">
+            <div class="col-12 col-lg-6 pt-5 text-center text-lg-start gs_reveal gs_reveal_fromLeft">
                 <p class="text-white pe-lg-5 text-justify fs-6 lh-lg">
                     <?php the_field('left_about_us_text'); ?>
                 </p>

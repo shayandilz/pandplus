@@ -95,7 +95,7 @@
 
 
     </div>
-    <a href="#cd-nav" class="cd-nav-trigger position-fixed z-top rounded-circle overflow-hidden animate__animated animate__fadeInLeft animate__delay-3s">
+    <a href="#cd-nav" class="cd-nav-trigger position-fixed z-top rounded-circle overflow-hidden animate__animated animate__fadeInLeft animate__delay-3s my-1">
         <span class="cd-nav-icon position-absolute start-50 top-50"></span>
 
         <svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
