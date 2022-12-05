@@ -2,8 +2,28 @@ require('./bootstrap');
 import 'swiper/css';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
+import WOW from 'wow.js'
 import $ from "jquery";
 
+
+const wow = new WOW(
+    {
+        boxClass: 'wow',      // animated element css class (default is wow)
+        animateClass: 'animated', // animation css class (default is animated)
+        offset: 100,          // distance to the element when triggering the animation (default is 0)
+        duration: .5,
+        mobile: true,       // trigger animations on mobile devices (default is true)
+        live: true,       // act on asynchronously loaded content (default is true)
+        callback: function (box) {
+            // the callback is fired every time an animation is started
+            // the argument that is passed in is the DOM node being animated
+        },
+        scrollContainer: null,    // optional scroll container selector, otherwise use window,
+        resetAnimation: true,     // reset animation on end (default is true)
+    }
+);
+
+wow.init();
 
 $(document).ready(function () {
     //menu item
@@ -42,9 +62,9 @@ $(document).ready(function () {
 
     //open/close lateral navigation
     $('.cd-nav-trigger').on('click', function (event) {
-        setTimeout ( function() {
+        setTimeout(function () {
             $('.top-menu').toggleClass('z-top');
-        } , 300)
+        }, 300)
         event.preventDefault();
         //stop if nav animation is running
         if (!isLateralNavAnimating) {
@@ -58,22 +78,22 @@ $(document).ready(function () {
         }
     });
     //    service list menu
-    $(".service_archive_list li").each(function (){
+    $(".service_archive_list li").each(function () {
         let datafrom = jsData.service_ID
         let el = $(this).bind();
         const datalist = this.dataset.list
-        let services_show = $('.services'+ -datalist);
+        let services_show = $('.services' + -datalist);
 
-        $(this).mouseenter(function (e){
+        $(this).mouseenter(function (e) {
             if (!el.hasClass("active")) {
                 el.addClass("active");
                 el.siblings().removeClass("active");
             }
             datafrom.forEach(function (value, index) {
                 console.log(value)
-                if (datalist == value && el.hasClass('active') ){
-                        services_show.addClass("show");
-                        services_show.siblings().removeClass("show");
+                if (datalist == value && el.hasClass('active')) {
+                    services_show.addClass("show");
+                    services_show.siblings().removeClass("show");
                 }
             })
         })
@@ -92,7 +112,23 @@ $(document).ready(function () {
     })
 });
 document.addEventListener('DOMContentLoaded', function () {
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    //toggle header on time
+    const toggleScrollClass = function () {
+        if (window.scrollY > 24) {
+            document.body.classList.add('scrolled');
+        } else {
+            document.body.classList.remove('scrolled');
+        }
+    }
 
+    toggleScrollClass();
+
+    //check scroll to take actions on it
+    window.addEventListener('scroll', function () {
+        toggleScrollClass();
+    });
 
     const swiper = new Swiper('.swiper1', {
         // Optional parameters

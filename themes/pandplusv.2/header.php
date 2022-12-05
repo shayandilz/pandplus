@@ -61,7 +61,7 @@
 
 <!-- Navbar STart -->
 <header class="position-relative">
-    <div class="position-absolute top-menu z-top py-2">
+    <div class="position-absolute top-menu z-top py-2 animate__animated animate__fadeInDown animate__delay-1s">
         <div class="container justify-content-center justify-content-end justify-content-lg-center d-flex gap-3 align-items-center px-2">
             <div class="d-flex col-11 col-lg-9 gap-3 justify-content-end justify-content-lg-start">
             <a class="text-end text-lg-start" href="<?php echo esc_url(get_home_url()) ?>">
@@ -95,7 +95,7 @@
 
 
     </div>
-    <a href="#cd-nav" class="cd-nav-trigger position-fixed z-top rounded-circle overflow-hidden">Menu
+    <a href="#cd-nav" class="cd-nav-trigger position-fixed z-top rounded-circle overflow-hidden animate__animated animate__fadeInLeft animate__delay-3s">
         <span class="cd-nav-icon position-absolute start-50 top-50"></span>
 
         <svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
