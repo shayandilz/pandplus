@@ -19,7 +19,7 @@
                        type="button"
                        data-bs-toggle="modal"
                        data-bs-target="#exampleModal"
-                       class="btn btn-white px-4 py-2 fs-5 mx-auto my-4 mx-lg-0 rounded-1 w-50">
+                       class="btn btn-white px-2 py-2 mx-auto my-4 mx-lg-0 rounded-1 w-50">
                         <?php echo esc_html($footer_button['text']); ?>
                     </a>
                 <?php endif; ?>
@@ -68,29 +68,29 @@
                 ?>
 
             </div>
-            <div class="col-lg col-6">
-                <?php
-                $locations = get_nav_menu_locations();
-                $menu = wp_get_nav_menu_object($locations['footerLocationThree']);
-                if ($menu) :
-                    ?>
-                    <h6 class="fw-bolder pb-3">
-                        <?= $menu->name; ?>
-                    </h6>
-                    <?php
-                    wp_nav_menu(array(
-                        'theme_location' => 'footerLocationThree',
-                        'menu_class' => 'list-unstyled pe-0 small fw-lighter text-semi-light d-flex flex-column gap-3',
-                        'container' => false,
-                        'menu_id' => 'navbarTogglerMenu',
-                        'item_class' => 'nav-item',
-                        'link_class' => 'lazy text-decoration-none ',
-                        'depth' => 1,
-                    ));
-                endif;
-                ?>
-
-            </div>
+<!--            <div class="col-lg col-6">-->
+<!--                --><?php
+//                $locations = get_nav_menu_locations();
+//                $menu = wp_get_nav_menu_object($locations['footerLocationThree']);
+//                if ($menu) :
+//                    ?>
+<!--                    <h6 class="fw-bolder pb-3">-->
+<!--                        --><?//= $menu->name; ?>
+<!--                    </h6>-->
+<!--                    --><?php
+//                    wp_nav_menu(array(
+//                        'theme_location' => 'footerLocationThree',
+//                        'menu_class' => 'list-unstyled pe-0 small fw-lighter text-semi-light d-flex flex-column gap-3',
+//                        'container' => false,
+//                        'menu_id' => 'navbarTogglerMenu',
+//                        'item_class' => 'nav-item',
+//                        'link_class' => 'lazy text-decoration-none ',
+//                        'depth' => 1,
+//                    ));
+//                endif;
+//                ?>
+<!---->
+<!--            </div>-->
             <div class="col-lg-3 col-6">
                 <?php
                 $google_map_iframe = get_field('google_map_iframe', 'option');

@@ -32,16 +32,16 @@ main {
 
 .cd-nav-trigger {
   left: 5%;
-  top: 20px;
+  top: 0!important;
   height: 54px;
   width: 54px;
-  background-color: rgba(255, 255, 255, 0.5);
+  //background-color: rgba(255, 255, 255, 0.5);
   /* image replacement */
   text-indent: 100%;
   white-space: nowrap;
   -webkit-transition: -webkit-transform 0.5s;
   -moz-transition: -moz-transform 0.5s;
-  transition: transform 0.5s;
+  transition: transform 0.5s , background-color 200ms ease-out;
 }
 
 .cd-nav-trigger .cd-nav-icon {
@@ -55,7 +55,8 @@ main {
   transform: translateX(-50%) translateY(-50%);
   width: 22px;
   height: 2px;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgb(255, 255, 255);
+  transition: background-color 200ms ease-out;
 }
 
 .cd-nav-trigger .cd-nav-icon::before, .cd-nav-trigger .cd-nav-icon:after {
@@ -343,7 +344,10 @@ main {
 //second menu
 .top-menu {
   top: 0;
-  width: 100vw;
+  width: 100%;
+  right: 0;
+  left: auto;
+  height:60px;
   backdrop-filter: brightness(0.5);
 
   #menu-main-menu {

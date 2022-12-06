@@ -48,12 +48,12 @@
     </div>
     <div class="container tab-pane fade" id="nav-service" role="tabpanel" aria-labelledby="nav-service-tab"
          tabindex="0">
-        <ul class="list-unstyled mt-4 row justify-content-center align-items-center text-center">
+        <ul class="list-unstyled my-5 row justify-content-center align-items-center text-center">
             <?php
             $services_heaeder = array(
                 'post_type' => 'services',
                 'post_status' => 'publish',
-                'posts_per_page' => '3',
+                'posts_per_page' => '-1',
                 'ignore_sticky_posts' => true
             );
             $loop_services = new WP_Query($services_heaeder);
@@ -65,14 +65,14 @@
                         <div style="width: 44px;height: 44px">
                             <?= get_field('service_icon'); ?>
                         </div>
-                        <a class="text-dark fw-bold" href="<?php the_permalink(); ?>">
+                        <a class="text-dark fs-4 fw-bold" href="<?php the_permalink(); ?>">
                             <?php the_title(); ?>
                         </a>
                     </li>
                 <?php endwhile;
             endif;
             wp_reset_postdata(); ?>
-            <div class="d-flex flex-column align-items-center justify-content-center gap-4 text-center mt-4">
+            <div class="d-flex flex-column align-items-center justify-content-center gap-4 text-center mt-4 ">
                 <!--                 <a class="btn btn-dark px-4 py-2 fs-5 rounded-1"-->
                 <!--                    href="--><?php //echo esc_url(get_home_url('/services')) ?><!--">-->
                 <!--                     رفتن به صفحه خدمات-->
@@ -90,12 +90,12 @@
     </div>
     <div class="container tab-pane fade" id="nav-portfolio" role="tabpanel" aria-labelledby="nav-portfolio-tab"
          tabindex="0">
-        <ul class="row list-unstyled mt-4 g-3">
+        <ul class="row list-unstyled my-5 g-3">
             <?php
             $portfolio = array(
                 'post_type' => 'portfolio',
                 'post_status' => 'publish',
-                'posts_per_page' => '4',
+                'posts_per_page' => '6',
                 'ignore_sticky_posts' => true
             );
             $loop_portfolio = new WP_Query($portfolio);
@@ -138,12 +138,12 @@
     </div>
     <div class="container tab-pane fade overflow-scroll" id="nav-blog" role="tabpanel" aria-labelledby="nav-blog-tab"
          tabindex="0">
-        <ul class="row list-unstyled mt-4 ">
+        <ul class="row list-unstyled my-5 ">
             <?php
             $post = array(
                 'post_type' => 'post',
                 'post_status' => 'publish',
-                'posts_per_page' => '4',
+                'posts_per_page' => '6',
                 'ignore_sticky_posts' => true
             );
             $loop_post = new WP_Query($post);
@@ -184,7 +184,7 @@
     </div>
 </div>
 <!--menu mobile footer -->
-<div class="py-3 w-100 bg-danger position-fixed bottom-0 z-top">
+<div class="py-3 w-100 bg-danger position-absolute bottom-0 z-top">
     <h5 class="text-center text-secondary fw-bold">آدرس پستی</h5>
     <p class="px-5 text-center">تهران خیابان شهید بهشتی ابتدای خیابان سرافراز برج دریای نور طبقه چهار واحد۴۰۴</p>
     <div class="d-flex justify-content-center gap-3">

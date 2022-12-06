@@ -14,12 +14,29 @@
             </div>
             <div class="col-12 col-lg-10 row row-cols-1 row-cols-lg-3 py-5">
                 <?php
+                $i = -1;
                 $list_services = get_field('services_list');
                 if ($list_services) :
                     foreach ($list_services as $post):
-                        setup_postdata($post);
-                        get_template_part('template-parts/service-card');
-                        endforeach;
+                        $i++;
+                        setup_postdata($post); ?>
+                        <article class="col row align-items-start mx-0 my-2 my-lg-0 animate__animated animate__fadeInDown animate__delay-<?php echo $i; ?>s">
+                            <div style="width: 94px;height: 94px">
+                                <?= get_field('service_icon'); ?>
+                            </div>
+                            <div class="col-12">
+                                <a class="text-black " href="<?php the_permalink(); ?>">
+                                    <h4 class="fw-bolder title-card py-3 text-danger">
+                                        <?= get_the_title(); ?>
+                                        <span>> </span>
+                                    </h4>
+                                    <p class="text-justify">
+                                        <?= wp_trim_words(get_the_content(), 18); ?>
+                                    </p>
+                                </a>
+                        </article>
+                    <?php
+                    endforeach;
                 endif;
                 wp_reset_postdata();
                 ?>

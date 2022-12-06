@@ -2,7 +2,7 @@
     <div class="container my-3">
         <div class="row mt-5 justify-content-between align-items-center">
             <div class="col-12 row align-items-center">
-                <div class="col-md-5 col-12 text-dark text-justify">
+                <div class="col-md-5 col-12 text-dark text-justify animate__animated animate__fadeInLeft ">
                     <p class="fs-5">
                         <?php the_field('client_small_title'); ?>
                     </p>
@@ -13,7 +13,7 @@
                         <?php the_field('client_text'); ?>
                     </p>
                 </div>
-                <div class="col-md-7 col-12">
+                <div class="col-md-7 col-12 animate__animated animate__fadeInRight">
 
                     <article class="d-flex justify-content-evenly flex-wrap gap-2 align-content-center">
                         <?php

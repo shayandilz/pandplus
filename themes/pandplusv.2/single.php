@@ -105,8 +105,8 @@ while (have_posts()) :
 <!--                            <a class="text-danger fw-bolder" href=""> ادامه مطلب ></a>-->
 <!--                        </div>-->
 <!--                    </div>-->
-                    <!--            cta-->
-<!--                    --><?php //get_template_part('template-parts/cta'); ?>
+<!--                                cta-->
+                    <?php get_template_part('template-parts/cta'); ?>
                     <!--            more post-->
                     <?php get_template_part('template-parts/blogpage/more-posts'); ?>
                     <!--            comments-->
@@ -133,4 +133,4 @@ while (have_posts()) :
 
 <?php endwhile;
 wp_reset_query();
-get_footer();
+get_footer(); ?>
