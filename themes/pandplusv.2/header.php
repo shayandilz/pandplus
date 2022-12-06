@@ -5,7 +5,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTJDKQXKFQ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-ZTJDKQXKFQ');
@@ -17,7 +21,7 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="sabavision_advertiser_id" content="01862141-bc61-4233-ae52-14fa3352b001" />
+    <meta name="sabavision_advertiser_id" content="01862141-bc61-4233-ae52-14fa3352b001"/>
     <script src="https://plus.sabavision.com/dmp/dox/events.min.js"></script>
     <script>__SabaEvents.initialize()</script>
     <meta name="google-site-verification" content="yrAbFPNW03P6nVf3eS5Cdb_SsSG1uxAK4Yp7JHyKomM"/>
@@ -37,13 +41,28 @@
     <!-- End Google Tag Manager -->
     <!--    yektanet script -->
     <script> !function (t, e, n) {
-            t.yektanetAnalyticsObject = n, t[n] = t[n] || function () { t[n].q.push(arguments) }, t[n].q = t[n].q || []; var a = new Date, r = a.getFullYear().toString() + "0" + a.getMonth() + "0" + a.getDate() + "0" + a.getHours(), c = e.getElementsByTagName("script")[0], s = e.createElement("script"); s.id = "ua-script-NMiTglkd"; s.dataset.analyticsobject = n; s.async = 1; s.type = "text/javascript"; s.src = "https://cdn.yektanet.com/rg_woebegone/scripts_v3/NMiTglkd/rg.complete.js?v=" + r, c.parentNode.insertBefore(s, c) }(window, document, "yektanet"); </script>
+            t.yektanetAnalyticsObject = n, t[n] = t[n] || function () {
+                t[n].q.push(arguments)
+            }, t[n].q = t[n].q || [];
+            var a = new Date,
+                r = a.getFullYear().toString() + "0" + a.getMonth() + "0" + a.getDate() + "0" + a.getHours(),
+                c = e.getElementsByTagName("script")[0], s = e.createElement("script");
+            s.id = "ua-script-NMiTglkd";
+            s.dataset.analyticsobject = n;
+            s.async = 1;
+            s.type = "text/javascript";
+            s.src = "https://cdn.yektanet.com/rg_woebegone/scripts_v3/NMiTglkd/rg.complete.js?v=" + r, c.parentNode.insertBefore(s, c)
+        }(window, document, "yektanet"); </script>
     <!--    yektanet script -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-241604640-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-241604640-1');
@@ -64,38 +83,39 @@
     <div class="position-absolute top-menu z-top py-2 animate__animated animate__fadeInDown animate__delay-1s">
         <div class="container justify-content-center justify-content-end justify-content-lg-center d-flex gap-3 align-items-center px-2">
             <div class="d-flex col-11 col-lg-9 gap-3 justify-content-end justify-content-lg-start">
-            <a class="text-end text-lg-start" href="<?php echo esc_url(get_home_url()) ?>">
-                <?php
-                $footer_logo = get_field('footer_logo', 'option');
-                ?>
-                <img class="lazy" width="40" height="auto" src="<?= $footer_logo['url'] ?>"
-                     alt="<?= get_bloginfo('name'); ?>">
-            </a>
-            <hr class="vr text-white my-auto d-none d-lg-inline">
-            <div class="d-lg-flex d-none">
-                <?php
-                wp_nav_menu(array(
-                    'theme_location' => 'headerMenuLocation',
-                    'menu_class' => 'list-unstyled d-flex align-items-center gap-2 m-0',
-                    'container' => false,
-                    'item_class' => 'nav-item',
-                    'link_class' => 'nav-link fs-6 py-1',
-                    'depth' => 1
-                ));
-                ?>
+                <a class="text-end text-lg-start" href="<?php echo esc_url(get_home_url()) ?>">
+                    <?php
+                    $footer_logo = get_field('footer_logo', 'option');
+                    ?>
+                    <img class="lazy" width="40" height="auto" src="<?= $footer_logo['url'] ?>"
+                         alt="<?= get_bloginfo('name'); ?>">
+                </a>
+                <hr class="vr text-white my-auto d-none d-lg-inline">
+                <div class="d-lg-flex d-none">
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'headerMenuLocation',
+                        'menu_class' => 'list-unstyled d-flex align-items-center gap-2 m-0',
+                        'container' => false,
+                        'item_class' => 'nav-item',
+                        'link_class' => 'nav-link fs-6 py-1',
+                        'depth' => 1
+                    ));
+                    ?>
+                </div>
             </div>
-            </div>
-        <button type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-                class="btn btn-white px-3 py-2 d-none d-lg-inline ">
-            دریافت مشاوره
-        </button>
+            <button rel="nofollow" type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    class="btn btn-white px-3 py-2 d-none d-lg-inline ">
+                دریافت مشاوره
+            </button>
         </div>
 
 
     </div>
-    <a href="#cd-nav" class="cd-nav-trigger position-fixed z-top rounded-circle overflow-hidden animate__animated animate__fadeInLeft animate__delay-3s my-1">
+    <a href="#cd-nav" rel="nofollow"
+       class="cd-nav-trigger position-fixed z-top rounded-circle overflow-hidden animate__animated animate__fadeInLeft animate__delay-3s my-1">
         <span class="cd-nav-icon position-absolute start-50 top-50"></span>
 
         <svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
@@ -129,6 +149,8 @@
 <!--            </svg>-->
 <!--        </a>-->
 <!--    </div>-->
+<a href="#" rel="nofollow" class="btn backTo_Top position-fixed bg-secondary text-white rounded-circle pt-1 shadow pb-2"><i
+            class="bi bi-arrow-up"></i></a>
 <main class="container-fluid m-0 p-0 position-relative overflow-hidden">
 
 

@@ -13,14 +13,14 @@ while (have_posts()) :
                 <div class="col-12 col-lg-7 order-2 order-lg-1">
                     <!-- tag list        -->
                     <div class="d-flex gap-3">
-                        <h6 class="bg-success rounded px-3 py-2 shadow-sm">
-                    <span class="text-danger">
+                        <h6 class=" px-3 py-2 ">
+                    <span class="text-danger my-auto">
                         <?php get_template_part('template-parts/icons/tag-icon'); ?>
                         <?php
                         $category_detail = get_the_category($post->ID);//$post->ID
                         foreach ($category_detail as $category) { ?>
                             <span
-                               class="text-decoration-none py-2 px-3 me-2 small fw-lighter">
+                               class="bg-success shadow-sm rounded text-decoration-none py-2 px-3 ms-2 small fw-lighter">
                                 <?php echo $category->name ?>
                             </span>
                         <?php } ?>
@@ -33,7 +33,7 @@ while (have_posts()) :
                         <?php the_title(); ?>
                     </h1>
                     <!--            table of content-->
-                    <div class="bg-success image-rounded p-5 mb-5">
+                    <div class="bg-success image-rounded px-3 px-lg-5 py-2 py-lg-3 mb-5">
                         <h3 class="py-3">آنچه در این مقاله می‌خوانید:</h3>
                         <div class="d-flex align-items-center">
                             <?php echo do_shortcode('[TOC]') ?>
@@ -62,13 +62,19 @@ while (have_posts()) :
                         <?php echo get_the_author_meta('display_name', $post->post_author); ?>
                         </span>
                             </div>
-                            <div>
+                            <div class="d-flex align-items-center">
                                 <!--                        date-->
                                 <?php echo get_the_date('d  F , Y'); ?>
                                 <!--                        reading time-->
-                                <span class="px-2">
-                             <?= reading_time(); ?>
-                        </span>
+                                <hr class="vr mx-1">
+                                <div class="d-flex px-2 align-items-center">
+                                    <?php get_template_part('template-parts/icons/clock');?>
+                                    زمان مطالعه
+                                    <h6 class="fw-bold mx-2 my-0">
+                                    <?= reading_time();?>
+                                    </h6>
+                                    دقیقه
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -86,9 +92,9 @@ while (have_posts()) :
 
 
                     <!--            content-->
-                    <div class="text-justify px-1 px-lg-0">
+                    <article class="text-justify px-1 px-lg-0">
                         <?php the_content(); ?>
-                    </div>
+                    </article>
                     <!--                            every 200 word-->
 <!--                    <div class="bg-success image-rounded p-3 my-5">-->
 <!--                        <div class="d-md-flex gap-3 align-items-center text-center text-md-start">-->

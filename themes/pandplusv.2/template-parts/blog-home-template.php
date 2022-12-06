@@ -11,7 +11,7 @@
         <?php } ?>
         <div class="fs-6 text-center">
             ارایه توسط
-            <span class="fw-normal text-danger">
+            <span class="fw-bold text-danger">
                 <?php echo get_the_author_meta('display_name', $post->post_author); ?>
             </span>
         </div>
@@ -21,7 +21,7 @@
     </div>
     <div class="col-12 col-lg-7">
         <a class="text-black " href="<?php the_permalink(); ?>">
-            <h4 class="fw-bolder">
+            <h4 class="fw-bold fs-5">
                 <?php the_title(); ?>
             </h4>
         </a>

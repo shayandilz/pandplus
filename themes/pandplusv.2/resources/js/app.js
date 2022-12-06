@@ -31,10 +31,12 @@ $(document).ready(function () {
         if ($(document).scrollTop() > 30) { // check if user scrolled more than 50 from top of the browser window
             $('.cd-nav-trigger ').css('background-color' , 'rgba(255, 255, 255, 0.5)')
             $('.cd-nav-icon').css('background-color' , 'black')
+            $('.backTo_Top').removeClass('outro');
         }
         else {
             $('.cd-nav-trigger ').css('background-color' , 'transparent')
             $('.cd-nav-icon').css('background-color' , 'white')
+            $('.backTo_Top').addClass('outro');
         }
         })
             //menu item

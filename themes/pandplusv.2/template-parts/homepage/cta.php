@@ -1,4 +1,4 @@
-<section class="bg-secondary py-5">
+<section class="py-5">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-6 row align-items-center text-center text-lg-start">
@@ -8,7 +8,7 @@
                 </p>
             </div>
             <div class="col-12 col-lg-6 pt-5 text-center text-lg-start">
-                <p class="text-danger pe-lg-5">
+                <p class="text-danger pe-lg-5 text-justify">
                     <?php the_field('left_cta'); ?>
                 </p>
                 <?php
@@ -16,6 +16,7 @@
                 if ($CTA_button): ?>
                     <a class="btn btn-dark px-5 py-3 fs-5 rounded-1"
                        type="button"
+                       rel="nofollow"
                        data-bs-toggle="modal"
                        data-bs-target="#exampleModal"
                        href="<?php echo esc_url($CTA_button['url']); ?>">

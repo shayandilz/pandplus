@@ -16,6 +16,7 @@
                 if ($about_button_upper): ?>
                     <a class="btn btn-white px-5 py-3 fs-5 rounded-1"
                        type="button"
+                       rel="nofollow"
                        data-bs-toggle="modal"
                        data-bs-target="#exampleModal"
                        href="<?php echo esc_url($about_button_upper['url']); ?>">
