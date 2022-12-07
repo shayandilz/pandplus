@@ -317,3 +317,11 @@ body.navigation-is-open {
 article a {
   @extend .text-secondary , .fw-bold;
 }
+//comment
+.wpd-comment-wrap {
+  border: 1px solid #d6d5d5;
+  border-radius: 30px;
+  padding: 20px;
+  background: #fafffb;
+  margin: 5px 0;
+}

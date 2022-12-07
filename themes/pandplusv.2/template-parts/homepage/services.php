@@ -30,8 +30,8 @@
                                         <?= get_the_title(); ?>
                                         <span>> </span>
                                     </h4>
-                                    <p class="text-justify">
-                                        <?= the_excerpt(); ?>
+                                    <p class="text-center text-lg-start">
+                                        <?= get_the_excerpt(); ?>
                                     </p>
                                 </a>
                         </article>
