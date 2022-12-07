@@ -23,7 +23,7 @@
                 <?= esc_html($phone['title']) ?>
             </h6>
             <a class="text-black d-flex flex-row justify-content-center align-items-center text-center gap-2"
-               href="<?php echo esc_url($phone['number']); ?>">
+               href="tel:<?= get_field('call_number_service', 'option'); ?>">
                 تماس تلفنی
                 <i class="bi bi-chevron-left"></i>
             </a>
@@ -37,7 +37,7 @@
                 <?= esc_html($mail['title']) ?>
             </h6>
             <a class="text-black d-flex flex-row justify-content-center align-items-center text-center gap-2"
-               href="<?php echo esc_url($mail['url']); ?>">
+               href="mailto:<?php echo esc_url($mail['url']); ?>">
                 ارسال ایمیل
                 <i class="bi bi-chevron-left"></i>
             </a>
@@ -48,11 +48,12 @@
             $mail = get_field('Counseling', 'option');
             ?>
             <h6 class="text-black fs-4 fw-bold">
-                <?= esc_html($mail['title']) ?>
                 مشاوره
             </h6>
-            <a class="text-black d-flex flex-row justify-content-center align-items-center text-center gap-2"
-               href="<?php echo esc_url($mail['url']); ?>">
+            <a rel="nofollow" type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    class="text-black d-flex flex-row justify-content-center align-items-center text-center gap-2">
                 مشاوره
                 <i class="bi bi-chevron-left"></i>
             </a>

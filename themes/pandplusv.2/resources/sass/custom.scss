@@ -97,10 +97,10 @@ a {
 //svg lines
 .ver-line {
   position: absolute;
-  top: -30px;
+  top: -60px;
   bottom: -30px;
   right: 0;
-  z-index: 1;
+  z-index: -1;
   //height: 110%;
 }
 
@@ -295,13 +295,15 @@ body.navigation-is-open {
   }
 }
 .card-main{
-  &:hover {
+  &:hover , &:active {
     .card-info {
       transform: translateY(0);
+      opacity: 1;
     }
   }
 .card-info {
-  transition: transform 300ms linear;
+  transition: transform 300ms linear , opacity 300ms ease-out;
+  opacity: 0;
   transform: translateY(100%);
 }
 }

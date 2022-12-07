@@ -24,7 +24,7 @@
 <!--                    </a>-->
 <!--                --><?php //endif; ?>
             </div>
-            <div class="col-lg col-6">
+            <div class="col-lg col-12 my-2 my-lg-0">
                 <h6 class="fw-bolder pb-3">
                     <?php
                     $locations = get_nav_menu_locations();
@@ -35,7 +35,7 @@
                 <?php
                 wp_nav_menu(array(
                     'theme_location' => 'footerLocationOne',
-                    'menu_class' => 'list-unstyled pe-0 small fw-lighter text-semi-light d-flex flex-column gap-3',
+                    'menu_class' => 'list-unstyled pe-0 small fw-lighter text-semi-light d-flex flex-lg-column flex-wrap gap-3',
                     'container' => false,
                     'menu_id' => 'navbarTogglerMenu',
                     'item_class' => 'nav-item',
@@ -45,7 +45,7 @@
                 ?>
 
             </div>
-            <div class="col-lg col-6">
+            <div class="col-lg col-12 my-2 my-lg-0">
                 <?php
                 $locations = get_nav_menu_locations();
                 $menu = wp_get_nav_menu_object($locations['footerLocationTwo']);
@@ -57,7 +57,7 @@
                     <?php
                     wp_nav_menu(array(
                         'theme_location' => 'footerLocationTwo',
-                        'menu_class' => 'list-unstyled pe-0 small fw-lighter text-semi-light d-flex flex-column gap-3',
+                        'menu_class' => 'list-unstyled pe-0 small fw-lighter text-semi-light d-flex flex-lg-column flex-wrap  gap-3',
                         'container' => false,
                         'menu_id' => 'navbarTogglerMenu',
                         'item_class' => 'nav-item',
@@ -91,7 +91,7 @@
 //                ?>
 <!---->
 <!--            </div>-->
-            <div class="col-lg-3 col-12">
+            <div class="col-lg-3 col-12 h-100">
                 <?php
                 $google_map_iframe = get_field('google_map_iframe', 'option');
                 if ($google_map_iframe): ?>

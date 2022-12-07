@@ -115,7 +115,7 @@
                                  ?>"
                                  alt="<?php the_title(); ?>">
                         </a>
-                        <h6 class="text-center fw-bolder text-danger"><?php echo get_the_title(); ?></h6>
+                        <h6 class="text-center fw-bold fs-6 text-danger"><?php echo get_the_title(); ?></h6>
                     </li>
                 <?php endwhile;
             endif;
@@ -152,6 +152,7 @@
                 while ($loop_post->have_posts()) :
                     $loop_post->the_post(); ?>
                     <li class="col-6 d-flex flex-column gap-3">
+                        <a href="<?php the_permalink(); ?>">
                         <img class="img-fluid overflow-hidden image-rounded-min object-fit lazy ratio-1x1"
                              src="<?php
                              if (has_post_thumbnail($post->ID)) {
@@ -161,7 +162,8 @@
                              }
                              ?>"
                              alt="<?php the_title(); ?>">
-                        <h6 class="text-center fw-bolder text-danger"><?php echo get_the_title(); ?></h6>
+                        <h6 class="text-center fs-6 fw-bold text-danger"><?php echo get_the_title(); ?></h6>
+                        </a>
                     </li>
                 <?php endwhile;
             endif;
@@ -184,7 +186,7 @@
     </div>
 </div>
 <!--menu mobile footer -->
-<div class="py-3 w-100 bg-danger position-absolute bottom-0 z-top">
+<div class="py-3 w-100 bg-danger position-fixed bottom-0 z-top">
     <h5 class="text-center text-secondary fw-bold">آدرس پستی</h5>
     <p class="px-5 text-center">تهران خیابان شهید بهشتی ابتدای خیابان سرافراز برج دریای نور طبقه چهار واحد۴۰۴</p>
     <div class="d-flex justify-content-center gap-3">

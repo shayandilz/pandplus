@@ -1,6 +1,10 @@
 <?php get_header(); ?>
 <div class="container py-5 mt-5">
     <div class="w-100 mb-5 mx-auto">
+        <div class="d-block d-lg-flex align-items-center">
+            نتیجه جستجو برای :
+        <h1 class="fw-bold ms-3"> <?php the_search_query();?> </h1>
+        </div>
         <?php get_template_part('template-parts/search') ?>
     </div>
     <?php

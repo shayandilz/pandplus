@@ -88,7 +88,7 @@ while (have_posts()) :
             </div>
             <div class="row justify-content-center mt-5">
                 <!--        main area-->
-                <div class="col-12 col-lg-7 ">
+                <div class="col-12 col-lg-7 bg-white z-top">
 
 
                     <!--            content-->

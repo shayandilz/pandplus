@@ -18,18 +18,7 @@ $services = array(
                     معرض
                     نویسنده و موارد دیگر!
                 </p>
-                <div class="d-flex justify-content-center align-items-center pe-lg-3 my-3 gap-3">
-                    <button type="button"
-                            rel="nofollow"
-                            data-bs-toggle="modal"
-                            data-bs-target="#exampleModal"
-                            class="btn btn-dark px-3 py-2">
-                        دریافت مشاوره
-                    </button>
-                    <a class="text-danger" href="#">
-                        <?php get_template_part('template-parts/lines/short-line-hor') ?>
-                        مشاهده خدمات</a>
-                </div>
+                <?php get_template_part('template-parts/counseling-call'); ?>
                 <!--            call details-->
                 <?php get_template_part('template-parts/service-cta'); ?>
             </div>

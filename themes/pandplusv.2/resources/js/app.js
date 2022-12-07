@@ -27,6 +27,7 @@ const wow = new WOW(
 wow.init();
 
 $(document).ready(function () {
+
     $(window).scroll(function () { // check if scroll event happened
         if ($(document).scrollTop() > 30) { // check if user scrolled more than 50 from top of the browser window
             $('.cd-nav-trigger ').css('background-color' , 'rgba(255, 255, 255, 0.5)')

@@ -441,4 +441,3 @@ function reading_time() {
 
     return $readingtime;
 }
-

@@ -1,4 +1,4 @@
-<div class="col-12 col-lg my-2">
+<div class="col-12 col-lg my-2 hover-shadow">
     <a href="<?php the_permalink(); ?>">
         <img class="col-12 image-rounded-min ratio ratio-1x1" src="<?php echo get_the_post_thumbnail_url(); ?> " alt="">
         <div class="align-items-center text-danger">
