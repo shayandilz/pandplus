@@ -97,11 +97,12 @@ a {
 //svg lines
 .ver-line {
   position: absolute;
-  top: -60px;
-  bottom: -30px;
+  top: 0px;
   right: 0;
-  z-index: -1;
-  //height: 110%;
+  z-index: 1;
+  width: 100vw;
+  transform: scale(0.2);
+  transform-origin: top right;
 }
 
 .ver-hor__big {

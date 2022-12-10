@@ -78,4 +78,20 @@ document.addEventListener("DOMContentLoaded", function () {
             } // assure that the element is hidden when scrolled into view
         });
     });
+
+
+    //line draw for main page
+    MorphSVGPlugin.convertToPath("circle, rect, ellipse, line, polygon, polyline");
+    let lineSVG = gsap.timeline({
+        scrollTrigger: {
+            markers: true,
+            trigger: ".svg-section",
+            start: "top center",
+            // endTrigger: '.end-section',
+            end: "2150px center",
+            scrub: 1,
+        },
+        ease: "power1.in"
+    })
+    lineSVG.fromTo('#star-path', 1, {drawSVG: "100% 100%"}, {drawSVG: "0% 100%"})
 });

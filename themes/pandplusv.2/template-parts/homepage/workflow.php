@@ -1,4 +1,4 @@
-<section class="container-fluid py-5 position-relative">
+<section class="container-fluid py-5 position-relative svg-section">
     <!--    svg in left-->
     <div class="d-none d-lg-inline">
         <?php get_template_part('template-parts/lines/vertical-line-homePage'); ?>
