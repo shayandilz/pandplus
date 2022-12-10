@@ -4,10 +4,10 @@
         <div class="row justify-content-center">
             <div class="col-12 row justify-content-center py-3 py-lg-5">
                 <div class="col-lg-10 col-12 text-center pt-5 pt-lg-0 row justify-content-center">
-                    <h3 class="fs-1 fw-bold text-danger py-3">
+                    <h3 data-animate="1" class="fs-2 fw-bolder text-danger py-3 gs_reveal gs_reveal_fromBottom">
                         <?php the_field('service_title'); ?>
                     </h3>
-                    <p class="fs-6 text-danger lh-lg text-justify text-lg-center">
+                    <p data-animate="1" class="fs-6 text-danger lh-lg text-justify text-lg-center gs_reveal gs_reveal_fromBottom">
                         <?php the_field('service_text'); ?>
                     </p>
                 </div>
@@ -20,17 +20,17 @@
                     foreach ($list_services as $post):
                         $i++;
                         setup_postdata($post); ?>
-                        <article class=" mx-0 my-3 my-lg-3 animate__animated animate__fadeInDown animate__delay-<?php echo $i; ?>s">
+                        <article data-animate="<?php echo $i . 8; ?>" class=" mx-0 my-3 my-lg-3 gs_reveal gs_reveal_fromBottom" >
                             <div class="m-lg-0 m-auto" style="width: 94px;height: 94px">
                                 <?= get_field('service_icon'); ?>
                             </div>
                             <div class="pt-2">
                                 <a class="text-black " href="<?php the_permalink(); ?>">
-                                    <h4 class="fw-bolder text-center text-lg-start title-card py-2 py-lg-4 text-danger">
+                                    <h4 class="fw-bold text-center text-lg-start title-card py-2 py-lg-4 text-danger">
                                         <?= get_the_title(); ?>
                                         <span>> </span>
                                     </h4>
-                                    <p class="text-center text-lg-start">
+                                    <p class="text-center fw-light text-lg-start">
                                         <?= get_the_excerpt(); ?>
                                     </p>
                                 </a>

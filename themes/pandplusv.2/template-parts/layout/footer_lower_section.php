@@ -6,7 +6,7 @@
                     <?php
                     $footer_logo = get_field('footer_logo', 'option');
                     ?>
-                    <img class="lazy" width="65px" height="65px" src="<?= $footer_logo['url'] ?>"
+                    <img width="65px" height="65px" src="<?= $footer_logo['url'] ?>"
                          alt="<?= get_bloginfo('name'); ?>">
                 </a>
                 <div class="pt-2 text-justify small fw-lighter text-semi-light">
@@ -25,7 +25,7 @@
 <!--                --><?php //endif; ?>
             </div>
             <div class="col-lg col-12 my-2 my-lg-0">
-                <h6 class="fw-bolder pb-3">
+                <h6 class="fw-bolder pb-3 ">
                     <?php
                     $locations = get_nav_menu_locations();
                     $menu = wp_get_nav_menu_object($locations['footerLocationOne']);
@@ -107,13 +107,13 @@
             </div>
         </div>
         <div class="col-12 col-lg-10 row justify-content-between py-4 px-0 align-items-center">
-            <div class="col-12 col-lg-8 fw-lighter text-semi-light fs-6 text-start ">
+            <div class="col-12 col-lg-8 fw-lighter text-semi-light fs-6 text-start">
                 <div class="border-2 border-bottom pb-1"></div>
                 <div class="pt-3 text-center text-lg-start">
                     <?php the_field('copyright_text', 'option'); ?>
                 </div>
             </div>
-            <div class="col-12 col-lg-4 gap-2 text-center ">
+            <div class="col-12 col-lg-4 gap-2 text-center">
                 <p class="text-center m-0 mb-2">مارا دنبال کنید</p>
                 <?php get_template_part('template-parts/layout/social'); ?>
             </div>

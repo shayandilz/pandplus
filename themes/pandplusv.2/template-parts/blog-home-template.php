@@ -1,4 +1,4 @@
-<article class="row w-100 align-items-start text-center text-lg-start justify-content-lg-start py-3">
+<article data-animate="6" class="row w-100 align-items-start text-center text-lg-start justify-content-lg-start py-3 gs_reveal gs_reveal_fromBottom">
     <div class="col-12 col-lg-3 d-flex flex-column gap-2 align-items-center">
         <?php $user_array_img = get_field('profile_image', 'user_' . $post->post_author);
         if ($user_array_img) { ?>

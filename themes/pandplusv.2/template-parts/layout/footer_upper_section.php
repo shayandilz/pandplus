@@ -1,7 +1,7 @@
 <div class="row justify-content-center">
-    <div class="d-flex col-11 col-lg-7 cta-footer image-rounded p-4 shadow-sm z-top">
+    <div class="d-flex col-11 col-lg-7 position-absolute translate-middle-y cta-footer image-rounded p-4 shadow-sm z-top">
         <!--    Whatsapp    -->
-        <div class="col-5 col-lg-3 d-flex flex-column align-items-center justify-content-center gap-3 text-center ">
+        <div data-animate="3" class="col-5 col-lg-3 d-flex flex-column align-items-center justify-content-center gap-3 text-center gs_reveal gs_reveal_fromTop">
             <?php get_template_part('template-parts/icons/whatsapp');
             $whatsapp = get_field('whatsapp', 'option');
             ?>
@@ -15,7 +15,7 @@
             </a>
         </div>
         <!--    Phone    -->
-        <div class="col-5 col-lg-3 d-flex flex-column align-items-center justify-content-center gap-3 text-center">
+        <div data-animate="6" class="col-5 col-lg-3 d-flex flex-column align-items-center justify-content-center gap-3 text-center gs_reveal gs_reveal_fromTop">
             <?php get_template_part('template-parts/icons/phone');
             $phone = get_field('phone', 'option');
             ?>
@@ -29,7 +29,7 @@
             </a>
         </div>
         <!--    Email    -->
-        <div class="col-5 col-lg-3 d-flex flex-column align-items-center justify-content-center gap-3 text-center">
+        <div data-animate="9" class="col-5 col-lg-3 d-flex flex-column align-items-center justify-content-center gap-3 text-center gs_reveal gs_reveal_fromTop">
             <?php get_template_part('template-parts/icons/mail');
             $mail = get_field('email', 'option');
             ?>
@@ -43,7 +43,7 @@
             </a>
     </div>
 <!--        Counseling-->
-        <div class="col-5 col-lg-3 d-flex flex-column align-items-center justify-content-center gap-3 text-center">
+        <div data-animate="12" class="col-5 col-lg-3 d-flex flex-column align-items-center justify-content-center gap-3 text-center gs_reveal gs_reveal_fromTop">
             <?php get_template_part('template-parts/icons/Counseling');
             $mail = get_field('Counseling', 'option');
             ?>

@@ -30,19 +30,19 @@
     }
 }
 .btn-dark{
-    @extend .bg-danger, .text-white, .lazy, .border-1, .border-danger;
+    @extend .bg-danger, .text-white, .border-1, .border-danger;
     &:hover{
         @extend .bg-white,.text-danger, .border-danger;
     }
 }
 .btn-white{
-    @extend .bg-white, .text-danger, .lazy, .border-1, .border-danger;
+    @extend .bg-white, .text-danger, .border-1, .border-danger;
     &:hover{
         @extend .bg-secondary,.text-danger, .border-secondary;
     }
 }
 .btn-secondary{
-    @extend .bg-danger, .text-white, .lazy, .border-1, .border-danger;
+    @extend .bg-danger, .text-white, .border-1, .border-danger;
     &:hover{
         @extend .bg-secondary,.text-danger, .border-secondary;
     }

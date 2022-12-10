@@ -1,4 +1,4 @@
-<section class="bg-danger portfolio-main position-relative z-top pt-lg-5 min-vh-100">
+<section class="bg-info portfolio-main position-relative pt-lg-5 min-vh-100">
     <?php get_template_part('template-parts/lines/ver-hor-line-big'); ?>
     <div class="container py-4">
         <div class="row justify-content-center">
@@ -6,16 +6,18 @@
                 <div class="swiper swiper2">
                     <div class="row align-items-center pt-3 pb-5 ">
                         <div class="col-12 col-lg-10">
-                            <h3 class="text-white text-center text-lg-start fs-1 m-0 fw-bold">کاری که ما انجام داده ایم</h3>
+                            <h3 data-animate="6" class="text-white text-center text-lg-start fs-1 m-0 fw-bold gs_reveal gs_reveal_fromRight">کاری که ما انجام داده ایم</h3>
                         </div>
                         <div class="col-12 col-lg-2 d-flex gap-3 justify-content-center text-lg-start">
-                            <div class="swiper-button-next-unique1 fs-1 text-white"><i
-                                        class="bi bi-arrow-right-circle"></i></div>
-                            <div class="swiper-button-prev-unique1 fs-1 text-white"><i
-                                        class="bi bi-arrow-left-circle"></i></div>
+                            <div data-animate="12" class="swiper-button-next-unique1 fs-1 text-white gs_reveal gs_reveal_fromRight">
+                                <i class="bi bi-arrow-right-circle"></i>
+                            </div>
+                            <div data-animate="18" class="swiper-button-prev-unique1 fs-1 text-white gs_reveal gs_reveal_fromLeft">
+                                <i class="bi bi-arrow-left-circle"></i>
+                            </div>
                         </div>
                     </div>
-                    <div class="swiper-wrapper">
+                    <div data-animate="12" class="swiper-wrapper gs_reveal gs_reveal_fromBottom">
                         <?php
                         $args = array(
                             'post_type' => 'portfolio',

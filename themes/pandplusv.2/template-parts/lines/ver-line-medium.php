@@ -1,5 +1,3 @@
-<svg class="col-lg-2 d-none d-lg-inline line-min" xmlns="http://www.w3.org/2000/svg" width="33" height="479"
-     viewBox="0 0 33 479" fill="none">
-    <rect width="33" height="479" rx="16.5" fill="none" stroke-linecap="square" stroke-width="4"
-          stroke-miterlimit="30" stroke="#6BE3BD"/>
+<svg class="col-lg-2 d-none d-lg-inline rounded" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 33 215" style="enable-background:new 0 0 33 215;" xml:space="preserve">
+    <line class="line-min" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke="#6BE3BD" stroke-width="15px" fill="#6BE3BD" x1="16.5" y1="17" x2="16.5" y2="200"/>
 </svg>

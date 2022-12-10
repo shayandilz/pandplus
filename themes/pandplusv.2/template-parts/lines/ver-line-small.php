@@ -1,3 +1,3 @@
-<svg id="line_min" class="col-lg-2 d-none d-lg-inline line-min" xmlns="http://www.w3.org/2000/svg" width="33" height="215" viewBox="0 0 33 215" fill="none">
-    <rect width="33" height="215" rx="16.5" fill="#2B303E"/>
+<svg class="col-lg-2 d-none d-lg-inline" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="line_min" x="0px" y="0px" viewBox="0 0 33 150" style="enable-background:new 0 0 33 150;" xml:space="preserve">
+    <line class="line-min" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke="#2B303E" stroke-width="15px" fill="#6BE3BD" x1="16.5" y1="18" x2="16.5" y2="135"/>
 </svg>

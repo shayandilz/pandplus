@@ -2,18 +2,18 @@
     <div class="container my-3">
         <div class="row mt-5 justify-content-between align-items-center">
             <div class="col-12 row align-items-center mx-0">
-                <div class="col-md-5 col-12 text-dark text-justify animate__animated animate__fadeInLeft ">
-                    <p class="fs-5">
+                <div class="col-md-5 col-12 text-justify">
+                    <p data-animate="6" class="fs-6 text-danger gs_reveal gs_reveal_fromBottom">
                         <?php the_field('client_small_title'); ?>
                     </p>
-                    <h3 class="fs-1 font-bold my-4">
+                    <h3 data-animate="6" class="fs-2 text-danger fw-bolder gs_reveal gs_reveal_fromBottom my-4">
                         <?php the_field('client_title'); ?>
                     </h3>
-                    <p class="fs-5">
+                    <p data-animate="6" class="text-danger gs_reveal gs_reveal_fromBottom">
                         <?php the_field('client_text'); ?>
                     </p>
                 </div>
-                <div class="col-md-7 col-12 animate__animated animate__fadeInRight">
+                <div class="col-md-7 col-12">
 
                     <article class="d-flex justify-content-evenly flex-wrap gap-1 align-content-center">
                         <?php
@@ -28,8 +28,9 @@
                             /* Start the Loop */
                             while ($loop_portfolio->have_posts()) :
                                 $loop_portfolio->the_post();
+                            $i++;
                                 $brand_logo = get_field('brand_logo');?>
-                                <div class="col-3">
+                                <div data-animate="<?php echo $i . 8; ?>" class="col-3 gs_reveal gs_reveal_fromBottom">
                                     <a href="<?php the_permalink();?>">
                                         <img width="100px" title="<?php echo esc_attr($brand_logo['alt']); ?>"
                                              class="img-fluid blackWhite lazy"

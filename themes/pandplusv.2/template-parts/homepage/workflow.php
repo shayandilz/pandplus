@@ -7,16 +7,17 @@
     <div class="container my-lg-5 py-lg-5">
         <div class="row justify-content-start">
             <div class="col-12 col-lg-8 text-center text-lg-start">
-                <h3 class="fw-bold fs-1 text-danger py-4 gs_reveal gs_reveal_fromTop">
+                <h3 data-animate="6" class="fw-bolder fs-2 text-danger py-4 gs_reveal gs_reveal_fromRight">
                     <?php the_field('workflow_title'); ?>
                 </h3>
-                <p class="text-justify text-dark pe-lg-5 gs_reveal gs_reveal_fromRight">
+                <p data-animate="12" class="text-justify text-dark pe-lg-5 gs_reveal gs_reveal_fromRight">
                     <?php the_field('workflow_text'); ?>
                 </p>
                 <?php
                 $workflow_button = get_field('workflow_button');
                 if ($workflow_button): ?>
-                    <a class="btn btn-dark px-5 py-3 fs-5 rounded-1 animate__animated animate__fadeInLeft animate__delay-2s"
+                    <a data-animate="20"
+                       class="btn btn-dark px-4 py-2 fs-6 rounded gs_reveal gs_reveal_fromTop"
                        type="button"
                        rel="nofollow"
                        data-bs-toggle="modal"
