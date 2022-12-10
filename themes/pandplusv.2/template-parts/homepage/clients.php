@@ -1,7 +1,7 @@
 <section class="bg-secondary py-4">
     <div class="container my-3">
         <div class="row mt-5 justify-content-between align-items-center">
-            <div class="col-12 row align-items-center">
+            <div class="col-12 row align-items-center mx-0">
                 <div class="col-md-5 col-12 text-dark text-justify animate__animated animate__fadeInLeft ">
                     <p class="fs-5">
                         <?php the_field('client_small_title'); ?>
@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-md-7 col-12 animate__animated animate__fadeInRight">
 
-                    <article class="d-flex justify-content-evenly flex-wrap gap-2 align-content-center">
+                    <article class="d-flex justify-content-evenly flex-wrap gap-1 align-content-center">
                         <?php
                         $portfolio = array(
                             'post_type' => 'portfolio',
@@ -29,10 +29,14 @@
                             while ($loop_portfolio->have_posts()) :
                                 $loop_portfolio->the_post();
                                 $brand_logo = get_field('brand_logo');?>
-                                <div class="col-3 m-auto">
-                                    <img width="120px" title="<?php echo esc_attr($brand_logo['alt']); ?>"
-                                         class="img-fluid blackWhite lazy" src="<?php echo esc_url($brand_logo['url']); ?>"
-                                         alt="<?php echo esc_attr($brand_logo['alt']); ?>">
+                                <div class="col-3">
+                                    <a href="<?php the_permalink();?>">
+                                        <img width="100px" title="<?php echo esc_attr($brand_logo['alt']); ?>"
+                                             class="img-fluid blackWhite lazy"
+                                             src="<?php echo esc_url($brand_logo['url']); ?>"
+                                             alt="<?php echo esc_attr($brand_logo['alt']); ?>">
+
+                                    </a>
                                 </div>
                             <?php endwhile;
                         endif;

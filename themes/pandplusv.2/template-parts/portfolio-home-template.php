@@ -5,7 +5,7 @@
                 <img class="image-rounded object-fit" src="<?php echo get_the_post_thumbnail_url(); ?>"
                      title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
             </div>
-            <div class="d-block d-lg-flex pt-3 gap-2 align-items-center">
+            <div class="pt-3 gap-2 align-items-center">
                 <!--                category-->
                 <p class="m-0 fs-6">
                     <?php
@@ -22,18 +22,18 @@
                         )
                     );
                     foreach ($tour_pages as $tour){
-                        echo $tour->post_title . ' ';
+                        echo '<span class="border-2 border-start ps-1 border-secondary me-2">' . $tour->post_title . ' </span>';
                     }
                     ?>
                 </p>
-                <hr class="vr d-none d-lg-inline">
-                <p class="m-0 fs-6 py-2 py-lg-0">
+<!--                <hr class="vr d-none d-lg-inline">-->
+                <p class="m-0 fs-6 py-2">
                     <?php get_template_part('template-parts/icons/clock'); ?>
                     <!--                    date-->
                     <span>۱۴۰۰ بهمن ۲۲</span>
                 </p>
             </div>
-            <h4 class="fw-bolder pt-3 fs-5">
+            <h4 class="fw-bolder fs-5">
                 <?php echo get_the_title(); ?>
             </h4>
         </a>

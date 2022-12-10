@@ -41,3 +41,9 @@
         @extend .bg-secondary,.text-danger, .border-secondary;
     }
 }
+.btn-secondary{
+    @extend .bg-danger, .text-white, .lazy, .border-1, .border-danger;
+    &:hover{
+        @extend .bg-secondary,.text-danger, .border-secondary;
+    }
+}

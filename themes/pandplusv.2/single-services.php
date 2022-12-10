@@ -3,14 +3,14 @@
 
 get_header(); ?>
 <!--top banner-->
-<section class="container vh-100 mt-lg-0 mt-5">
+<section class="container mt-lg-0 mt-5 overflow-hidden">
     <div class="row justify-content-center align-items-start h-100">
         <!--            cta-->
         <div class="col-12 col-lg-5 pe-lg-2 me-lg-5 text-danger pt-5 mt-lg-5">
-            <h2 class="display-3 fw-bolder"><?php the_title(); ?></h2>
-            <div class="my-4 text-justify">
-                <?php echo wp_trim_words(the_content(), 20); ?>
-            </div>
+            <h1 class="display-3 fw-bolder"><?php the_title(); ?></h1>
+            <article class="my-4 text-justify">
+                <?php echo the_content(); ?>
+            </article>
             <div class="d-flex justify-content-between align-items-center pe-lg-3 my-3">
                 <!--                <button class="btn bg-danger px-4 py-2 rounded text-white">تعرفه های خدمات سئو</button>-->
                 <?php
@@ -27,7 +27,7 @@ get_header(); ?>
             <!--            costumers -->
             <div>
                 <h6 class="my-4">برخی از مشتریان ما</h6>
-                <div class="d-flex flex-row gap-2 align-items-start overflow-hidden">
+                <div class="d-flex flex-row gap-2 align-items-start flex-wrap">
                     <?php
                     $projects_services = get_field('projects_services');
                     if ($projects_services) :
@@ -35,8 +35,11 @@ get_header(); ?>
                             setup_postdata($post);
                             $brand_logo = get_field('brand_logo');
                             ?>
-                            <img width="80px" class="img-fluid" src="<?php echo esc_url($brand_logo['url']); ?>"
-                                 alt="<?php echo esc_attr($brand_logo['alt']); ?>">
+                            <a href="<?php the_permalink();?>">
+                                <img width="80px" class="img-fluid" src="<?php echo esc_url($brand_logo['url']); ?>"
+                                     alt="<?php echo esc_attr($brand_logo['alt']); ?>">
+
+                            </a>
                         <?php endforeach;
                     endif;
                     wp_reset_postdata();
@@ -45,20 +48,21 @@ get_header(); ?>
             </div>
         </div>
         <!--            scrolling cards-->
-        <div class="col-12 col-lg-5 swiper3 overflow-hidden h-100 d-none d-lg-block">
-            <div class="swiper-wrapper">
+        <div class="overflow-hidden col-12 col-lg-5 swiper3 vh-100 d-none d-lg-block animate__animated animate__fadeInUp">
+            <div class="swiper-wrapper ">
                 <?php
                 $projects_services = get_field('projects_services');
                 if ($projects_services) :
                     foreach ($projects_services as $post):
                         setup_postdata($post); ?>
-                        <img class="swiper-slide rounded-2" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+                        <img style="height:300px" class="swiper-slide rounded-2" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
                     <?php endforeach;
                 endif;
                 wp_reset_postdata();
                 ?>
             </div>
         </div>
+<!--        more services-->
         <div class="col-12 col-lg-5 swiper4 overflow-hidden d-lg-none d-block">
             <div class="swiper-wrapper">
                 <?php
@@ -105,7 +109,7 @@ get_header(); ?>
                                     <h4 class="fw-bolder text-danger">
                                         <?php the_sub_field('title'); ?>
                                     </h4>
-                                    <p class="text-justify">
+                                    <p class="text-justify text-danger">
                                         <?php the_sub_field('text'); ?>
                                     </p>
                                 </div>

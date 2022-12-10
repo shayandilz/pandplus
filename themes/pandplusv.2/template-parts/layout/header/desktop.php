@@ -10,13 +10,13 @@ $services_list = [7470,7469];
                     <a class="text-black" href="<?php echo esc_url(get_home_url()) ?>">خانه</a>
                 </li>
                 <li class="<?= (in_array(get_queried_object()->ID, $services_list)) || get_queried_object()->ID == 7373 ? 'current-menu-item' : ''; ?>" data-list="service-menu">
-                    <a class="text-black" href="#">خدمات</a>
+                    <a class="text-black" href="<?php echo esc_url('/services'); ?>">خدمات</a>
                 </li>
                 <li data-list="portfolio-menu">
-                    <a class="text-black" href="#">نمونه کار</a>
+                    <a class="text-black" href="/">نمونه کار</a>
                 </li>
                 <li data-list="blog-menu">
-                    <a class="text-black" href="#">بلاگ</a>
+                    <a class="text-black" href="<?php echo esc_url('/blog') ?>">بلاگ</a>
                 </li>
             </ul>
         </nav>
@@ -63,7 +63,7 @@ $services_list = [7470,7469];
                         while ($loop_portfolio->have_posts()) :
                             $loop_portfolio->the_post(); ?>
                             <li class="col-4">
-                                <a href="#">
+                                <a href="<?php the_permalink();?>">
                                     <img class="img-fluid overflow-hidden image-rounded-min object-fit lazy"
                                          src="<?php
                                          if (has_post_thumbnail($loop_portfolio->ID)) {
@@ -73,6 +73,7 @@ $services_list = [7470,7469];
                                          }
                                          ?>"
                                          alt="<?php the_title(); ?>">
+                                    <h6 class="text-center fs-6 mt-2 fw-bold text-danger"><?php echo get_the_title(); ?></h6>
                                 </a>
                             </li>
                         <?php endwhile;
@@ -105,6 +106,7 @@ $services_list = [7470,7469];
                                      }
                                      ?>"
                                      alt="<?php the_title(); ?>">
+                                    <h6 class="text-center fs-6 mt-2 fw-bold text-danger"><?php echo get_the_title(); ?></h6>
                                 </a>
                             </li>
                         <?php endwhile;
@@ -116,8 +118,8 @@ $services_list = [7470,7469];
 
     </div>
     <div class="row mt-5">
-        <div class="col-12 ">
-            <div class="row gap-3">
+        <div class="col-12">
+            <div class="row gap-3 text-danger">
                 <div class="col">
                     <h4>آدرس پستی</h4>
                     <p>
@@ -127,14 +129,14 @@ $services_list = [7470,7469];
                 <div class="col">
                     <h4>در تماس باشید</h4>
                     <p>
-                        <?= get_field('address', 'option') ?>
+                        <a class="text-danger" href="tel:<?= get_field('call_number_service', 'option'); ?>"><?= get_field('call_number_service', 'option'); ?></a>
                     </p>
                 </div>
-                <div class="col text-center">
+                <div class="col">
                     <h4>ساعت کاری</h4>
                     <?= get_field('hour_shift', 'option') ?>
                 </div>
-                <div class="col text-center">
+                <div class="col">
                     <h4>شبکه های اجتماعی</h4>
                     <?php get_template_part('template-parts/layout/social'); ?>
                 </div>

@@ -9,7 +9,7 @@ $services = array(
     <!--top banner-->
     <section class="container">
         <div class="row justify-content-center align-content-center py-5 pb-5">
-            <div class="col-12 col-lg-6 px-lg-5 text-danger">
+            <div class="col-12 col-lg-6 px-lg-5 py-5 text-danger">
                 <h1 class="display-5 fw-bolder text-center">
                     ما پند پلاس هستیم و سایت های زیبا طراحی میکنیم
                 </h1>
@@ -18,17 +18,7 @@ $services = array(
                     معرض
                     نویسنده و موارد دیگر!
                 </p>
-                <div class="d-flex justify-content-center align-items-center pe-lg-3 my-3 gap-3">
-                    <button type="button"
-                            data-bs-toggle="modal"
-                            data-bs-target="#exampleModal"
-                            class="btn btn-dark px-3 py-2">
-                        دریافت مشاوره
-                    </button>
-                    <a class="text-danger" href="#">
-                        <?php get_template_part('template-parts/lines/short-line-hor') ?>
-                        مشاهده خدمات</a>
-                </div>
+                <?php get_template_part('template-parts/counseling-call'); ?>
                 <!--            call details-->
                 <?php get_template_part('template-parts/service-cta'); ?>
             </div>
@@ -68,7 +58,7 @@ $services = array(
                                         <?php } ?>
                                     </span>
                                 <h5 class="card-title py-3 fw-bolder"><?php the_title(); ?></h5>
-                                <p class="card-text"><?php echo wp_trim_words(get_the_content(), 18); ?></p>
+                                <p class="card-text"><?php echo the_excerpt(); ?></p>
                                 <a href="<?php the_permalink(); ?>" class="btn btn-dark">بیشتر بدانید</a>
                             </div>
                         </article>

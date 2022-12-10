@@ -48,11 +48,11 @@ main {
   /* icon created in CSS */
   bottom: auto;
   right: auto;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(180deg);
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(180deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(180deg);
+  -o-transform: translateX(-50%) translateY(-50%) rotate(180deg);
+  transform: translateX(-50%) translateY(-50%) rotate(180deg);
   width: 22px;
   height: 2px;
   background-color: rgb(255, 255, 255);
@@ -358,5 +358,43 @@ main {
 
   .vr {
     height: 30px;
+  }
+}
+//back to top buttom
+.scrolled {
+  .backTo_Top {
+    @extend .intro
+  }
+}
+
+.backTo_Top {
+  left: 15px;
+  bottom: 15px;
+  z-index: 10;
+  transition: 0.5s;
+  transform: translateY(100px);
+}
+.intro {
+  animation: intro 800ms ease-out forwards;
+}
+.outro {
+  animation: outro 800ms ease-out forwards;
+}
+@keyframes intro {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes outro {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100px);
+    opacity: 0;
   }
 }

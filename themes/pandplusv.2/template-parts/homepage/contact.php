@@ -2,7 +2,7 @@
     <div class="container py-4 contact-form">
         <div class="row align-items-center justify-content-center">
             <div class="col-11 col-lg-4 d-flex flex-column gap-3">
-                <h3 class="text-danger fw-bolder">
+                <h3 class="text-danger fs-1 fw-bold lh-lg">
                     <?= get_field('contact_header'); ?>
                 </h3>
                 <span class="border-1 border-top border-danger fs-5 text-center text-lg-start text-danger w-auto pt-3">

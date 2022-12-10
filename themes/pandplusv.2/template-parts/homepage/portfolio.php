@@ -1,14 +1,14 @@
-<section class="bg-danger portfolio-main position-relative z-top py-lg-5">
+<section class="bg-danger portfolio-main position-relative z-top pt-lg-5 min-vh-100">
     <?php get_template_part('template-parts/lines/ver-hor-line-big'); ?>
     <div class="container py-4">
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="swiper swiper2">
-                    <div class="row align-items-center pt-3 pb-5">
-                        <div class="col-9 col-lg-10">
-                            <h3 class="text-white fs-2 m-0 fw-bold">کاری که ما انجام داده ایم</h3>
+                    <div class="row align-items-center pt-3 pb-5 ">
+                        <div class="col-12 col-lg-10">
+                            <h3 class="text-white text-center text-lg-start fs-1 m-0 fw-bold">کاری که ما انجام داده ایم</h3>
                         </div>
-                        <div class="col-2 col-lg-2 d-flex gap-3">
+                        <div class="col-12 col-lg-2 d-flex gap-3 justify-content-center text-lg-start">
                             <div class="swiper-button-next-unique1 fs-1 text-white"><i
                                         class="bi bi-arrow-right-circle"></i></div>
                             <div class="swiper-button-prev-unique1 fs-1 text-white"><i

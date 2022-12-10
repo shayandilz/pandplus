@@ -3,7 +3,7 @@
 
 get_header(); ?>
 
-    <section class="container">
+    <section class="container pt-5">
         <div class="row justify-content-center pb-5">
             <!--        selection post of blogs-->
             <?php
@@ -15,7 +15,7 @@ get_header(); ?>
                         آخرین مقالات
                     </h2>
                 </div>
-                <div class="col-lg-10 row grid-border-card vh-80 gap-3 justify-content-center">
+                <div class="col-lg-10 row grid-border-card vh-65 gap-3 justify-content-center">
                     <?php
                     $args = array(
                         'post_type' => 'post',
@@ -72,7 +72,7 @@ get_header(); ?>
                                 <?php echo '<ul class="pagination justify-content-center align-items-center">';
                                 // get_previous_posts_link will return a string or void if no link is set.
                                 if ($prev_posts_link = get_previous_posts_link(__('قبلی'))) :
-                                    echo '<li class="prev-list-item page-item me-4">';
+                                    echo '<li class="prev-list-item bg-danger py-2 px-3 image-rounded-min text-white page-item me-4">';
                                     echo $prev_posts_link;
                                     echo '</li>';
                                 endif;
@@ -82,7 +82,7 @@ get_header(); ?>
 
                                 // get_next_posts_link will return a string or void if no link is set.
                                 if ($next_posts_link = get_next_posts_link(__('بعدی'))) :
-                                    echo '<li class="next-list-item page-item me-4">';
+                                    echo '<li class=" next-list-item bg-danger px-3 py-2 image-rounded-min text-white page-item me-4">';
                                     echo $next_posts_link;
                                     echo '</li>';
                                 endif;

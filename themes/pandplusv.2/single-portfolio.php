@@ -19,12 +19,19 @@
                         <?php } ?>
                     </p>
                 </div>
-                <a class="text-danger" href="#">مشاهده همه</a>
+                <div class="d-flex gap-3">
+                    <div class="text-danger fs-2 swiper-button-prev swiper-button-prev-unique5 z-top">
+                        <i class="bi bi-arrow-right-circle"></i>
+                    </div>
+                    <div class="text-danger fs-2 swiper-button-next swiper-button-next-unique5 z-top">
+                        <i class="bi bi-arrow-left-circle"></i>
+                    </div>
+                </div>
             </div>
         </div>
         <!--    slider swiper -->
-        <div class="row justify-content-center position-relative py-2">
-            <div class="swiper5 col-12 col-lg-10 overflow-hidden image-rounded-min">
+        <div class="row justify-content-center position-relative py-2 align-items-start vh-65-fix">
+            <div class="swiper5 col-12 col-lg-10 overflow-hidden image-rounded-min h-100">
                 <div class="swiper-wrapper ">
                     <?php
                     $portfolio = array(
@@ -39,19 +46,13 @@
                         while ($loop_portfolio->have_posts()) :
                             $loop_portfolio->the_post(); ?>
                             <a class="swiper-slide  ratio ratio-1x1 " href="<?php the_permalink(); ?>">
-                                <img class="object-fit" src="<?php echo get_the_post_thumbnail_url() ?>" alt="">
+                                <img class="object-fit" src="<?php echo get_the_post_thumbnail_url() ?>" alt="<?php the_title();?>">
                             </a>
                         <?php endwhile;
                     endif;
                     wp_reset_postdata(); ?>
                 </div>
                 <!-- If we need navigation buttons -->
-            </div>
-            <div class="text-danger fs-4 swiper-button-prev swiper-button-prev-unique5">
-                <i class="bi bi-arrow-right-circle"></i>
-            </div>
-            <div class="text-danger fs-4 swiper-button-next swiper-button-next-unique5">
-                <i class="bi bi-arrow-left-circle"></i>
             </div>
         </div>
     </section>

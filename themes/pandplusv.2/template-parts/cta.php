@@ -7,5 +7,5 @@
     <button type="button"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
-            class=" btn rounded px-4 py-2 btn-dark text-white">دریافت مشاوره </button>
+            class=" btn rounded px-4 py-2 btn-secondary">دریافت مشاوره </button>
 </div>
