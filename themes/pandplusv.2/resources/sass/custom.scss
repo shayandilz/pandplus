@@ -33,7 +33,13 @@
 a {
   text-decoration: none !important;
 }
-
+//hero section
+.front__banner {
+  height: 100vh;
+}
+.text-appear{
+  display: none;
+}
 //front page
 .call {
   position: fixed;
@@ -282,8 +288,6 @@ body.navigation-is-open {
 //service icon color
 .swiper-slide {
   #Layer_1 {
-    filter: drop-shadow(0px 0px 2px gray);
-
     path, line, rect, polyline, circle {
       stroke: #fbbb01 !important;
     }
@@ -309,7 +313,7 @@ body.navigation-is-open {
 //pagination items
 .page-numbers.current {
   @extend .bg-danger , .text-white;
-  padding: 2px 9px;
+  padding: 2px 9px 1px;
   border-radius: 100%;
 }
 //blog content
@@ -323,4 +327,33 @@ article a {
   padding: 20px;
   background: #fafffb;
   margin: 5px 0;
+}
+//padding to services page bottom
+#services__area {
+  padding-bottom: 120px;
+}
+//animation for logo header
+.animate__logo {
+  animation: logo 700ms forwards ease-out ;
+}
+@keyframes logo {
+  0% {
+    rotate: 8deg;
+  }
+  20% {
+    rotate: -8deg;
+  }
+  40% {
+    rotate: 8deg;
+  }
+  60% {
+    rotate: -8deg;
+  }
+  80% {
+    rotate: 8deg;
+  }
+  100% {
+    rotate: 0;
+  }
+
 }

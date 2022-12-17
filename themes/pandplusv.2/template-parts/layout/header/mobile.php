@@ -39,7 +39,10 @@
             <?php
             $footer_button = get_field('footer_button', 'option');
             if ($footer_button): ?>
-                <a href="<?php echo esc_url($footer_button['link']); ?>"
+                <a rel="nofollow" type="button"
+                   data-bs-toggle="modal"
+                   data-bs-target="#exampleModal"
+                   href="<?php echo esc_url($footer_button['link']); ?>"
                    class="btn btn-dark px-4 py-2 fs-5 rounded-1">
                     <?php echo esc_html($footer_button['text']); ?>
                 </a>
@@ -80,7 +83,10 @@
                 <?php
                 $footer_button = get_field('footer_button', 'option');
                 if ($footer_button): ?>
-                    <a href="<?php echo esc_url($footer_button['link']); ?>"
+                    <a rel="nofollow" type="button"
+                       data-bs-toggle="modal"
+                       data-bs-target="#exampleModal"
+                       href="<?php echo esc_url($footer_button['link']); ?>"
                        class="btn btn-dark px-4 py-2 fs-5 rounded-1">
                         <?php echo esc_html($footer_button['text']); ?>
                     </a>
@@ -128,7 +134,10 @@
                 <?php
                 $footer_button = get_field('footer_button', 'option');
                 if ($footer_button): ?>
-                    <a href="<?php echo esc_url($footer_button['link']); ?>"
+                    <a rel="nofollow" type="button"
+                       data-bs-toggle="modal"
+                       data-bs-target="#exampleModal"
+                       href="<?php echo esc_url($footer_button['link']); ?>"
                        class="btn btn-dark px-4 py-2 fs-5 rounded-1">
                         <?php echo esc_html($footer_button['text']); ?>
                     </a>
@@ -170,13 +179,16 @@
             wp_reset_postdata(); ?>
             <div class="d-flex flex-column align-items-center justify-content-center gap-4 text-center mt-2">
                 <a class="btn btn-dark px-4 py-2 fs-5 rounded-1"
-                   href="<?php echo esc_url(get_home_url('/blog')) ?>">
+                   href="<?php echo site_url('/بلاگ'); ?>">
                     رفتن به صفحه بلاگ
                 </a>
                 <?php
                 $footer_button = get_field('footer_button', 'option');
                 if ($footer_button): ?>
-                    <a href="<?php echo esc_url($footer_button['link']); ?>"
+                    <a rel="nofollow" type="button"
+                       data-bs-toggle="modal"
+                       data-bs-target="#exampleModal"
+                       href="<?php echo esc_url($footer_button['link']); ?>"
                        class="btn btn-dark px-4 py-2 fs-5 rounded-1">
                         <?php echo esc_html($footer_button['text']); ?>
                     </a>

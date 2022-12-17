@@ -4,7 +4,7 @@ while (have_posts()) :
     the_post();
     ?>
 
-    <section class="position-relative overflow-hidden">
+    <section class="position-relative overflow-hidden pb-5">
     <span class="position-absolute top-50 start-0 d-none d-lg-inline">
         <?php get_template_part('template-parts/lines/ver-hor-line-big-right'); ?>
     </span>
@@ -14,26 +14,26 @@ while (have_posts()) :
                     <!-- tag list        -->
                     <div class="d-flex gap-3">
                         <h6 class=" px-3 py-2 ">
-                    <span class="text-danger my-auto">
-                        <?php get_template_part('template-parts/icons/tag-icon'); ?>
-                        <?php
-                        $category_detail = get_the_category($post->ID);//$post->ID
-                        foreach ($category_detail as $category) { ?>
-                            <span
-                               class="bg-success shadow-sm rounded text-decoration-none py-2 px-3 ms-2 small fw-lighter">
-                                <?php echo $category->name ?>
+                            <span class="text-danger my-auto">
+                                <?php get_template_part('template-parts/icons/tag-icon'); ?>
+                                <?php
+                                $category_detail = get_the_category($post->ID);//$post->ID
+                                foreach ($category_detail as $category) { ?>
+                                    <span
+                                            class="bg-success shadow-sm rounded text-decoration-none py-2 px-3 ms-2 small fw-lighter">
+                                        <?php echo $category->name ?>
+                                    </span>
+                                <?php } ?>
                             </span>
-                        <?php } ?>
-                    </span>
                             <!-- tag name-->
                         </h6>
                     </div>
                     <!--            title-->
-                    <h1 class="my-4">
+                    <h1 class="my-4 px-3 px-lg-0">
                         <?php the_title(); ?>
                     </h1>
                     <!--            table of content-->
-                    <div class="bg-success image-rounded px-3 px-lg-5 py-2 py-lg-3 mb-5">
+                    <div class="bg-success image-rounded px-4 px-lg-5 py-4 mb-5 shadow-sm">
                         <h3 class="py-3">آنچه در این مقاله می‌خوانید:</h3>
                         <div class="d-flex align-items-center">
                             <?php echo do_shortcode('[TOC]') ?>
@@ -68,10 +68,10 @@ while (have_posts()) :
                                 <!--                        reading time-->
                                 <hr class="vr mx-1">
                                 <div class="d-flex px-2 align-items-center">
-                                    <?php get_template_part('template-parts/icons/clock');?>
+                                    <?php get_template_part('template-parts/icons/clock'); ?>
                                     زمان مطالعه
                                     <h6 class="fw-bold mx-2 my-0">
-                                    <?= reading_time();?>
+                                        <?= reading_time(); ?>
                                     </h6>
                                     دقیقه
                                 </div>
@@ -79,10 +79,11 @@ while (have_posts()) :
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4 order-1 order-lg-2 mb-3 mb-lg-0">
+                <div class="col-12 col-lg-4 order-1 order-lg-2 mb-3 mb-lg-0 pt-5 pt-lg-0">
                     <!--        post image-->
                     <div class="ratio ratio-1x1">
-                        <img class=" image-rounded object-fit" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+                        <img class=" image-rounded object-fit shadow-sm"
+                             src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?= the_title(); ?>">
                     </div>
                 </div>
             </div>
@@ -92,26 +93,31 @@ while (have_posts()) :
 
 
                     <!--            content-->
-                    <article class="text-justify px-1 px-lg-0">
+                    <article class="text-justify px-1 px-lg-0 text-danger">
                         <?php the_content(); ?>
                     </article>
                     <!--                            every 200 word-->
-<!--                    <div class="bg-success image-rounded p-3 my-5">-->
-<!--                        <div class="d-md-flex gap-3 align-items-center text-center text-md-start">-->
-<!--                            <img class="col-12 col-lg-2 image-rounded-min object-fit"-->
-<!--                                 src="--><?php //echo get_the_post_thumbnail_url(); ?><!--" alt="">-->
-<!--                            <div class="col-12 col-lg-7 mt-2 mt-md-0">-->
-<!--                                <div class="d-flex align-items-center gap-3 justify-content-center justify-content-md-start">-->
-<!--                                    <p class="fw-bold m-0"> طراحی و توسعه وبسایت</p>-->
-<!--                                    <hr class="vr">-->
-<!--                                    <span>--><?php //echo get_template_part('template-parts/icons/services/clock'); ?><!--</span> --><?php //echo get_the_date('d  F , Y'); ?>
-<!--                                </div>-->
-<!--                                <h6 class="my-2 fs-4">--><?php //the_title(); ?><!--</h6>-->
-<!--                            </div>-->
-<!--                            <a class="text-danger fw-bolder" href=""> ادامه مطلب ></a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                                cta-->
+                    <!--                    <div class="bg-success image-rounded p-3 my-5">-->
+                    <!--                        <div class="d-md-flex gap-3 align-items-center text-center text-md-start">-->
+                    <!--                            <img class="col-12 col-lg-2 image-rounded-min object-fit"-->
+                    <!--                                 src="--><?php //echo get_the_post_thumbnail_url();
+                    ?><!--" alt="">-->
+                    <!--                            <div class="col-12 col-lg-7 mt-2 mt-md-0">-->
+                    <!--                                <div class="d-flex align-items-center gap-3 justify-content-center justify-content-md-start">-->
+                    <!--                                    <p class="fw-bold m-0"> طراحی و توسعه وبسایت</p>-->
+                    <!--                                    <hr class="vr">-->
+                    <!--                                    <span>-->
+                    <?php //echo get_template_part('template-parts/icons/services/clock');
+                    ?><!--</span> --><?php //echo get_the_date('d  F , Y');
+                    ?>
+                    <!--                                </div>-->
+                    <!--                                <h6 class="my-2 fs-4">--><?php //the_title();
+                    ?><!--</h6>-->
+                    <!--                            </div>-->
+                    <!--                            <a class="text-danger fw-bolder" href=""> ادامه مطلب ></a>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                    <!--                                cta-->
                     <?php get_template_part('template-parts/cta'); ?>
                     <!--            more post-->
                     <?php get_template_part('template-parts/blogpage/more-posts'); ?>

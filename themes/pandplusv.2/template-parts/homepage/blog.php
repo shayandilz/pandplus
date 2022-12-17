@@ -1,15 +1,15 @@
-<section class="py-4 bg-white position-relative z-top">
+<section class="py-5 bg-white position-relative z-top">
     <div class="container py-5">
         <div class="row justify-content-center align-items-center">
             <div class="row col-lg-10 align-items-center text-center text-lg-start">
                 <div class="col-12 col-lg-5 text-danger">
-                    <span data-animate="3" class="py-2 text-danger fs-5 gs_reveal gs_reveal_fromRight">
+                    <span data-animate="3" class="py-2 text-danger fs-5">
                        <?= get_field('blog_small_header'); ?>
                     </span>
-                    <h3 data-animate="6" class="py-3 fs-2 fw-bolder gs_reveal gs_reveal_fromRight">
+                    <h3 data-animate="6" class="py-3 fs-2 fw-bolder">
                         <?= get_field('blog_header'); ?>
                     </h3>
-                    <p data-animate="9" class="py-2 text-justify gs_reveal gs_reveal_fromRight">
+                    <p data-animate="9" class="py-2 text-justify">
                         <?= get_field('blog_text'); ?>
                     </p>
                     <?php

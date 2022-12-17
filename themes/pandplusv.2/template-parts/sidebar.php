@@ -1,4 +1,4 @@
-<div class="bg-success rounded-3 py-5 ps-4 sidebar-area">
+<div class="bg-success rounded-3 py-5 ps-4 sidebar-area shadow-sm">
     <div>
         <h4 class="fw-bolder fs-4 ">مقالات پیشنهادی ما</h4>
 <!--        grid latest posts -->

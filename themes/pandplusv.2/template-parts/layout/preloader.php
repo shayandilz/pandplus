@@ -1,7 +1,7 @@
-<div class="position-absolute top-0 end-0 h-100">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 1200 1200" style="enable-background:new 0 0 1200 1200;" xml:space="preserve">
+<div class="position-fixed d-none w-100 d-flex justify-content-center bg-white z-top top-0 end-0 h-100">
+    <svg width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 1200 1200" style="enable-background:new 0 0 1200 1200;" xml:space="preserve">
 <style type="text/css">
-    .st0{fill:#FFFFFF;}
+    .st0{fill:#f1f1f1;}
     .st1{fill:none;stroke:#4C328B;stroke-width:5;stroke-miterlimit:10;}
     .st2{fill:none;stroke:#6BE3BD;stroke-width:5;stroke-miterlimit:10;}
     .st3{fill:none;stroke:#FBBB01;stroke-width:5;}

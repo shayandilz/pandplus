@@ -14,13 +14,13 @@
                                     <div class="col-12 col-lg-4 mb-lg-n5 mb-n2">
                                         <div class="ratio ratio-4x3">
                                             <?php if (!empty($image)): ?>
-                                                <img class="object-fit image-rounded"
+                                                <img class="object-fit image-rounded shadow-sm bg-white"
                                                      src="<?php echo esc_url($image['url']); ?>"
                                                      alt="<?php echo esc_attr($image['alt']); ?>">
                                             <?php endif; ?>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-5 bg-success px-lg-5 px-2 pt-5 d-flex gap-4 flex-column text-justify ms-n0 ms-lg-n5 mb-5 image-rounded overflow-hidden">
+                                    <div class="col-12 col-lg-5 bg-success px-lg-5 px-2 pt-5 d-flex gap-4 flex-column text-justify ms-n0 ms-lg-n5 mb-5 image-rounded overflow-hidden shadow-sm">
                                         <span class="mt-4 mt-lg-0 ps-lg-2 ps-0 text-primary">
                                             آژانس دیجیتال مارکتینگ پندپلاس
                                         </span>
@@ -30,19 +30,18 @@
                                         <p class="ps-lg-2 ps-0 text-danger">
                                             <?php the_sub_field('text') ?>
                                         </p>
+                                        <div class="row justify-content-center fs-2 ps-lg-3 ps-0 py-1">
+                                            <!--                                              player-->
+                                            <audio controls>
+                                                <source src="horse.ogg" type="audio/ogg">
+                                                <source src="horse.mp3" type="audio/mpeg">
+                                                Your browser does not support the audio element.
+                                            </audio>
+                                        </div>
                                         <p class="ps-lg-2 ps-0 text-danger">
                                             <?php get_field('client_name');?>
                                             </p>
-                                        <div class="position-relative d-flex gap-3 fs-2 ps-lg-3 ps-0 py-3 justify-content-center justify-content-lg-start">
-                                            <div class="swiper-button-next-unique d-flex justify-content-center align-items-center gap-3 text-danger">
-                                                <div class="swiper-button-next-unique d-flex justify-content-center align-items-center">
-                                                    <i class="bi bi-arrow-right-circle"></i>
-                                                </div>
-                                                <div class="swiper-button-prev-unique d-flex justify-content-center align-items-center">
-                                                    <i class="bi bi-arrow-left-circle"></i>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div>
 
                                 </div>

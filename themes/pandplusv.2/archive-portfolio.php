@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-    <section class="vh-100 d-flex flex-column justify-content-center align-items-center my-5 pt-5 pb-lg-5">
+    <section class="vh-100 d-flex flex-column justify-content-center align-items-center my-5 pt-5 pb-5">
         <article class="z-top position-relative text-center row justify-content-center">
             <div class="col-11 col-lg-8 row justify-content-center p-0">
                 <h1 class="display-4 fw-bolder my-auto text-dark">

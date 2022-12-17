@@ -21,7 +21,6 @@
       object-fit: cover;
     }
   }
-
 }
 
 @include media-breakpoint-down(lg) {
@@ -29,6 +28,9 @@
     img {
       width: 50px
     }
+  }
+  .front__banner {
+    height: 85vh!important;
   }
 }
 

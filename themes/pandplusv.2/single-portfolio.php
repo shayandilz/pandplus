@@ -3,57 +3,42 @@
     <section class="container">
         <!--    title-->
         <div class="row align-items-start pt-5 mt-5">
-            <div class="d-flex gap-3 justify-content-between align-items-center">
+            <div class="d-flex gap-3 justify-content-between align-items-center px-lg-5">
                 <div class="d-flex align-items-center gap-3 ">
                     <h1 class="text-danger display-6">
                         <?php the_title(); ?>
                     </h1>
                     <hr class="vr text-danger">
-                    <p>
-                        <?php $category_detail = get_the_category($post->ID);//$post->ID
-                        foreach ($category_detail as $category) { ?>
-                            <span
-                                class="py-2 px-3 me-2 text-danger">
-                                     <?php echo $category->name ?>
-                                 </span>
-                        <?php } ?>
+                    <p class="m-0">
+                        <?php
+                        $tour_pages = get_posts(
+                            array(
+                                'post_type' => 'services',
+                                'meta_query' => array(
+                                    array(
+                                        'key' => 'projects_services', // name of custom field
+                                        'value' => '"' . get_the_ID() . '"',
+                                        'compare' => 'LIKE'
+                                    )
+                                )
+                            )
+                        );
+                        foreach ($tour_pages as $tour) {
+                            echo '<span class="ps-1 border-secondary me-3">' . $tour->post_title . ' </span>';
+                        }
+                        ?>
                     </p>
                 </div>
-                <div class="d-flex gap-3">
-                    <div class="text-danger fs-2 swiper-button-prev swiper-button-prev-unique5 z-top">
-                        <i class="bi bi-arrow-right-circle"></i>
-                    </div>
-                    <div class="text-danger fs-2 swiper-button-next swiper-button-next-unique5 z-top">
-                        <i class="bi bi-arrow-left-circle"></i>
-                    </div>
+                <!--                website link-->
+                <div class="d-flex gap-3 ">
+                    <a class="text-danger fw-bold" href="<?php echo get_field('brand_url'); ?>"> وب سایت ></a>
                 </div>
             </div>
         </div>
         <!--    slider swiper -->
-        <div class="row justify-content-center position-relative py-2 align-items-start vh-65-fix">
-            <div class="swiper5 col-12 col-lg-10 overflow-hidden image-rounded-min h-100">
-                <div class="swiper-wrapper ">
-                    <?php
-                    $portfolio = array(
-                        'post_type' => 'portfolio',
-                        'post_status' => 'publish',
-                        'posts_per_page' => '-1',
-                        'ignore_sticky_posts' => true
-                    );
-                    $loop_portfolio = new WP_Query($portfolio);
-                    if ($loop_portfolio->have_posts()) : $i = 0;
-                        /* Start the Loop */
-                        while ($loop_portfolio->have_posts()) :
-                            $loop_portfolio->the_post(); ?>
-                            <a class="swiper-slide  ratio ratio-1x1 " href="<?php the_permalink(); ?>">
-                                <img class="object-fit" src="<?php echo get_the_post_thumbnail_url() ?>" alt="<?php the_title();?>">
-                            </a>
-                        <?php endwhile;
-                    endif;
-                    wp_reset_postdata(); ?>
-                </div>
-                <!-- If we need navigation buttons -->
-            </div>
+        <div class="row justify-content-center align-items-start">
+            <?php get_template_part('template-parts/testimony'); ?>
+            <!-- If we need navigation buttons -->
         </div>
     </section>
     <!--answer area-->
@@ -65,7 +50,8 @@
                     <h3 class="text-danger">مشکل</h3>
                 </div>
                 <div class="col-lg-8">
-                    <p class="text-justify">ما خدمات تجربه دیجیتال را به استارت آپ ها و کسب و کارهای کوچک ارائه می دهیم. ما
+                    <p class="text-justify">ما خدمات تجربه دیجیتال را به استارت آپ ها و کسب و کارهای کوچک ارائه می دهیم.
+                        ما
                         با ایجاد هویت برند به
                         مشتریان خود کمک می کنیم تا موفق شوند.</p>
                 </div>
@@ -73,23 +59,23 @@
         </div>
     </section>
     <!--services-->
-    <section class="container">
-        <div class="row justify-content-between row-cols-1 row-cols-lg-3">
-            <!--        cards-->
-            <div class="col gap-3 my-3 my-lg-0 p-4 p-lg-0">
-                <p class="m-0">01</p>
-                <span>خدمات</span>
-                <h4 class="text-danger fw-bolder py-3">
-                    بازاریابی دیجیتال
-                </h4>
-                <p class="text-justify">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده لورم ایپسوم
-                    متن ساختگی با تولید
-                    سادگی نامفهوم از صنعت چاپ و با استفاده لورم ایپسوم متن ساختگی</p>
-                <ul class="list-unstyled">
-                    <li>تبلیغات کلیکی</li>
-                    <li>برند سازی</li>
-                    <li>فلان بهمان</li>
-                </ul>
+    <section class="bg-secondary py-5">
+        <div class="container pb-5 mb-5">
+            <div class="row justify-content-between row-cols-1 row-cols-lg-3">
+                <!--        cards-->
+                <?php
+                foreach ($tour_pages as $tour) { ?>
+                    <article class="card p-2 col-12 col-md-5 border-0 shadow-sm">
+                        <img src="<?= get_the_post_thumbnail_url($tour->ID); ?>" class="card-img-top"
+                             alt="<?php the_title(); ?>">
+                        <div class="card-body">
+                            <h5 class="card-title py-3 fw-bolder"><?= $tour->post_title ?></h5>
+                            <p class="card-text"><?= $tour->post_excerpt; ?></p>
+                            <a href="<?php the_permalink($tour->ID); ?>" class="btn btn-dark">بیشتر بدانید</a>
+                        </div>
+                    </article>
+                <?php }
+                ?>
             </div>
         </div>
     </section>

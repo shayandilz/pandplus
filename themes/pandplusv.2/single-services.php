@@ -96,11 +96,14 @@ get_header(); ?>
                             <?php the_field('workflow_text') ?>
                         </p>
                     </div>
+                    <?php $j= 15 ;?>
                     <ul class="list-unstyled row gap-lg-4 gap-0 justify-content-lg-start justify-content-center">
                         <?php while (have_rows('workflow_steps')): the_row();;
-                            $i++
+                            $i++;
+                            $j+=20;
                             ?>
-                            <li class="col-md-4 col-12 px-lg-2 px-0 row justify-content-center">
+                            <li     data-animate="<?= $j; ?>"
+                                    class="col-md-4 col-12 px-lg-2 px-0 row justify-content-center gs_reveal gs_reveal_fromRight">
                                 <div class="col-2 display-1 fw-bold text-white"><?= $i; ?></div>
                                 <div class="col">
                                     <p class="text-danger">
@@ -139,7 +142,7 @@ get_header(); ?>
             <div class="row justify-content-center">
                 <!--                title-->
                 <div class="col-12 col-lg-6 text-center my-3">
-                    <p class="text-primary"><?php the_field('portfolio_title'); ?></p>
+                    <h4 class="fs-4 text-danger fw-bolder mb-4"><?php the_field('portfolio_title'); ?></h4>
 <!--                    <h3 class=" fw-bolder">-->
 <!--                        --><?php //the_field('portfolio_text'); ?>
 <!--                    </h3>-->
@@ -167,7 +170,7 @@ get_header(); ?>
 
 </section>
 <!--services-->
-<section id="services__area" class="bg-danger py-5">
+<section id="services__area" class="bg-danger pt-5">
     <div class="container overflow-hidden">
         <div class="row justify-content-center ">
             <?php get_template_part('template-parts/service-show'); ?>

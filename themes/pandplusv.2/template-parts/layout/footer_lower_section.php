@@ -91,11 +91,11 @@
 //                ?>
 <!---->
 <!--            </div>-->
-            <div class="col-lg-3 col-12 h-100">
+            <div class="col-lg-3 col-12 z-top">
                 <?php
                 $google_map_iframe = get_field('google_map_iframe', 'option');
                 if ($google_map_iframe): ?>
-                    <div class="position-relative rounded-3">
+                    <div class="position-relative rounded h-100">
                         <?php echo $google_map_iframe; ?>
                         <a href="https://goo.gl/maps/2dUeBwPYSwTo8tNE7"
                            class="btn bg-white d-flex justify-content-between align-items-center position-absolute bottom-0 mb-4 mx-3 w-auto end-0 start-0">
@@ -106,15 +106,15 @@
                 <?php endif; ?>
             </div>
         </div>
-        <div class="col-12 col-lg-10 row justify-content-between py-4 px-0 align-items-center">
-            <div class="col-12 col-lg-8 fw-lighter text-semi-light fs-6 text-start">
+        <div class="col-12 col-lg-10 row justify-content-center py-4 px-0 align-items-center">
+            <div class="col-12 col-lg-9 fw-lighter text-semi-light fs-6 text-start">
                 <div class="border-2 border-bottom pb-1"></div>
                 <div class="pt-3 text-center text-lg-start">
                     <?php the_field('copyright_text', 'option'); ?>
                 </div>
             </div>
-            <div class="col-12 col-lg-4 gap-2 text-center">
-                <p class="text-center m-0 mb-2">مارا دنبال کنید</p>
+            <div class="col-12 col-lg-3 gap-2 text-center">
+                <p class="text-center text-lg-start m-0 mb-2">مارا دنبال کنید</p>
                 <?php get_template_part('template-parts/layout/social'); ?>
             </div>
         </div>

@@ -3,7 +3,7 @@
 
 get_header(); ?>
 
-    <section class="container pt-5">
+    <section class="container py-5">
         <div class="row justify-content-center pb-5">
             <!--        selection post of blogs-->
             <?php
@@ -72,7 +72,7 @@ get_header(); ?>
                                 <?php echo '<ul class="pagination justify-content-center align-items-center">';
                                 // get_previous_posts_link will return a string or void if no link is set.
                                 if ($prev_posts_link = get_previous_posts_link(__('قبلی'))) :
-                                    echo '<li class="prev-list-item bg-danger py-2 px-3 image-rounded-min text-white page-item me-4">';
+                                    echo '<li class="prev-list-item bg-danger py-2 px-4 image-rounded-min text-white page-item me-4">';
                                     echo $prev_posts_link;
                                     echo '</li>';
                                 endif;

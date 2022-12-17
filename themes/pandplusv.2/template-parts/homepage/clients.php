@@ -1,19 +1,19 @@
 <section class="bg-secondary py-4">
     <div class="container my-3">
         <div class="row mt-5 justify-content-between align-items-center">
-            <div class="col-12 row align-items-center mx-0">
-                <div class="col-md-5 col-12 text-justify">
-                    <p data-animate="6" class="fs-6 text-danger gs_reveal gs_reveal_fromBottom">
+            <div class="col-12 row align-items-center mx-0 justify-content-evenly">
+                <div class="col-md-5 col-12 text-justify ">
+                    <p data-animate="6" class="fs-6 text-danger ">
                         <?php the_field('client_small_title'); ?>
                     </p>
-                    <h3 data-animate="6" class="fs-2 text-danger fw-bolder gs_reveal gs_reveal_fromBottom my-4">
+                    <h3 data-animate="6" class="fs-2 text-danger fw-bolder my-4">
                         <?php the_field('client_title'); ?>
                     </h3>
                     <p data-animate="6" class="text-danger gs_reveal gs_reveal_fromBottom">
                         <?php the_field('client_text'); ?>
                     </p>
                 </div>
-                <div class="col-md-7 col-12">
+                <div class="col-md-6 col-12 z-top">
 
                     <article class="d-flex justify-content-evenly flex-wrap gap-1 align-content-center">
                         <?php

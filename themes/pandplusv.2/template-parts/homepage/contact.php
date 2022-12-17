@@ -12,7 +12,7 @@
                     <?= get_field('contact_number'); ?>
                 </a>
             </div>
-            <div data-animate="12" class="col-11 col-lg-6 form-front gs_reveal gs_reveal_fromBottom">
+            <div data-animate="12" class="col-11 col-lg-6 form-front z-top">
                 <?php
                 $gravity = get_field('contact_form');
                 echo do_shortcode('[gravityform id="'.$gravity.'" title="false" description="false" ajax="true"]') ?>

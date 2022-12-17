@@ -12,6 +12,15 @@ MorphSVGPlugin.defaultType = "linear";
 
 
 document.addEventListener("DOMContentLoaded", function () {
+    let tween = gsap.to("#text", {
+        text: {value: "آژانس دیجیتال مارکتینگ پندپلاس\n"},
+        duration: 2,
+        delay: 0.4,
+        ease: "none",
+        onComplete: function (){
+            $('.text-appear').fadeIn();
+        }
+    })
     function animateFrom(elem, direction) {
         direction = direction || 1;
         var x = 0,

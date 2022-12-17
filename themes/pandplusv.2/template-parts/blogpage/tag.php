@@ -6,7 +6,7 @@
     <?php
     foreach ($categories as $category) { ?>
         <a href="<?= get_category_link($category->term_id) ?>"
-           class="bg-success rounded shadow-sm text-decoration-none py-2 px-1 me-1 text-danger">
+           class="bg-success rounded shadow-sm text-decoration-none py-2 px-2 me-1 text-danger">
             <?php echo $category->name ?>
         </a>
     <?php } ?>
