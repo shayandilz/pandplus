@@ -136,7 +136,7 @@ get_header(); ?>
 <!--    --><?php //get_template_part('template-parts/testimony'); ?>
 <!--</section>-->
 <!--portfolio-->
-<section class="container pb-lg-3 pt-lg-3">
+<section class="container py-5">
     <div class="row justify-content-center">
         <div class="row col-lg-10 col-12 justify-content-center">
             <div class="row justify-content-center">

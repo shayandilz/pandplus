@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="container py-5 mt-5">
+<div class="container py-5 my-5">
     <div class="w-100 mb-5 mx-auto">
         <div class="d-block d-lg-flex align-items-center">
             نتیجه جستجو برای :

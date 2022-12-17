@@ -12,7 +12,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-12 col-lg-10 row row-cols-1 row-cols-lg-3 py-3">
+            <div class="col-12 col-lg-10 row row-cols-1 row-cols-lg-3 py-3 justify-content-center">
                 <?php
                 $i = -1;
                 $list_services = get_field('services_list');

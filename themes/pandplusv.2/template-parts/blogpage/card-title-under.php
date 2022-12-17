@@ -13,9 +13,7 @@
                 <?php } ?>
             </div>
             <p class="m-0 py-1">
-                <?php  get_template_part('template-parts/icons/clock');?>
-                <!--                    date-->
-                <span>۱۴۰۰ بهمن ۲۲</span>
+                <span><?php  get_template_part('template-parts/icons/services/clock');?></span> <?php echo get_the_date('d  F , Y'); ?>
             </p>
         </div>
         <h4 class="fw-bolder fs-6 text-danger">

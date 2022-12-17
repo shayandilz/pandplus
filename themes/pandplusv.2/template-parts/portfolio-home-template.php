@@ -1,6 +1,8 @@
 <article class="row swiper-slide px-0 justify-content-center">
     <div class="col-12">
-        <a href="<?php the_permalink();?>">
+<!--        <a href="--><?php //the_permalink();?><!--"> -->
+            <a href="<?php echo get_field('brand_url'); ?>" alt="<?php the_title(); ?>">
+
             <div class="ratio ratio-1x1">
                 <img class="image-rounded object-fit" src="<?php echo get_the_post_thumbnail_url(); ?>"
                      title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
