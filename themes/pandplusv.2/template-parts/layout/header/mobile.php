@@ -40,6 +40,7 @@
             $footer_button = get_field('footer_button', 'option');
             if ($footer_button): ?>
                 <a rel="nofollow" type="button"
+                   id="cta-event"
                    data-bs-toggle="modal"
                    data-bs-target="#exampleModal"
                    href="<?php echo esc_url($footer_button['link']); ?>"
@@ -84,6 +85,7 @@
                 $footer_button = get_field('footer_button', 'option');
                 if ($footer_button): ?>
                     <a rel="nofollow" type="button"
+                       id="cta-event"
                        data-bs-toggle="modal"
                        data-bs-target="#exampleModal"
                        href="<?php echo esc_url($footer_button['link']); ?>"
@@ -135,6 +137,7 @@
                 $footer_button = get_field('footer_button', 'option');
                 if ($footer_button): ?>
                     <a rel="nofollow" type="button"
+                       id="cta-event"
                        data-bs-toggle="modal"
                        data-bs-target="#exampleModal"
                        href="<?php echo esc_url($footer_button['link']); ?>"
@@ -162,7 +165,7 @@
                     $loop_post->the_post(); ?>
                     <li class="col-6 d-flex flex-column gap-3">
                         <a href="<?php the_permalink(); ?>">
-                        <img class="img-fluid overflow-hidden image-rounded-min object-fit lazy ratio-1x1"
+                        <img class="img-fluid overflow-hidden image-rounded-blog object-fit lazy ratio-1x1"
                              src="<?php
                              if (has_post_thumbnail($post->ID)) {
                                  echo get_the_post_thumbnail_url();
@@ -186,6 +189,7 @@
                 $footer_button = get_field('footer_button', 'option');
                 if ($footer_button): ?>
                     <a rel="nofollow" type="button"
+                       id="cta-event"
                        data-bs-toggle="modal"
                        data-bs-target="#exampleModal"
                        href="<?php echo esc_url($footer_button['link']); ?>"

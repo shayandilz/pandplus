@@ -1,6 +1,7 @@
-<div class="modal fade contact-form" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-md">
-        <div class="modal-content image-rounded-min bg-secondary">
+<div class="modal fade contact-form" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md" >
+        <div class="modal-content image-rounded-min bg-secondary" >
                 <div class="modal-body col-12">
                     <div class="modal-header border-0 pb-5 pt-2">
                         <h5 class="modal-title text-danger fs-3" id="exampleModalLabel">دریافت مشاوره</h5>

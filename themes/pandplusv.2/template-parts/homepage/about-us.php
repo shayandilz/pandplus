@@ -16,6 +16,7 @@
                 if ($about_button_upper): ?>
                     <a
                             data-animate="20"
+                            id="cta-event"
                             class="btn btn-white px-4 py-2 fs-6 rounded gs_reveal gs_reveal_fromBottom"
                             type="button"
                             rel="nofollow"

@@ -23,6 +23,7 @@
             </div>
         </div>
         <button rel="nofollow" type="button"
+                id="cta-event"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
                 class="btn btn-white px-3 py-2 d-none d-lg-inline ">

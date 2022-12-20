@@ -97,7 +97,7 @@ $services_list = [7470,7469];
                             $loop_post->the_post(); ?>
                             <li class="col-4">
                                 <a href="<?php the_permalink(); ?>">
-                                <img class="img-fluid overflow-hidden image-rounded-min object-fit lazy"
+                                <img class="img-fluid overflow-hidden image-rounded-blog object-fit lazy"
                                      src="<?php
                                      if (has_post_thumbnail($post->ID)) {
                                          echo get_the_post_thumbnail_url();

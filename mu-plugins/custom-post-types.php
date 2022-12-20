@@ -28,6 +28,32 @@ function portfolio_post_types()
             'query_var' => true,
         )
     );
+    // game post-type
+    register_post_type('games', array(
+        'supports' => array( 'title', 'editor', 'comments', 'excerpt', 'custom-fields', 'thumbnail' ),
+        'rewrite' => array('slug' => 'games'),
+        'has_archive' => true,
+        'public' => true,
+        'labels' => array(
+            'name' => 'بازی',
+            'add_new' => 'افزودن بازی',
+            'add_new_item' => 'افزودن بازی',
+            'edit_item' => 'ویرایش بازی',
+            'all_items' => 'همه ی بازی ها',
+            'singular_name' => 'بازی ها'
+        ),
+        'menu_icon' => 'dashicons-portfolio'
+    ));
+    register_taxonomy(
+        'game_categories',
+        'game',             // post type name
+        array(
+            'hierarchical' => true,
+            'label' => 'دسته بندی بازی', // display name
+            'query_var' => true,
+        )
+    );
+    // services post-type
     register_post_type('services', array(
         'supports' => array( 'title', 'editor', 'comments', 'excerpt', 'custom-fields', 'thumbnail' ),
         'rewrite' => array('slug' => 'services'),

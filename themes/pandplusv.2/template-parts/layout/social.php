@@ -8,7 +8,7 @@
         <a class="social-link" href="<?= get_field('telegram', 'option') ?>">
             <i class="bi bi-telegram"></i>
         </a>
-        <a class="social-link" href="<?= get_field('twitter', 'option') ?>">
+        <a class="social-link z-top" href="<?= get_field('twitter', 'option') ?>">
             <i class="bi bi-twitter"></i>
         </a>
         <a class="social-link z-top" href="<?= get_field('youtube', 'option') ?>">

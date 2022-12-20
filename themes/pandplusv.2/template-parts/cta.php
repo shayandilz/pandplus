@@ -5,6 +5,7 @@
         <p>مشاوران ما با شما تماس خواهند گرفت</p>
     </div>
     <button type="button"
+            id="cta-event"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
             class=" btn rounded px-4 py-2 btn-secondary">دریافت مشاوره </button>

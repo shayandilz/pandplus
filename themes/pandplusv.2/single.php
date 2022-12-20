@@ -82,7 +82,7 @@ while (have_posts()) :
                 <div class="col-12 col-lg-4 order-1 order-lg-2 mb-3 mb-lg-0 pt-5 pt-lg-0">
                     <!--        post image-->
                     <div class="ratio ratio-1x1">
-                        <img class=" image-rounded object-fit shadow-sm"
+                        <img class="image-rounded-blog object-fit shadow-sm"
                              src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?= the_title(); ?>">
                     </div>
                 </div>
