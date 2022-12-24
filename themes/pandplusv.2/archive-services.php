@@ -15,7 +15,7 @@ if ($loop_services->have_posts()) : $i = 0; ?>
         <div class="row justify-content-center align-content-center py-5 pb-5">
             <div class="col-12 col-lg-6 px-lg-5 pt-5 text-danger">
                 <h1 class="display-5 fw-bolder text-center">
-                    <?php get_field('header_title', get_the_ID()); ?>
+                    <?= get_field('services_header_title'); ?>
                 </h1>
                 <?php get_template_part('template-parts/counseling-call'); ?>
                 <!--            call details-->
@@ -28,7 +28,9 @@ if ($loop_services->have_posts()) : $i = 0; ?>
             <!--                sticky sidebar in right-->
             <div class="col-12 col-lg-4 text-center text-lg-start py-5 py-lg-0">
                 <p class="text-center text-lg-start">آژانس دیجیتال مارکتینگ پندپلاس</p>
-                <h3 class="fw-bolder">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</h3>
+                <h3 class="fw-bolder">
+
+                </h3>
                 <p class="text-justify">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده لورم
                     ایپسگی نامفهوم ا</p>
                 <button class="btn btn-secondary px-5 py-2">بیشتر بدانید</button>

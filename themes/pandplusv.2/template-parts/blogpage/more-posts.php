@@ -14,8 +14,8 @@
             while ($loop->have_posts()) :
                 $loop->the_post();
                 ?>
-                <a href="<?php echo get_the_permalink(); ?>" class="d-block d-lg-flex my-3">
-                    <img class="col-12 col-lg-5 me-2 image-rounded-min object-fit"
+                <a href="<?php echo get_the_permalink(); ?>" class="d-block d-lg-flex my-3 align-items-center">
+                    <img class="col-12 col-lg-5 me-2 image-rounded-20 object-fit"
                          src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
                     <div>
                         <div class="align-items-center gap-1 text-danger">
@@ -28,7 +28,10 @@
                     </span>
                                 <?php } ?>
                             </div>
-                            <span><?php get_template_part('template-parts/icons/services/clock'); ?></span> <?php echo get_the_date('d  F , Y'); ?>
+                            <span class="small">
+                                 <?php get_template_part('template-parts/icons/clock');
+                                 echo get_the_date('d  F , Y'); ?>
+                            </span>
                         </div>
                         <h6 class="fw-bold fs-6 text-danger"><?php echo get_the_title(); ?></h6>
                     </div>

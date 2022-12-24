@@ -106,7 +106,7 @@ $services_list = [7470,7469];
                                      }
                                      ?>"
                                      alt="<?php the_title(); ?>">
-                                    <h6 class="text-center fs-6 mt-2 fw-bold text-danger"><?php echo get_the_title(); ?></h6>
+                                    <h6 class="text-center fs-6 mt-3 fw-bold text-danger"><?php echo get_the_title(); ?></h6>
                                 </a>
                             </li>
                         <?php endwhile;

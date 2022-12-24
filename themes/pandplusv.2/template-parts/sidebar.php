@@ -2,7 +2,7 @@
     <div>
         <h4 class="fw-bolder fs-4 ">مقالات پیشنهادی ما</h4>
 <!--        grid latest posts -->
-        <div class="row row-cols-1 grid-border">
+        <div class="row row-cols-1">
             <?php
             $args = array(
                 'post_type' => 'post',

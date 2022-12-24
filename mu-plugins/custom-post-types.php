@@ -6,7 +6,7 @@ function portfolio_post_types()
     //    Projects post type
     register_post_type('portfolio', array(
         'supports' => array( 'title', 'editor', 'comments', 'excerpt', 'custom-fields', 'thumbnail' ),
-        'rewrite' => array('slug' => 'projects'),
+        'rewrite' => array('slug' => 'portfolio'),
         'has_archive' => true,
         'public' => true,
         'labels' => array(
@@ -54,7 +54,8 @@ function portfolio_post_types()
         )
     );
     // services post-type
-    register_post_type('services', array(
+    register_post_type(' 
+    ', array(
         'supports' => array( 'title', 'editor', 'comments', 'excerpt', 'custom-fields', 'thumbnail' ),
         'rewrite' => array('slug' => 'services'),
         'has_archive' => true,
