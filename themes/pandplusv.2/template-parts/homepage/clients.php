@@ -2,7 +2,7 @@
     <div class="container my-3">
         <div class="row mt-5 justify-content-between align-items-center">
             <div class="col-12 row align-items-center mx-0 justify-content-evenly">
-                <div class="col-md-5 col-12 text-justify ">
+                <div class="col-md-4 col-12 text-justify ">
                     <p data-animate="6" class="fs-6 text-danger ">
                         <?php the_field('client_small_title'); ?>
                     </p>
@@ -13,9 +13,9 @@
                         <?php the_field('client_text'); ?>
                     </p>
                 </div>
-                <div class="col-md-6 col-12 z-top">
+                <div class="col-md-7 col-12 z-top">
 
-                    <article class="d-flex justify-content-evenly flex-wrap gap-1 align-content-center">
+                    <article class="d-flex justify-content-evenly flex-wrap  align-content-center">
                         <?php
                         $portfolio = array(
                             'post_type' => 'portfolio',
@@ -30,7 +30,9 @@
                                 $loop_portfolio->the_post();
                             $i++;
                                 $brand_logo = get_field('brand_logo');?>
-                                <div data-animate="<?php echo $i . 8; ?>" class="col-3 gs_reveal gs_reveal_fromBottom">
+                                <div data-animate="<?php echo $i . 8; ?>" class="col-lg-3 px-2 px-lg-0 col-4 gs_reveal
+                                gs_reveal_fromBottom
+                                 text-center my-auto">
                                     <a href="<?php the_permalink();?>">
                                         <img width="100px" title="<?php echo esc_attr($brand_logo['alt']); ?>"
                                              class="img-fluid blackWhite lazy"

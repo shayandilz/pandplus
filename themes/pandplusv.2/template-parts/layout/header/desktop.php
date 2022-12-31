@@ -13,7 +13,7 @@ $services_list = [7470,7469];
                     <a class="text-black" href="<?php echo esc_url('/services'); ?>">خدمات</a>
                 </li>
                 <li data-list="portfolio-menu">
-                    <a class="text-black" href="/">نمونه کار</a>
+                    <a class="text-black" href="<?php echo esc_url('/portfolio') ?>">نمونه کار</a>
                 </li>
                 <li data-list="blog-menu">
                     <a class="text-black" href="<?php echo esc_url('/blog') ?>">بلاگ</a>

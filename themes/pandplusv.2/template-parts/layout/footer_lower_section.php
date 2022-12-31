@@ -1,5 +1,5 @@
 <div class="row pt-5 align-items-center justify-content-center bg-info text-white">
-    <div class="container col col-lg-11 row justify-content-center pt-5">
+    <div class="container col col-lg-11 row justify-content-center pt-5 px-0">
         <div class=" pt-3 pt-lg-5 col col-lg-10 row px-0">
             <div class="col-lg-4 col-12 d-flex flex-column gap-3 pb-3 pb-lg-0">
                 <a class="text-center text-lg-start" href="<?php echo esc_url(get_home_url()) ?>">

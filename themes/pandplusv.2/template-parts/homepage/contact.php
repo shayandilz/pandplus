@@ -2,7 +2,8 @@
     <div class="container py-4 contact-form">
         <div class="row align-items-center justify-content-center">
             <div class="col-11 col-lg-4 d-flex flex-column gap-3">
-                <h3 data-animate="6" class="text-danger fs-2 fw-bolder lh-lg gs_reveal gs_reveal_fromRight">
+                <h3 data-animate="6" class="text-danger text-center text-lg-start fs-2 fw-bolder lh-lg gs_reveal
+                gs_reveal_fromRight">
                     <?= get_field('contact_header'); ?>
                 </h3>
                 <span data-animate="6" class="border-1 border-top border-danger fs-5 text-center text-lg-start text-danger w-auto pt-3 gs_reveal gs_reveal_fromRight">

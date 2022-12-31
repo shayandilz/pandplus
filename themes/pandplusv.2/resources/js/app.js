@@ -27,6 +27,10 @@ const wow = new WOW(
 wow.init();
 
 $(document).ready(function () {
+    //get current location
+    // fetch('http://ip-api.com/json')
+    //     .then((response) => response.json())
+    //     .then((data) => console.log(data.city));
     // animate logo
         setInterval(function () {
             $('.logo_header').addClass('animate__logo');
