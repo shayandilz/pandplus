@@ -8,6 +8,7 @@ $services = array(
     'posts_per_page' => '-1',
     'ignore_sticky_posts' => true
 );
+
 $loop_services = new WP_Query($services);
 if ($loop_services->have_posts()) : $i = 0; ?>
     <!--top banner-->
@@ -15,8 +16,7 @@ if ($loop_services->have_posts()) : $i = 0; ?>
         <div class="row justify-content-center align-content-center py-5 pb-5">
             <div class="col-12 col-lg-6 px-lg-5 pt-5 text-danger">
                 <h1 class="display-5 fw-bolder text-center">
-<!--                    --><?php //var_dump(get_field('services_header_title')); ?>
-                    ما پند پلاس هستیم
+                    <?= get_field('services_header_title', 7675); ?>
                 </h1>
                 <?php get_template_part('template-parts/counseling-call'); ?>
                 <!--            call details-->
