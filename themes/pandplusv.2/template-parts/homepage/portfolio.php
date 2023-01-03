@@ -1,4 +1,4 @@
-<section class="bg-info portfolio-main position-relative pt-lg-5 min-vh-100">
+<section class="bg-info portfolio-main position-relative pt-lg-5 vh-65">
     <?php get_template_part('template-parts/lines/ver-hor-line-big'); ?>
     <div class="container py-4">
         <div class="row justify-content-center">

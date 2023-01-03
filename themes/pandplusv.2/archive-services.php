@@ -37,7 +37,7 @@ if ($loop_services->have_posts()) : $i = 0; ?>
 <!--                <button class="btn btn-secondary px-5 py-2">بیشتر بدانید</button>-->
 <!--            </div>-->
             <!--                services grid cards-->
-            <div class="col-12 col-lg-12 row justify-content-center gap-4 m-0 rounded-1 bg-dark p-4">
+            <div class="col-12 col-lg-12 row justify-content-center gap-4 m-0 rounded-1 p-4">
 
                 <?php /* Start the Loop */
                 while ($loop_services->have_posts()) :

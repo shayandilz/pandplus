@@ -31,10 +31,10 @@
 <div class="tab-content menuHeader" id="nav-tabContent">
     <div class="container tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
          tabindex="0">
-        <div class="d-flex flex-column align-items-center justify-content-center gap-4 text-center mt-5">
+        <div class="d-flex align-items-center justify-content-evenly gap-2 text-center mt-5">
             <a class="btn btn-dark px-4 py-2 fs-5 rounded-1"
                href="<?php echo esc_url(get_home_url()) ?>">
-                رفتن به صفحه اصلی
+                صفحه اصلی
             </a>
             <?php
             $footer_button = get_field('footer_button', 'option');
@@ -52,7 +52,7 @@
     </div>
     <div class="container tab-pane fade" id="nav-service" role="tabpanel" aria-labelledby="nav-service-tab"
          tabindex="0">
-        <ul class="list-unstyled my-5 row justify-content-center align-items-center text-center">
+        <ul class="list-unstyled my-5 pb-5 row justify-content-center align-items-center text-center">
             <?php
             $services_heaeder = array(
                 'post_type' => 'services',
@@ -76,11 +76,11 @@
                 <?php endwhile;
             endif;
             wp_reset_postdata(); ?>
-            <div class="d-flex flex-column align-items-center justify-content-center gap-4 text-center mt-4 ">
-                <!--                 <a class="btn btn-dark px-4 py-2 fs-5 rounded-1"-->
-                <!--                    href="--><?php //echo esc_url(get_home_url('/services')) ?><!--">-->
-                <!--                     رفتن به صفحه خدمات-->
-                <!--                 </a>-->
+            <div class="d-flex align-items-center justify-content-evenly gap-2 text-center mt-4 ">
+                                 <a class="btn btn-dark px-4 py-2 fs-5 rounded-1"
+                                    href="<?php echo esc_url('/services') ?>">
+                                     خدمات
+                                 </a>
                 <?php
                 $footer_button = get_field('footer_button', 'option');
                 if ($footer_button): ?>
@@ -98,7 +98,7 @@
     </div>
     <div class="container tab-pane fade" id="nav-portfolio" role="tabpanel" aria-labelledby="nav-portfolio-tab"
          tabindex="0">
-        <ul class="row list-unstyled my-5 g-3">
+        <ul class="row list-unstyled my-5 g-3 pb-5">
             <?php
             $portfolio = array(
                 'post_type' => 'portfolio',
@@ -128,11 +128,11 @@
                 <?php endwhile;
             endif;
             wp_reset_postdata(); ?>
-            <div class="d-flex flex-column align-items-center justify-content-center gap-4 text-center">
-<!--                <a class="btn btn-dark px-4 py-2 fs-5 rounded-1"-->
-<!--                   href="--><?php //echo esc_url(get_home_url()) ?><!--">-->
-<!--                    رفتن به صفحه اصلی-->
-<!--                </a>-->
+            <div class="d-flex align-items-center justify-content-evenly gap-2 text-center">
+                <a class="btn btn-dark px-4 py-2 fs-5 rounded-1"
+                   href="<?php echo esc_url('/portfolio') ?>">
+                    نمونه کار‌ها
+                </a>
                 <?php
                 $footer_button = get_field('footer_button', 'option');
                 if ($footer_button): ?>
@@ -150,7 +150,7 @@
     </div>
     <div class="container tab-pane fade overflow-scroll" id="nav-blog" role="tabpanel" aria-labelledby="nav-blog-tab"
          tabindex="0">
-        <ul class="row list-unstyled my-5 ">
+        <ul class="row list-unstyled my-5 pb-5">
             <?php
             $post = array(
                 'post_type' => 'post',
@@ -180,10 +180,10 @@
                 <?php endwhile;
             endif;
             wp_reset_postdata(); ?>
-            <div class="d-flex flex-column align-items-center justify-content-center gap-4 text-center mt-2">
+            <div class="d-flex  align-items-center justify-content-evenly gap-2 text-center mt-2">
                 <a class="btn btn-dark px-4 py-2 fs-5 rounded-1"
                    href="<?php echo site_url('/بلاگ'); ?>">
-                    رفتن به صفحه بلاگ
+                     بلاگ
                 </a>
                 <?php
                 $footer_button = get_field('footer_button', 'option');
@@ -204,7 +204,9 @@
 <!--menu mobile footer -->
 <div class="py-3 w-100 bg-danger position-fixed bottom-0 z-top">
     <h5 class="text-center text-secondary fw-bold">آدرس پستی</h5>
-    <p class="px-5 text-center">تهران خیابان شهید بهشتی ابتدای خیابان سرافراز برج دریای نور طبقه چهار واحد۴۰۴</p>
+    <address class="px-5 text-center text-white">
+        <?= get_field('address', 'option') ?>
+    </address>
     <div class="d-flex justify-content-center gap-3">
         <?php get_template_part('template-parts/layout/social') ?>
     </div>

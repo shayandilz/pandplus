@@ -122,9 +122,9 @@ $services_list = [7470,7469];
             <div class="row gap-3 text-danger">
                 <div class="col">
                     <h4>آدرس پستی</h4>
-                    <p>
+                    <address>
                         <?= get_field('address', 'option') ?>
-                    </p>
+                    </address>
                 </div>
                 <div class="col">
                     <h4>در تماس باشید</h4>

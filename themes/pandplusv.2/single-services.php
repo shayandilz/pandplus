@@ -4,9 +4,9 @@
 get_header(); ?>
 <!--top banner-->
 <section class="container mt-lg-0 mt-5 overflow-hidden">
-    <div class="row justify-content-center align-items-start h-100">
+    <div class="row justify-content-evenly align-items-start h-100">
         <!--            cta-->
-        <div class="col-12 col-lg-5 pe-lg-2 me-lg-5 text-danger pt-5 mt-lg-5">
+        <div class="col-12 col-lg-5 text-danger my-auto pt-4">
             <h1 class="display-3 fw-bolder"><?php the_title(); ?></h1>
             <article class="my-4 text-justify">
                 <?php echo the_content(); ?>
@@ -48,7 +48,8 @@ get_header(); ?>
             </div>
         </div>
         <!--            scrolling cards-->
-        <div class="overflow-hidden col-12 col-lg-5 swiper3 vh-100 d-none d-lg-block animate__animated animate__fadeInUp">
+        <div class="overflow-hidden col-12 col-lg-5 swiper3 vh-100 d-none d-lg-block animate__animated
+        animate__fadeInUp">
             <div class="swiper-wrapper ">
                 <?php
                 $projects_services = get_field('projects_services');
@@ -63,7 +64,7 @@ get_header(); ?>
             </div>
         </div>
 <!--        more services-->
-        <div class="col-12 col-lg-5 swiper4 overflow-hidden d-lg-none d-block">
+        <div class="col-12 col-lg-5 py-2 swiper4 overflow-hidden d-lg-none d-block">
             <div class="swiper-wrapper">
                 <?php
                 if ($projects_services) :

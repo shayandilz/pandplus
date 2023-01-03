@@ -56,9 +56,14 @@ body {
 .object-fit {
   object-fit: cover;
 }
-
+.opacity-10 {
+  opacity: 0.1;
+}
 .z-top {
   z-index: 10;
+}
+.-z-1 {
+  z-index: -1;
 }
 
 .vh-65 {
@@ -72,7 +77,9 @@ body {
 .end-5 {
   left: 10px;
 }
-
+.vh-60 {
+  min-height: 60vh;
+}
 .vh-80 {
   min-height: 80vh;
 }

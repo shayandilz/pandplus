@@ -88,6 +88,7 @@ $(document).ready(function () {
         $('.cd-nav-trigger').on('click', function (event) {
             // fade out top menu when cd nav active
             $('.top-menu').toggleClass('animate__fadeOutUp animate__delay-1s');
+            $('.call').toggleClass('animate__fadeOutDown animate__fadeInUp');
             event.preventDefault();
             //stop if nav animation is running
             if (!isLateralNavAnimating) {

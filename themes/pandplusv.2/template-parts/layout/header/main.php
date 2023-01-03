@@ -1,7 +1,7 @@
 <div class="position-absolute top-menu z-top py-2 animate__animated animate__fadeInDown animate__delay-1s">
-    <div class="container justify-content-center justify-content-end justify-content-lg-center d-flex gap-3 align-items-center px-2">
+    <div class="container justify-content-end justify-content-lg-center d-flex gap-3 align-items-center px-2">
         <div class="d-flex col-11 col-lg-9 gap-3 justify-content-end justify-content-lg-start">
-            <a class="text-end text-lg-start logo_header" href="<?php echo esc_url(get_home_url()) ?>">
+            <a class="text-end text-lg-start logo_header" href="<?php echo esc_url(get_home_url()); ?>">
                 <?php
                 $footer_logo = get_field('footer_logo', 'option');
                 ?>
@@ -22,12 +22,17 @@
                 ?>
             </div>
         </div>
-        <button rel="nofollow" type="button"
-                id="cta-event"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-                class="btn btn-white px-3 py-2 d-none d-lg-inline ">
+        <a href="tel:<?php the_field('call_number_service', 'option') ?>"
+           id="cta-event"
+           class="btn btn-white px-3 py-2 d-none d-lg-inline ">
             دریافت مشاوره
-        </button>
+        </a>
+<!--        <button rel="nofollow" type="button"-->
+<!--                id="cta-event"-->
+<!--                data-bs-toggle="modal"-->
+<!--                data-bs-target="#exampleModal"-->
+<!--                class="btn btn-white px-3 py-2 d-none d-lg-inline ">-->
+<!--            دریافت مشاوره-->
+<!--        </button>-->
     </div>
 </div>

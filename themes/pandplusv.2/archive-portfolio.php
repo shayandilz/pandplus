@@ -26,19 +26,22 @@ $loop_portfolio = new WP_Query($portfolio);
     </article>
 </section>
 <section class="container pb-5 mb-5">
-    <ul class="nav nav-tabs border-0 w-fit-content mx-auto px-3 gap-2 justify-content-center" id="myTab" role="tablist">
+    <ul class="nav nav-tabs border-0 w-fit-content mx-auto px-3 gap-2 overflow-hidden justify-content-center" id="myTab"
+        role="tablist">
 
         <?php
         $args_cat = array(
             'taxonomy' => 'portfolio_categories',
+//            'hide_empty'=> false,
             'orderby' => 'name',
             'order' => 'ASC'
         );
         $cats = get_categories($args_cat);
+        $s= 0;
         $i = 0;
         foreach ($cats as $key => $cat) { ?>
-            <li class="nav-item " role="presentation">
-                <button class="bg-secondary nav-link py-md-4 px-lg-4 px-md-3 p-2 lazy
+            <li class="nav-item animate__animated animate__slideInUp animate__delay-<?= $s;?>s" role="presentation">
+                <button class="bg-secondary nav-link py-md-3 px-lg-4 px-md-3 p-2 lazy
                         <?php if ($i == 0) {
                     $i = 1;
                     echo 'active';
@@ -53,7 +56,8 @@ $loop_portfolio = new WP_Query($portfolio);
                     <?php echo $cat->name; ?>
                 </button>
             </li>
-        <?php }
+        <?php $s++;
+        }
         wp_reset_postdata() ?>
     </ul>
     <div class="tab-content p-3 bg-warning mb-4 rounded-1 shadow-sm" id="myTabContent" role="tablist">
@@ -73,6 +77,8 @@ $loop_portfolio = new WP_Query($portfolio);
                         'tax_query' => array(
                             array(
                                 'taxonomy' => 'portfolio_categories',
+                                'orderby' => 'name',
+                                'order' => 'ASC',
                                 'field' => 'term_id',
                                 'terms' => $cat->term_taxonomy_id,
                                 'operator' => 'IN'
@@ -82,7 +88,8 @@ $loop_portfolio = new WP_Query($portfolio);
                     $loop = new WP_Query($args);
                     if ($loop->have_posts()) {
                         while ($loop->have_posts()) : $loop->the_post(); ?>
-                            <a class="p-3 col-11 col-md-4" href="<?php the_permalink(); ?>">
+                        <li class="p-3 col-12 col-md-4">
+                            <a href="<?php the_permalink(); ?>">
                                 <img src="<?= get_the_post_thumbnail_url(); ?>" class="card-img-top image-rounded-min"
                                      alt="<?php the_title(); ?>">
                                 <div class="card-body text-black">
@@ -90,6 +97,7 @@ $loop_portfolio = new WP_Query($portfolio);
                                     <p class="card-text text-justify"><?php echo wp_trim_words(get_the_content(), 15); ?></p>
                                 </div>
                             </a>
+                        </li>
                         <?php endwhile;
                     }
                     wp_reset_postdata() ?>
