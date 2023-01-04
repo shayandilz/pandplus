@@ -18,11 +18,7 @@
                             data-animate="20"
                             id="cta-event"
                             class="btn btn-white px-4 py-2 fs-6 rounded gs_reveal gs_reveal_fromBottom"
-                            type="button"
-                            rel="nofollow"
-                            data-bs-toggle="modal"
-                            data-bs-target="#exampleModal"
-                            href="<?php echo esc_url($about_button_upper['url']); ?>">
+                            href="tel:<?php the_field('call_number_service', 'option') ?>">
                         <?php echo esc_html($about_button_upper['title']); ?>
                     </a>
                 <?php endif; ?>
