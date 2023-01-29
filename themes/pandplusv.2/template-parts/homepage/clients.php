@@ -34,8 +34,8 @@
                                 gs_reveal_fromBottom
                                  text-center my-auto">
                                     <a href="<?php the_permalink();?>">
-                                        <img width="100px" title="<?php echo esc_attr($brand_logo['alt']); ?>"
-                                             class="img-fluid blackWhite lazy"
+                                        <img width="100" title="<?php echo esc_attr($brand_logo['alt']); ?>"
+                                             class="img-fluid blackWhite lazy w-100p"
                                              src="<?php echo esc_url($brand_logo['url']); ?>"
                                              alt="<?php echo esc_attr($brand_logo['alt']); ?>">
 

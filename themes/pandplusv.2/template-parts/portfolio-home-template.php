@@ -1,8 +1,6 @@
 <article class="row swiper-slide px-0 justify-content-center">
     <div class="col-12">
         <a href="<?php the_permalink();?>">
-<!--            <a href="--><?php //echo get_field('brand_url'); ?><!--" alt="--><?php //the_title(); ?><!--">-->
-
             <div class="ratio ratio-1x1">
                 <img class="image-rounded object-fit" src="<?php echo get_the_post_thumbnail_url(); ?>"
                      title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
@@ -21,7 +19,7 @@
         </a>
         <!--            services -->
         <div class="d-flex border-top border-1 border-white gap-2 align-items-center mt-1 px-2 bg-info text-white">
-            <h6 class="m-0 fs-6">خدمات</h6>
+            <p class="m-0 fs-6">خدمات</p>
             <hr class="vr">
             <!--                services icon-->
             <div class="d-flex gap-2 text-center">

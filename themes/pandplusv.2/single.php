@@ -39,9 +39,6 @@ while (have_posts()) :
                             <?php echo do_shortcode('[TOC]') ?>
                         </div>
                     </div>
-                    <!--            excerpt-->
-                    <!--            <p class="py-3 text-justify">--><?php //echo get_the_excerpt();
-                    ?><!--</p>-->
                     <!--            author info-->
                     <div class="d-flex gap-3 align-items-center">
                         <?php $user_array_img = get_field('profile_image', 'user_' . $post->post_author);
@@ -96,27 +93,6 @@ while (have_posts()) :
                     <article class="text-justify px-1 px-lg-0 text-danger">
                         <?php the_content(); ?>
                     </article>
-                    <!--                            every 200 word-->
-                    <!--                    <div class="bg-success image-rounded p-3 my-5">-->
-                    <!--                        <div class="d-md-flex gap-3 align-items-center text-center text-md-start">-->
-                    <!--                            <img class="col-12 col-lg-2 image-rounded-min object-fit"-->
-                    <!--                                 src="--><?php //echo get_the_post_thumbnail_url();
-                    ?><!--" alt="">-->
-                    <!--                            <div class="col-12 col-lg-7 mt-2 mt-md-0">-->
-                    <!--                                <div class="d-flex align-items-center gap-3 justify-content-center justify-content-md-start">-->
-                    <!--                                    <p class="fw-bold m-0"> طراحی و توسعه وبسایت</p>-->
-                    <!--                                    <hr class="vr">-->
-                    <!--                                    <span>-->
-                    <?php //echo get_template_part('template-parts/icons/services/clock');
-                    ?><!--</span> --><?php //echo get_the_date('d  F , Y');
-                    ?>
-                    <!--                                </div>-->
-                    <!--                                <h6 class="my-2 fs-4">--><?php //the_title();
-                    ?><!--</h6>-->
-                    <!--                            </div>-->
-                    <!--                            <a class="text-danger fw-bolder" href=""> ادامه مطلب ></a>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
                     <!--                                cta-->
                     <?php get_template_part('template-parts/cta'); ?>
                     <!--            more post-->

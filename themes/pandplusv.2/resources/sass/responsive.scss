@@ -13,9 +13,6 @@
     .swiper-slide-active .ratio{
       transition: all 0.3s ease-in-out;
     }
-    //.swiper-slide-active .ratio{
-    //  margin-bottom: 20px!important;
-    //}
     .swiper-slide-active img{
       height: 290px;
       object-fit: cover;
@@ -24,14 +21,12 @@
 }
 
 @include media-breakpoint-down(lg) {
-  .top-menu {
-    img {
-      width: 50px
-    }
+
+  .front__banner-video {
+    height: 55vh!important;
   }
   .front__banner {
     height: 85vh!important;
-    margin-bottom:-190px
   }
 }
 
@@ -92,8 +87,5 @@
   .portfolio-main{
     overflow: hidden;
     height: 90vh;
-  }
-  .small-md-down {
-    //font-size: $small-font-size !important;
   }
 }

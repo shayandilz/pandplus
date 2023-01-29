@@ -3,9 +3,9 @@
         <div class="d-flex col-11 col-lg-9 gap-3 justify-content-end justify-content-lg-start">
             <a class="text-end text-lg-start logo_header" href="<?php echo esc_url(get_home_url()); ?>">
                 <?php
-                $footer_logo = get_field('footer_logo', 'option');
+                $header_logo = get_field('header_logo', 'option');
                 ?>
-                <img class="lazy" width="40" height="auto" src="<?= $footer_logo['url'] ?>"
+                <img width="40" height="40" src="<?= $header_logo['url'] ?>"
                      alt="<?= get_bloginfo('name'); ?>">
             </a>
             <hr class="vr text-white my-auto d-none d-lg-inline">
@@ -24,15 +24,8 @@
         </div>
         <a href="tel:<?php the_field('call_number_service', 'option') ?>"
            id="cta-event"
-           class="btn btn-white px-3 py-2 d-none d-lg-inline ">
+           class="btn btn-white px-4 py-2 fs-6 d-none d-lg-inline ">
             دریافت مشاوره
         </a>
-<!--        <button rel="nofollow" type="button"-->
-<!--                id="cta-event"-->
-<!--                data-bs-toggle="modal"-->
-<!--                data-bs-target="#exampleModal"-->
-<!--                class="btn btn-white px-3 py-2 d-none d-lg-inline ">-->
-<!--            دریافت مشاوره-->
-<!--        </button>-->
     </div>
 </div>

@@ -1,10 +1,9 @@
+import $ from "jquery";
 require('./bootstrap');
 import 'swiper/css';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 import WOW from 'wow.js'
-import $ from "jquery";
-
 require('./gsap');
 
 const wow = new WOW(
@@ -27,10 +26,6 @@ const wow = new WOW(
 wow.init();
 
 $(document).ready(function () {
-    //get current location
-    // fetch('http://ip-api.com/json')
-    //     .then((response) => response.json())
-    //     .then((data) => console.log(data.city));
     // animate logo
         setInterval(function () {
             $('.logo_header').addClass('animate__logo');
@@ -88,6 +83,9 @@ $(document).ready(function () {
         $('.cd-nav-trigger').on('click', function (event) {
             // fade out top menu when cd nav active
             $('.top-menu').toggleClass('animate__fadeOutUp animate__delay-1s');
+            $('body').toggleClass('overflow-hidden')
+            $('html').toggleClass('overflow-hidden')
+            $('.backTo_Top').toggleClass('d-none')
             $('.call').toggleClass('animate__fadeOutDown animate__fadeInUp');
             event.preventDefault();
             //stop if nav animation is running
@@ -114,25 +112,12 @@ $(document).ready(function () {
                     el.siblings().removeClass("active");
                 }
                 datafrom.forEach(function (value, index) {
-                    console.log(value)
                     if (datalist == value && el.hasClass('active')) {
                         services_show.addClass("show");
                         services_show.siblings().removeClass("show");
                     }
                 })
             })
-            // $(this).mouseout(function (e){
-            //     if (el.hasClass("active")) {
-            //         el.removeClass("active");
-            //         el.siblings().removeClass("active");
-            //     }
-            //     datafrom.forEach(function (value, index) {
-            //         if (datalist == value && !el.hasClass('active') ){
-            //             services_show.removeClass("show");
-            //             services_show.siblings().removeClass("show");
-            //         }
-            //     })
-            // })
         })
     }
 );
@@ -190,7 +175,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const swiper3 = new Swiper('.swiper3', {
         // Optional parameters
         speed: 2000,
-        // effect: 'coverflow',
         loop: true,
         centeredSlides: true,
         slidesPerView: 2,
@@ -204,7 +188,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const swiper4 = new Swiper('.swiper4', {
         // Optional parameters
         speed: 2000,
-        // effect: 'coverflow',
         loop: true,
         centeredSlides: true,
         slidesPerView: 2,
@@ -217,7 +200,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     const swiper5 = new Swiper('.swiper5', {
         // Optional parameters
-        // loop: true,
         slidesPerView: 1,
         direction: 'vertical',
         centeredSlides: true,
@@ -234,5 +216,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 spaceBetween: 0,
             }
         }
+    });
+    const swiper6 = new Swiper('.swiper6', {
+        // Optional parameters
+        speed: 2000,
+        slidesPerView: 1,
+        direction: 'horizontal',
+        spaceBetween: 0,
+        autoplay: {
+            delay: 15000,
+        },
+        disableOnInteraction: true,
     });
 })

@@ -26,17 +26,17 @@ get_header(); ?>
             <?php get_template_part('template-parts/service-cta'); ?>
             <!--            costumers -->
             <div>
-                <h6 class="my-4">برخی از مشتریان ما</h6>
-                <div class="d-flex flex-row gap-2 align-items-start flex-wrap">
+                <p class="mt-5">برخی از مشتریان ما</p>
+                <div class="d-flex flex-row gap-2 align-items-start flex-wrap justify-content-center">
                     <?php
                     $projects_services = get_field('projects_services');
                     if ($projects_services) :
-                        foreach ($projects_services as $post):
+                        foreach (array_slice($projects_services , 0 , 8) as $post):
                             setup_postdata($post);
                             $brand_logo = get_field('brand_logo');
                             ?>
                             <a href="<?php the_permalink();?>">
-                                <img width="80px" class="img-fluid" src="<?php echo esc_url($brand_logo['url']); ?>"
+                                <img class="img-fluid w-100p" src="<?php echo esc_url($brand_logo['url']); ?>"
                                      alt="<?php echo esc_attr($brand_logo['alt']); ?>">
 
                             </a>
@@ -64,8 +64,8 @@ get_header(); ?>
             </div>
         </div>
 <!--        more services-->
-        <div class="col-12 col-lg-5 py-2 swiper4 overflow-hidden d-lg-none d-block">
-            <div class="swiper-wrapper">
+        <div class="col-12 col-lg-5 py-4 swiper4 overflow-hidden d-lg-none d-block">
+            <div class="swiper-wrapper align-items-center">
                 <?php
                 if ($projects_services) :
                     foreach ($projects_services as $post):

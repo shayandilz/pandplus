@@ -1,6 +1,7 @@
 <div class="col-12 col-lg my-2 hover-shadow">
     <a href="<?php the_permalink(); ?>">
-        <img class="col-12 image-rounded-min ratio ratio-1x1" src="<?php echo get_the_post_thumbnail_url(); ?> " alt="">
+        <img height="auto" class="col-12 image-rounded-min ratio ratio-1x1" src="<?php echo get_the_post_thumbnail_url(); ?> "
+              alt="">
         <div class="align-items-center text-danger">
             <!--                category-->
             <div class="m-0 pt-1 fs-6">

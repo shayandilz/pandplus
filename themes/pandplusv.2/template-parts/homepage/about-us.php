@@ -1,4 +1,4 @@
-<section class="bg-info svg-lines position-relative py-5 py-lg-0">
+<section class="bg-info svg-lines position-relative py-5 py-lg-0" id="aboutSection">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-12 col-lg-6 row align-items-center m-0">

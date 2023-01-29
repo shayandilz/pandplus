@@ -3,7 +3,7 @@
     <?php
     $footer_logo = get_field('footer_logo', 'option');
     ?>
-    <img class="lazy" width="65px" height="65px" src="<?= $footer_logo['url'] ?>"
+    <img width="65" height="65" src="<?= $footer_logo['url'] ?>"
          alt="<?= get_bloginfo('name'); ?>">
     <br>
     آژانس دیجیتال مارکتینگ پندپلاس
@@ -31,6 +31,7 @@
 <div class="tab-content menuHeader" id="nav-tabContent">
     <div class="container tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
          tabindex="0">
+            <p class="px-3 pt-3 pb-0 mb-0 text-justify fw-bold text-dark"><?php the_field('footer_text_lower', 'option'); ?></p>
         <div class="d-flex align-items-center justify-content-evenly gap-2 text-center mt-5">
             <a class="btn btn-dark px-4 py-2 fs-5 rounded-1"
                href="<?php echo esc_url(get_home_url()) ?>">

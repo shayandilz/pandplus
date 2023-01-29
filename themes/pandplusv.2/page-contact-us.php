@@ -12,13 +12,17 @@ get_header();
                         <?= get_field('title_big_contact_colored'); ?>
                     </span>
                 </h1>
-                <p class="col-lg-8 my-4">
+                <p class="col-lg-8 my-4 px-0">
                     <?= get_field('title_small_contact'); ?>
                 </p>
                 <?php get_template_part('template-parts/counseling-call'); ?>
                 <div class="col-lg-8">
                     <?php get_template_part('template-parts/service-cta'); ?>
                 </div>
+                <address class="pt-5 text-center text-dark">
+                    <span class="fw-bold text-secondary fs-5">آدرس : </span>
+                    <?= get_field('address', 'option') ?>
+                </address>
             </div>
 
         </article>

@@ -73,7 +73,9 @@ body {
 .vh-65-fix {
   height: 65vh;
 }
-
+.end-30 {
+  bottom: 30px;
+}
 .end-5 {
   left: 10px;
 }
@@ -83,7 +85,10 @@ body {
 .vh-80 {
   min-height: 80vh;
 }
-
+.w-100p {
+  width: 100px!important;
+  height: auto!important;
+}
 .h-100p {
   height: 100px
 }
@@ -93,7 +98,9 @@ body {
     @extend .text-white;
   }
 }
-
+.content-portfolio a {
+  color: #6be3bd;
+}
 .all-dark a {
   h1, h2, h3, h4, h5, h6, p, div, span {
     @extend .text-danger;
@@ -119,7 +126,7 @@ a {
   color:#4C328B!important;
 }
   p {
-    @extend .m-0 , .ps-5;
+    @extend .mx-0 , .my-auto , .ps-5;
   }
 
   @extend .ms-2 ,.ms-lg-0 ,.shadow-sm, .image-rounded-min, .text-dark, .p-4 , .bg-secondary ,.d-flex , .align-content-center;

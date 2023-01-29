@@ -90,7 +90,8 @@ $loop_portfolio = new WP_Query($portfolio);
                         while ($loop->have_posts()) : $loop->the_post(); ?>
                         <li class="p-3 col-12 col-md-4">
                             <a href="<?php the_permalink(); ?>">
-                                <img src="<?= get_the_post_thumbnail_url(); ?>" class="card-img-top image-rounded-min"
+                                <img src="<?= get_the_post_thumbnail_url(); ?>" class="h-auto card-img-top
+                                image-rounded-min"
                                      alt="<?php the_title(); ?>">
                                 <div class="card-body text-black">
                                     <h5 class="card-title py-2 fw-bolder text-center"><?php the_title(); ?></h5>

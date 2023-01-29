@@ -26,14 +26,14 @@
                                             <span class="mt-4 mt-lg-0 ps-lg-2 ps-0 text-primary">
                                             آژانس دیجیتال مارکتینگ پندپلاس
                                         </span>
-                                            <img width="100px"  src="<?php echo get_field('brand_logo')['url']; ?>"
+                                            <img class="w-100p"  src="<?php echo get_field('brand_logo')['url']; ?>"
                                                  alt="<?php the_title(); ?>">
                                         </div>
 
                                         <h3 class="ps-lg-2 ps-0 fw-bolder text-black">
                                             <?php the_field('testi_title') ;?>
                                         </h3>
-                                        <p class="ps-lg-4 ps-0 all-dark">
+                                        <p class="content-portfolio ps-lg-4 ps-0 all-dark">
                                             <?php echo get_the_content(); ?>
                                         </p>
                                         <div class="row justify-content-center fs-2 ps-lg-3 ps-0 py-1">

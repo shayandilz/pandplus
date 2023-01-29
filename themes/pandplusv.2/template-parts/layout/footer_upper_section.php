@@ -5,11 +5,12 @@
             <?php get_template_part('template-parts/icons/whatsapp');
             $whatsapp = get_field('whatsapp', 'option');
             ?>
-            <h6 class="text-black fs-4 fw-bold">
+            <p class="text-black fs-4 fw-bold">
                 <?= esc_html($whatsapp['title']) ?>
-            </h6>
+            </p>
             <a class="text-black d-flex flex-row justify-content-center align-items-center text-center gap-2"
-               href="<?php echo esc_url($whatsapp['number']); ?>">
+               href="https://wa.me/<?= $whatsapp['number'];?>"
+                alt="<?= $whatsapp['title'];?>">
                 چت واتساپ
                 <i class="bi bi-chevron-left"></i>
             </a>
@@ -19,11 +20,12 @@
             <?php get_template_part('template-parts/icons/phone');
             $phone = get_field('phone', 'option');
             ?>
-            <h6 class="text-black fs-4 fw-bold">
+            <p class="text-black fs-4 fw-bold">
                 <?= esc_html($phone['title']) ?>
-            </h6>
+            </p>
             <a class="text-black d-flex flex-row justify-content-center align-items-center text-center gap-2"
-               href="tel:<?= get_field('call_number_service', 'option'); ?>">
+               href="tel:<?= get_field('call_number_service', 'option'); ?>"
+                alt="<?= $phone['title'] ;?>">
                 تماس تلفنی
                 <i class="bi bi-chevron-left"></i>
             </a>
@@ -33,11 +35,12 @@
             <?php get_template_part('template-parts/icons/mail');
             $mail = get_field('email', 'option');
             ?>
-            <h6 class="text-black fs-4 fw-bold">
+            <p class="text-black fs-4 fw-bold">
                 <?= esc_html($mail['title']) ?>
-            </h6>
+            </p>
             <a class="text-black d-flex flex-row justify-content-center align-items-center text-center gap-2"
-               href="mailto:<?php echo esc_url($mail['url']); ?>">
+               href="mailto:<?php echo esc_url($mail['url']); ?>"
+               alt="<?= $mail['title'] ;?>">>
                 ارسال ایمیل
                 <i class="bi bi-chevron-left"></i>
             </a>
@@ -45,15 +48,17 @@
 <!--        Counseling-->
         <div data-animate="12" class="col-5 col-lg-3 d-flex flex-column align-items-center justify-content-center gap-3 text-center gs_reveal gs_reveal_fromLeft">
             <?php get_template_part('template-parts/icons/Counseling');
-            $mail = get_field('Counseling', 'option');
+            $Counseling = get_field('Counseling', 'option');
             ?>
-            <h6 class="text-black fs-4 fw-bold">
+            <p class="text-black fs-4 fw-bold">
                 مشاوره
-            </h6>
+            </p>
             <a rel="nofollow" type="button"
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal"
-                    class="text-black d-flex flex-row justify-content-center align-items-center text-center gap-2">
+                    class="text-black d-flex flex-row justify-content-center align-items-center text-center gap-2"
+                    alt="مشاوره">
+
                 مشاوره
                 <i class="bi bi-chevron-left"></i>
             </a>

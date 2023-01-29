@@ -33,13 +33,30 @@
 a {
   text-decoration: none !important;
 }
+
 //hero section
-.front__banner {
+.front__banner, .front__banner-video {
   height: 100vh;
 }
-.text-appear{
+
+.text-appear {
   display: none;
 }
+
+//mouse svg animation
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(100px);
+  }
+}
+
+svg #wheel {
+  animation: scroll ease 1.5s infinite;
+}
+
 //front page
 .call {
   position: fixed;
@@ -47,43 +64,11 @@ a {
   bottom: 15px;
   transform: translate(-50%, -50%);
   z-index: 3;
-
-  div {
-    a {
-      transform: rotate(90deg);
-      color: black;
-
-      &:hover::before {
-        animation: hover 250ms linear;
-      }
-
-      &:before {
-        background: red;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-      }
-    }
-  }
 }
-
-@keyframes hover {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    scale: 1.1;
-  }
-
-}
-
 // positon for top-banner logo in front page
 .logo {
   top: 0%;
-  transform: scale(0.5)translate(+50%, -18%);
+  transform: scale(0.5) translate(+50%, -18%);
   transform-origin: center;
 }
 
@@ -139,7 +124,8 @@ a {
   }
 
   .top_label {
-    padding:0!important;
+    padding: 0 !important;
+
     input[type=submit] {
       @extend .btn, .btn-dark, .px-5, .py-2, .text-white, .col-lg-4, .col-12, .rounded;
     }
@@ -297,29 +283,34 @@ body.navigation-is-open {
     }
   }
 }
-.card-main{
-  &:hover , &:active {
+
+.card-main {
+  &:hover, &:active {
     .card-info {
       transform: translateY(0);
       opacity: 1;
     }
   }
-.card-info {
-  transition: transform 300ms linear , opacity 300ms ease-out;
-  opacity: 0;
-  transform: translateY(100%);
+
+  .card-info {
+    transition: transform 300ms linear, opacity 300ms ease-out;
+    opacity: 0;
+    transform: translateY(100%);
+  }
 }
-}
+
 //pagination items
 .page-numbers.current {
-  @extend .bg-danger , .text-white;
+  @extend .bg-danger, .text-white;
   padding: 2px 9px 1px;
   border-radius: 100%;
 }
+
 //blog content
 article a {
-  @extend .text-secondary , .fw-bold;
+  @extend .text-secondary, .fw-bold;
 }
+
 //comment
 .wpd-comment-wrap {
   border: 1px solid #d6d5d5;
@@ -328,14 +319,17 @@ article a {
   background: #fafffb;
   margin: 5px 0;
 }
+
 //padding to services page bottom
 #services__area {
   padding-bottom: 120px;
 }
+
 //animation for logo header
 .animate__logo {
-  animation: logo 700ms forwards ease-out ;
+  animation: logo 700ms forwards ease-out;
 }
+
 @keyframes logo {
   0% {
     rotate: 8deg;

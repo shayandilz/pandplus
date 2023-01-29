@@ -15,7 +15,7 @@
                 $loop->the_post();
                 ?>
                 <a href="<?php echo get_the_permalink(); ?>" class="d-block d-lg-flex my-3 align-items-center">
-                    <img class="col-12 col-lg-5 me-2 image-rounded-20 object-fit"
+                    <img height="auto" class="col-12 col-lg-5 me-2 h-auto image-rounded-20 object-fit"
                          src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
                     <div>
                         <div class="align-items-center gap-1 text-danger">

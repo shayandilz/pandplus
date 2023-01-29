@@ -15,7 +15,8 @@
                     <?php
                     $blog_button = get_field('blog_button');
                     if ($blog_button): ?>
-                        <a data-animate="12" class="btn btn-dark px-5 py-3 fs-5 rounded-1 gs_reveal gs_reveal_fromBottom"
+                        <a data-animate="12" class="btn btn-dark px-4 py-2 fs-6 rounded-1 gs_reveal
+                        gs_reveal_fromRight"
                            href="<?php echo esc_url($blog_button['link']); ?>">
                             <?php echo esc_html($blog_button['title']); ?>
                         </a>

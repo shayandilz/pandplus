@@ -31,7 +31,10 @@
                 </div>
                 <!--                website link-->
                 <div class="d-flex gap-3 ">
-                    <a class="text-danger fw-bold" href="<?php echo get_field('brand_url'); ?>">
+                    <a class="text-danger fw-bold"
+                       aria-label="<?php echo get_field('brand_url')['title']; ?>"
+                       href="<?php echo get_field('brand_url'); ?>"
+                        alt="<?php echo get_field('brand_url')['title']; ?>">
                         وب سایت ></a>
                 </div>
             </div>
@@ -47,7 +50,7 @@
         <div class="row justify-content-center">
                 <?php
                 $i = 0;
-                while (have_rows('solutions')): the_row();;
+                while (have_rows('solutions')): the_row();
                     $i++;
                     ?>
                     <div class="row col-lg-10 justify-content-center">
@@ -77,7 +80,7 @@
                 <?php
                 foreach ($tour_pages as $tour) { ?>
                     <article class="card bg-transparent p-4 col-11 col-md-5 border-0 my-2 my-lg-0">
-                        <img src="<?= get_the_post_thumbnail_url($tour->ID); ?>" class="card-img-top bg-white"
+                        <img src="<?= get_the_post_thumbnail_url($tour->ID); ?>" class="h-auto card-img-top bg-white"
                              alt="<?php the_title(); ?>">
                         <div class="card-body bg-white shadow-sm">
                             <h5 class="card-title py-3 fw-bolder"><?= $tour->post_title ?></h5>

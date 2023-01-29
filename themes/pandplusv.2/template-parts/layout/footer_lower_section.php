@@ -6,7 +6,7 @@
                     <?php
                     $footer_logo = get_field('footer_logo', 'option');
                     ?>
-                    <img width="65px" height="65px" src="<?= $footer_logo['url'] ?>"
+                    <img width="65" height="65" src="<?= $footer_logo['url'] ?>"
                          alt="<?= get_bloginfo('name'); ?>">
                 </a>
                 <div class="pt-2 text-justify small fw-lighter text-semi-light">
@@ -14,13 +14,13 @@
                 </div>
             </div>
             <div class="col-lg col-12 my-2 my-lg-0">
-                <h6 class="fw-bolder pb-3 ">
+                <p class="fw-bolder pb-3 ">
                     <?php
                     $locations = get_nav_menu_locations();
                     $menu = wp_get_nav_menu_object($locations['footerLocationOne']);
                     echo $menu->name;
                     ?>
-                </h6>
+                </p>
                 <?php
                 wp_nav_menu(array(
                     'theme_location' => 'footerLocationOne',
@@ -40,9 +40,9 @@
                 $menu = wp_get_nav_menu_object($locations['footerLocationTwo']);
                 if ($menu) :
                     ?>
-                    <h6 class="fw-bolder pb-3">
+                    <p class="fw-bolder pb-3">
                         <?= $menu->name; ?>
-                    </h6>
+                    </p>
                     <?php
                     wp_nav_menu(array(
                         'theme_location' => 'footerLocationTwo',
@@ -75,11 +75,11 @@
             <div class="col-12 col-lg-9 fw-lighter text-semi-light fs-6 text-start">
                 <div class="border-2 border-bottom pb-1"></div>
                 <div class="pt-3 text-center text-lg-start">
-                    <?php the_field('copyright_text', 'option'); ?>
+                    <?php echo '© &nbsp'. date("Y") . '&nbsp&nbsp&nbsp'; the_field('copyright_text', 'option'); ?>
                 </div>
             </div>
             <div class="col-12 col-lg-3 gap-2 text-center pb-5 pb-lg-0">
-                <p class="text-center text-lg-start m-0 mb-2">مارا دنبال کنید</p>
+                <p class="text-center text-lg-start m-0 mb-2 pt-3 pt-lg-0">مارا دنبال کنید</p>
                 <?php get_template_part('template-parts/layout/social'); ?>
             </div>
         </div>
