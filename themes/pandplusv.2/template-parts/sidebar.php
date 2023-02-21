@@ -22,8 +22,6 @@
             wp_reset_postdata(); ?>
         </div>
 <!--        searchbar -->
-                <h4 class="fw-bolder mt-3 ">آخرین مقالات</h4>
-                <p class="my-3">پرطرفدارترین دسته  های پند پلاس در یک نگاه</p>
                 <?php get_template_part('template-parts/search');?>
 <!--        tags-->
         <h4 class="fw-bolder mt-3 ">دسته مقالات</h4>
